@@ -1,89 +1,55 @@
 # Mithilesh Gungah
 ### MSc Data Science | Former Data Engineer
 
-Designing data-driven systems that move from raw information to reliable decisions.
-
-With a background in data engineering and advanced training in data science, I build machine learning solutions that are structured, reproducible, and production-aware.
+Building data-driven solutions that turn raw data into actionable decisions.  
+I combine engineering discipline with analytical depth to create reproducible and production-ready ML workflows.
 
 ---
 
 ## About This Portfolio
 
-This portfolio demonstrates my ability to:
+Projects demonstrate my ability to:
 
-- Frame ambiguous problems into clear analytical objectives
-- Explore and understand complex datasets
-- Engineer meaningful features
-- Train and validate machine learning models rigorously
-- Interpret results beyond accuracy metrics
-- Communicate insights with clarity and context
+- Define and structure complex problems
+- Explore and preprocess diverse datasets
+- Engineer features and train ML models
+- Interpret results and extract actionable insights
+- Communicate findings clearly
 
-Each project follows a consistent structure:
-
-1. Problem Definition  
-2. Data Understanding  
-3. Methodology  
-4. Modeling & Validation  
-5. Results & Interpretation  
-6. Practical Implications  
-
-The focus is not just model performance, but reasoning, evaluation, and decision impact.
+Each project follows: Problem → Data → Method → Modeling → Results → Impact.
 
 ---
 
 ## Selected Projects
 
 ### Customer Churn Prediction
+**Goal:** Identify customers likely to churn.
 
-**Objective:** Identify customers at risk of churn and uncover behavioral drivers.
+- Feature engineering from usage patterns  
+- Logistic Regression, Random Forest, XGBoost with cross-validation  
 
-- Conducted in-depth exploratory data analysis
-- Engineered predictive features from usage patterns
-- Benchmarked Logistic Regression, Random Forest, and Gradient Boosting
-- Applied cross-validation and threshold tuning for class imbalance
-
-**Outcome:**
-- Improved recall on churn class relative to baseline
-- Identified key retention indicators
-- Delivered interpretable insights for business decision-making
-
-Project: [View Repository](#)
+**Impact:** Improved recall vs baseline; identified key retention drivers.  
+[View Project](#)
 
 ---
 
-### End-to-End Machine Learning Pipeline
+### End-to-End ML Pipeline
+**Goal:** Build a reusable ML workflow from ingestion to evaluation.
 
-**Objective:** Build a reproducible ML workflow from ingestion to evaluation.
+- Modular preprocessing, automated checks, structured training  
 
-- Designed modular preprocessing pipeline
-- Automated validation checks
-- Implemented structured training and evaluation framework
-- Ensured reproducibility across experiments
-
-**Outcome:**
-- Reduced manual intervention in preprocessing
-- Created reusable ML experimentation template
-- Improved workflow clarity and maintainability
-
-Project: [View Repository](#)
+**Impact:** Reproducible pipeline template; reduced manual effort.  
+[View Project](#)
 
 ---
 
 ### NLP Sentiment Analysis
+**Goal:** Classify customer feedback sentiment.
 
-**Objective:** Classify textual feedback and analyze sentiment patterns.
+- Text cleaning, TF-IDF & embedding comparison, model benchmarking  
 
-- Cleaned and tokenized textual data
-- Compared TF-IDF and embedding-based representations
-- Evaluated multiple classification models
-- Performed structured error analysis
-
-**Outcome:**
-- Strong classification performance
-- Clear understanding of linguistic drivers of sentiment
-- Transparent comparison of modeling approaches
-
-Project: [View Repository](#)
+**Impact:** High accuracy; insights into sentiment drivers; transparent evaluation.  
+[View Project](#)
 
 ---
 
