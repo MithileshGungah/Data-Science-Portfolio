@@ -1,108 +1,89 @@
 # Mithilesh Gungah
-### MSc Data Science Graduate | Former Data Engineer
+### MSc Data Science | Former Data Engineer
 
-Data scientist with a strong engineering foundation and a focus on building reliable, scalable, and impactful machine learning solutions. 
+Designing data-driven systems that move from raw information to reliable decisions.
 
-With hands-on experience in data engineering and advanced academic training in data science, I bring a balanced approach that combines analytical rigor with production-level thinking.
+With a background in data engineering and advanced training in data science, I build machine learning solutions that are structured, reproducible, and production-aware.
 
 ---
 
 ## About This Portfolio
 
-This portfolio showcases selected projects demonstrating:
+This portfolio demonstrates my ability to:
 
-- End-to-end machine learning workflows
-- Exploratory data analysis and statistical modeling
-- Data pipeline development and automation
-- Clear communication of technical insights
+- Frame ambiguous problems into clear analytical objectives
+- Explore and understand complex datasets
+- Engineer meaningful features
+- Train and validate machine learning models rigorously
+- Interpret results beyond accuracy metrics
+- Communicate insights with clarity and context
 
-Each project includes well-documented code, reproducible analysis, and practical business context.
+Each project follows a consistent structure:
 
----
+1. Problem Definition  
+2. Data Understanding  
+3. Methodology  
+4. Modeling & Validation  
+5. Results & Interpretation  
+6. Practical Implications  
 
-## Technical Expertise
-
-### Programming
-- Python
-- SQL
-- R
-
-### Data Science & Machine Learning
-- Pandas & NumPy
-- Scikit-learn
-- XGBoost
-- TensorFlow / PyTorch
-- Statistical Modeling
-- Feature Engineering
-- Model Evaluation & Optimization
-
-### Data Engineering
-- ETL Pipeline Development
-- Data Warehousing
-- Apache Spark
-- Airflow
-- Cloud Platforms (AWS / GCP)
-
-### Tools & Environment
-- Git & GitHub
-- Docker
-- Linux
-- Jupyter Notebook
+The focus is not just model performance, but reasoning, evaluation, and decision impact.
 
 ---
 
-## Featured Projects
+## Selected Projects
 
-### 1. Customer Churn Prediction
-Developed a predictive model to identify customers at risk of churn.
+### Customer Churn Prediction
 
-- Performed exploratory data analysis and feature engineering
-- Compared multiple classification algorithms
-- Optimized model performance using cross-validation
-- Delivered actionable insights for retention strategy
+**Objective:** Identify customers at risk of churn and uncover behavioral drivers.
 
-Project Link: [View Project](#)
+- Conducted in-depth exploratory data analysis
+- Engineered predictive features from usage patterns
+- Benchmarked Logistic Regression, Random Forest, and Gradient Boosting
+- Applied cross-validation and threshold tuning for class imbalance
 
----
+**Outcome:**
+- Improved recall on churn class relative to baseline
+- Identified key retention indicators
+- Delivered interpretable insights for business decision-making
 
-### 2. End-to-End Machine Learning Pipeline
-Built a production-ready ML workflow from raw data ingestion to deployment.
-
-- Automated preprocessing and validation
-- Implemented model versioning
-- Designed evaluation metrics for performance monitoring
-
-Project Link: [View Project](#)
+Project: [View Repository](#)
 
 ---
 
-### 3. NLP Sentiment Analysis
-Applied natural language processing techniques to classify customer reviews.
+### End-to-End Machine Learning Pipeline
 
-- Text preprocessing and tokenization
-- Feature extraction using TF-IDF and embeddings
-- Model comparison and performance analysis
+**Objective:** Build a reproducible ML workflow from ingestion to evaluation.
 
-Project Link: [View Project](#)
+- Designed modular preprocessing pipeline
+- Automated validation checks
+- Implemented structured training and evaluation framework
+- Ensured reproducibility across experiments
 
----
+**Outcome:**
+- Reduced manual intervention in preprocessing
+- Created reusable ML experimentation template
+- Improved workflow clarity and maintainability
 
-## Academic Background
-
-**MSc in Data Science**
-
-Key Focus Areas:
-- Machine Learning
-- Deep Learning
-- Big Data Systems
-- Statistical Inference
-- Data Mining
+Project: [View Repository](#)
 
 ---
 
-## Career Focus
+### NLP Sentiment Analysis
 
-I am particularly interested in roles that combine machine learning, data engineering, and applied AI - building systems that move from experimentation to production.
+**Objective:** Classify textual feedback and analyze sentiment patterns.
+
+- Cleaned and tokenized textual data
+- Compared TF-IDF and embedding-based representations
+- Evaluated multiple classification models
+- Performed structured error analysis
+
+**Outcome:**
+- Strong classification performance
+- Clear understanding of linguistic drivers of sentiment
+- Transparent comparison of modeling approaches
+
+Project: [View Repository](#)
 
 ---
 
