@@ -4,89 +4,102 @@
   <img src="churn.jpg" alt="Customer Churn Analysis" width="400">
 </p>
 
-## Project Objective
-Identify customers at risk of churn using the Telco dataset and provide actionable insights to reduce attrition and improve retention strategies.
+---
+
+## Overview
+
+The goal of this project is to **identify customers at risk of leaving** using the Telco dataset and provide **actionable insights** for retention strategies. By detecting high-risk users, the company can save revenue, optimize marketing spend, and improve customer lifetime value.
 
 ---
 
-## 1. Problem Statement
-- Churn Rate: 26.5% of customers were leaving the service.  
-- Challenges:  
-  - Month-to-month contracts have the highest attrition.  
-  - Service dissatisfaction in key offerings (Fiber, TechSupport, OnlineSecurity).  
-  - Generic retention campaigns were not targeting high-risk users.  
-  - Imbalanced dataset: only ~27% of customers churn.  
+## Problem Context
 
-**Goal:** Build a predictive model to flag high-risk customers and inform targeted retention campaigns.
+- Current churn rate: **26.5%**, indicating significant customer attrition.  
+- Key challenges identified:
+  - Month-to-month customers are most vulnerable.  
+  - Dissatisfaction in Fiber, TechSupport, and OnlineSecurity services.  
+  - Generic retention campaigns do not focus on high-risk customers.  
+  - Dataset is imbalanced (~27% churners), requiring careful evaluation using precision, recall, and F1-score metrics.  
 
----
-
-## 2. Dataset Overview
-- **Source:** [IBM Telco Customer Churn Dataset](https://github.com/IBM/telco-customer-churn-on-icp4d/tree/master/data)  
-- **Records:** 7,043 customers  
-- **Features:** 21 (Demographic, Contract, Service usage, Payment methods)  
-
-**Key Statistics:**
-
-| Metric              | Value |
-|--------------------|-------|
-| Total Records      | 7,043 |
-| Target Variable    | Churn (Yes/No) |
-| Churn Rate         | 26.5% Yes, 73.5% No |
-| Categorical Features | 16 |
-| Numerical Features   | 3 |
-
-**Observations:**  
-- Categorical variables require encoding.  
-- `customerID` is unique and non-predictive.  
-- Missing values in `TotalCharges` addressed via conversion and imputation.  
-- **Class Imbalance:** Only ~26.5% of customers churn → dataset is imbalanced, which requires careful evaluation using precision, recall, and F1-score metrics.
+**Objective:** Build a predictive solution to flag potential churners and support targeted interventions.
 
 ---
 
-## 3. Data Preprocessing & Feature Engineering
-**Steps Taken:**
-1. Converted `TotalCharges` to numeric and handled missing values.  
-2. Encoded categorical variables:  
-   - Binary: Yes/No → 1/0  
-   - Multi-class: One-Hot Encoding (Contract, InternetService, PaymentMethod)  
-3. Dropped non-predictive `customerID`.  
-4. Split dataset into train (80%) and test (20%).  
-5. Optional considerations: scaling numeric features (not required for XGBoost), handling class imbalance (**SMOTE or class weighting could improve churn detection**).
+## Dataset Details
+
+**Source:** [IBM Telco Customer Churn Dataset](https://github.com/IBM/telco-customer-churn-on-icp4d/tree/master/data)  
+**Total records:** 7,043 customers  
+**Features:** 21 (demographics, contract, service usage, and payment info)  
+
+**Quick Snapshot:**
+
+| Metric               | Value              |
+|---------------------|------------------|
+| Total customers      | 7,043             |
+| Churners             | 26.5%             |
+| Non-churners         | 73.5%             |
+| Categorical features | 16                |
+| Numerical features   | 3                 |
+| Missing values       | `TotalCharges` fixed |
+| Class Imbalance      | Only ~26.5% churners |
 
 ---
 
-## 4. Modeling Approach
-Two supervised models were tested: **Logistic Regression** and **XGBoost**.
+## Data Preparation & Feature Engineering
 
-### 4.1 Logistic Regression
-| Metric           | Value |
-|-----------------|-------|
-| Accuracy         | 0.80  |
-| Churn Precision  | 0.64  |
-| Churn Recall     | 0.54  |
-| F1-score (Churn) | 0.58 |
+### Preprocessing Highlights
+
+- Converted `TotalCharges` from object → float; handled missing values.  
+- Encoded categorical variables:
+  - Binary → 0/1 (Yes/No)  
+  - Multi-class → One-Hot Encoding (Contract, PaymentMethod, InternetService)  
+- Removed non-predictive `customerID`.  
+- Split dataset: **80% train / 20% test**.  
+- Optional: Scaling numeric features (XGBoost not sensitive), SMOTE/class weighting considered for imbalance.
+
+### Feature Engineering
+
+- Dummy variables created for categorical features.  
+- Checked for outliers → none significant.  
+- Prepared data for modeling to capture behavioral and demographic patterns.  
+
+---
+
+## Predictive Modeling
+
+Two models were evaluated: **Logistic Regression** and **XGBoost**.
+
+### Logistic Regression
+
+| Metric               | Result |
+|---------------------|--------|
+| Accuracy             | 0.80   |
+| Precision (Churn)    | 0.64   |
+| Recall (Churn)       | 0.54   |
+| F1-score (Churn)     | 0.58   |
 
 **Observation:**  
-- Interpretable and good overall accuracy.  
-- High false negatives → misses a significant portion of churners.
+- Good overall accuracy and highly interpretable.  
+- High false negatives → misses some churners.  
 
-### 4.2 XGBoost
-| Metric           | Value |
-|-----------------|-------|
-| Accuracy         | 0.74  |
-| Churn Precision  | 0.51  |
-| Churn Recall     | 0.69  |
-| F1-score (Churn) | 0.59 |
+### XGBoost
 
-**Confusion Matrix (XGBoost):**
+| Metric               | Result |
+|---------------------|--------|
+| Accuracy             | 0.74   |
+| Precision (Churn)    | 0.51   |
+| Recall (Churn)       | 0.69   |
+| F1-score (Churn)     | 0.59   |
 
-|Actual \ Predicted| No churn (0) | Churn (1) |
-|-----------------|--------------|-----------|
-| No churn (0)    | 782          | 251       |
-| Churn (1)       | 115          | 259       |
+**Confusion Matrix (XGBoost)**
 
-**Top Features Influencing Churn:**
+| Actual \ Predicted | No Churn (0) | Churn (1) |
+|------------------|--------------|-----------|
+| No Churn (0)     | 782          | 251       |
+| Churn (1)        | 115          | 259       |
+
+**Top Drivers of Churn**
+
 1. Contract type (Month-to-month)  
 2. Tenure  
 3. MonthlyCharges  
@@ -98,46 +111,47 @@ Two supervised models were tested: **Logistic Regression** and **XGBoost**.
 9. DeviceProtection  
 10. PaymentMethod  
 
-**Insights:**  
-- Captures more potential churners than Logistic Regression (higher recall).  
-- Slightly lower precision → some non-churners targeted.  
-- Aligns with business intuition → actionable for retention.
+**Key Takeaways:**  
+- XGBoost identifies more churners (higher recall), ideal for retention campaigns.  
+- Slight drop in precision → some non-churners may be targeted.  
+- Feature importance aligns with business intuition for actionable strategies.  
 
 ---
 
-## 5. Business Insights
-- **High-Risk Segments:**  
-  - Month-to-month contracts, short tenure (<12 months), high MonthlyCharges, Fiber customers.  
-- **Retention Strategies:**  
-  - Personalized offers: discounts, loyalty rewards, service bundles.  
-  - Promote TechSupport, OnlineSecurity, and longer-term contracts.  
-- **Service Improvement:**  
-  - Fiber Internet quality and tech support responsiveness.  
-- **Campaign Monitoring:**  
-  - Track success and update models quarterly.
+## Business Strategy Recommendations
+
+1. **Prioritize High-Risk Segments:**  
+   - Month-to-month contracts, short tenure (<12 months), high MonthlyCharges, Fiber users.  
+2. **Retention Programs:**  
+   - Personalized discounts, loyalty rewards, service bundles.  
+   - Upsell TechSupport and OnlineSecurity packages.  
+3. **Service Enhancement:**  
+   - Improve fiber-optic service quality and technical support responsiveness.  
+4. **Monitoring & Optimization:**  
+   - Track campaign effectiveness; retrain models quarterly with fresh data.  
+
+**Expected Outcomes:**  
+- Minimize missed churners → maximize ROI of campaigns.  
+- Optimize marketing and operational efficiency.  
+- Increase customer lifetime value through targeted interventions.  
 
 ---
 
-## 6. Expected Impact
-- **Revenue Preservation:** Targeted retention campaigns prevent ~$1.2M/year in lost revenue.  
-- **Operational Efficiency:** Focus marketing and retention resources on high-risk customers.  
-- **Customer Lifetime Value:** Increase by reducing churn among early-tenure and high-spend customers.  
-- **Strategic Insights:** Clear understanding of churn drivers informs long-term business decisions.
+## Technology Stack
+
+- **Programming Language:** Python 3.9  
+- **Libraries:** XGBoost, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn  
 
 ---
 
-## 7. Tech Stack
-- Python 3.9  
-- Libraries: XGBoost, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn  
+## Conclusion
 
----
-
-## 8. Conclusion
-This project successfully identifies high-risk customers and key drivers of churn.  
-**XGBoost is recommended** for proactive retention campaigns. By combining predictive modeling with actionable strategies, the company can reduce churn, save revenue, and optimize retention efforts.
+The project successfully flags high-risk customers and uncovers major churn drivers.  
+**Recommendation:** Use XGBoost for predictive retention efforts. Combining analytics with actionable business strategies enables the company to reduce churn, save revenue, and focus resources efficiently.
 
 ---
 
 ## Contact
+
 - Email: [mithileshgungah@gmail.com](mailto:mithileshgungah@gmail.com)  
 - GitHub: [https://github.com/mithileshgungah](https://github.com/mithileshgungah)
