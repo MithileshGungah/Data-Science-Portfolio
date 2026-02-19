@@ -1,5 +1,9 @@
 # Customer Churn Prediction Engine
 
+<p align="center">
+  <img src="churn.jpg" alt="Customer Churn Analysis" width="400">
+</p>
+
 ## Project Objective
 Identify customers at risk of churn using the Telco dataset and provide actionable insights to reduce attrition and improve retention strategies.
 
