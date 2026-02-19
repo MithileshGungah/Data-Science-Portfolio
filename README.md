@@ -103,7 +103,7 @@ Key Focus Areas:
 
 ## Career Focus
 
-I am particularly interested in roles that combine machine learning, data engineering, and applied AI — building systems that move from experimentation to production.
+I am particularly interested in roles that combine machine learning, data engineering, and applied AI - building systems that move from experimentation to production.
 
 ---
 
