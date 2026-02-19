@@ -14,7 +14,6 @@ This portfolio showcases selected projects demonstrating:
 - End-to-end machine learning workflows
 - Exploratory data analysis and statistical modeling
 - Data pipeline development and automation
-- Applied deep learning techniques
 - Clear communication of technical insights
 
 Each project includes well-documented code, reproducible analysis, and practical business context.
