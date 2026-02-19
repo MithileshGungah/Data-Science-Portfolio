@@ -66,6 +66,6 @@ Each project follows: Problem → Data → Method → Modeling → Results → I
 
 ## Contact
 
-LinkedIn: [Your LinkedIn Profile](#)  
-GitHub: https://github.com/YOURUSERNAME  
-Email: your.email@example.com
+- LinkedIn: [Your LinkedIn Profile](#)  
+- GitHub: https://github.com/YOURUSERNAME  
+- Email: your.email@example.com
