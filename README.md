@@ -53,6 +53,17 @@ Each project follows: Problem → Data → Method → Modeling → Results → I
 
 ---
 
+## Tools & Skills
+
+**Programming & Scripting:** Python, SQL, R  
+**Machine Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch  
+**Data Engineering & Pipelines:** ETL, Airflow, Spark, Docker  
+**Visualization & Analysis:** Pandas, NumPy, Matplotlib, Seaborn, Plotly  
+**Version Control & Collaboration:** Git, GitHub  
+**Environment:** Linux, Jupyter Notebook, Cloud (AWS/GCP)
+
+---
+
 ## Contact
 
 LinkedIn: [Your LinkedIn Profile](#)  
