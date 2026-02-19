@@ -2,70 +2,80 @@
 
 ## Overview
 A telecom provider faced **26.5% customer churn**, with generic retention strategies failing to target high-risk users.  
-Using **XGBoost**, a predictive model was built to identify churners **before they leave**, enabling proactive, data-driven retention campaigns.
+We built a **predictive engine using XGBoost** to identify potential churners **before they leave**, enabling proactive, data-driven retention campaigns.  
 
 ---
 
-## Key Metrics
-
-| Metric          | Value      | Impact                                        |
-|-----------------|-----------|-----------------------------------------------|
-| Model Accuracy  | 74%       | High confidence in predictions               |
-| Churn Recall    | 69%       | Nearly 70% of potential churners flagged    |
-| Revenue Saved   | $1.2M/year| Targeted interventions reduce losses        |
-| Project Timeline| 1 week    | Fast deployment for immediate ROI           |
+## Problem
+Key challenges impacting churn included:  
+- **High Acquisition Cost:** Acquiring new customers costs 5× more than retaining existing ones.  
+- **Contract Vulnerability:** 70% of churners were on month-to-month plans and not prioritized.  
+- **Service Dissatisfaction:** Certain services (e.g., Fiber Internet) had higher churn, but root causes were unclear.  
+- **Data Imbalance:** Only ~26% of customers churned, requiring specialized handling in modeling.
 
 ---
 
-## Core Challenges
-- **High Acquisition Cost:** Retaining existing customers is 5x cheaper than acquiring new ones.  
-- **Contract Vulnerability:** Month-to-month customers (70% of churners) were not prioritized.  
-- **Service Dissatisfaction:** Key services had high churn, but underlying issues were unquantified.  
-- **Data Imbalance:** Only ~26% of customers churn, requiring specialized modeling.
+## Data
+- **Customer Base:** 7,043 unique subscribers  
+- **Features:** 21 behavioral and demographic features, including:  
+  - Tenure, contract type, payment method  
+  - Service usage indicators (Internet, Phone, Fiber)  
+  - Binary indicators (Yes/No) mapped to 0/1  
+- **Data Preparation:**  
+  - Missing values in `TotalCharges` handled  
+  - Exploratory data analysis confirmed class imbalance  
+  - Stratified train-test split to preserve churn distribution  
 
 ---
 
-## Approach & Solution
+## Approach & Methodology
 
-1. **Data Preparation**  
-   Aggregated 7,043 customer records, handled missing values, and performed exploratory analysis.
-
-2. **Feature Engineering**  
-   Engineered 21 behavioral & demographic features:  
+1. **Feature Engineering**  
    - Binary mapping for Yes/No variables  
-   - Normalization of "No Service" features  
-   - One-Hot Encoding for categorical fields (Contract, InternetService, PaymentMethod)
+   - Normalization of "No Internet/Phone Service" values  
+   - One-Hot Encoding for categorical features (Contract, InternetService, PaymentMethod)  
 
-3. **Model Development**  
-   XGBoost trained with class-weight balancing to prioritize detection of high-risk churners.
+2. **Model Development**  
+   - **Algorithm:** XGBoost Gradient Boosted Trees  
+   - **Class Imbalance Handling:** Weighted training using `scale_pos_weight` to prioritize churners  
+   - **Validation:** 80/20 stratified split, optimized F1-score  
 
-4. **Validation & Insights**  
-   80/20 stratified split, optimized F1-score, and extracted **feature importance** for actionable retention strategies.
+3. **Insights Extraction**  
+   - Feature importance calculated to highlight **top drivers of churn**  
 
 ---
 
 ## Most Influential Features Driving Churn
-- **Contract Type:** Month-to-month contracts are high risk  
-- **Tenure:** Short-term subscribers more likely to churn  
-- **Service Usage:** Fiber customers showed higher churn rates  
-- **Payment Method:** Automatic vs. manual payment patterns  
+- **Contract Type:** Month-to-month contracts are highest risk  
+- **Tenure:** Shorter-term subscribers more likely to churn  
+- **Service Usage:** Fiber Internet users show higher churn probability  
+- **Payment Method:** Patterns between automatic vs. manual payments influence churn  
+
+---
+
+## Model Performance & Key Metrics
+
+| Metric          | Value      | Business Impact                               |
+|-----------------|-----------|-----------------------------------------------|
+| Model Accuracy  | 74%       | High confidence in churn predictions          |
+| Churn Recall    | 69%       | Flags nearly 7 out of 10 potential churners  |
+| Revenue Saved   | $1.2M/year| Targeted interventions prevent losses         |
+| Project Timeline| 1 week    | Fast deployment for immediate ROI             |
 
 ---
 
 ## Business Impact
-- **Targeted Retention Campaigns:** Personalized offers to high-risk users  
-- **Revenue Preservation:** ~$1.2M annual savings  
-- **Operational Efficiency:** Reduced waste on low-risk customers  
-- **Marketing ROI:** Better focus, fewer blanket discounts  
+- **Targeted Retention Campaigns:** Personalized offers for high-risk customers  
+- **Revenue Preservation:** ~$1.2M annual savings by preventing churn  
+- **Operational Efficiency:** Reduces wasted efforts on low-risk customers  
+- **Marketing ROI:** Focused campaigns, fewer blanket discounts  
+- **Data-Driven Strategy:** Clear understanding of churn drivers informs future retention initiatives  
 
 ---
 
 ## Tech Stack
-- Python 3.9  
-- XGBoost  
-- Pandas / NumPy  
-- Scikit-Learn  
-- Seaborn / Matplotlib  
+- **Programming:** Python 3.9  
+- **Libraries:** XGBoost, Pandas, NumPy, Scikit-Learn, Seaborn, Matplotlib  
 
 ---
 
