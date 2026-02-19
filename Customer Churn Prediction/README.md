@@ -39,7 +39,8 @@ Identify customers at risk of churn using the Telco dataset and provide actionab
 **Observations:**  
 - Categorical variables require encoding.  
 - `customerID` is unique and non-predictive.  
-- Missing values in `TotalCharges` addressed via conversion and imputation.
+- Missing values in `TotalCharges` addressed via conversion and imputation.  
+- **Class Imbalance:** Only ~26.5% of customers churn → dataset is imbalanced, which requires careful evaluation using precision, recall, and F1-score metrics.
 
 ---
 
@@ -51,7 +52,7 @@ Identify customers at risk of churn using the Telco dataset and provide actionab
    - Multi-class: One-Hot Encoding (Contract, InternetService, PaymentMethod)  
 3. Dropped non-predictive `customerID`.  
 4. Split dataset into train (80%) and test (20%).  
-5. Optional considerations: scaling numeric features (not required for XGBoost), handling class imbalance (SMOTE/class weighting).
+5. Optional considerations: scaling numeric features (not required for XGBoost), handling class imbalance (**SMOTE or class weighting could improve churn detection**).
 
 ---
 
