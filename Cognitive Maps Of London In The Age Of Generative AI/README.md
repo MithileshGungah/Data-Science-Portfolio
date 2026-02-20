@@ -172,6 +172,7 @@ Visibility = (TP + FP) / (TP + FP + FN + TN)
 **Interpretation**  
 High visibility reflects salience or over-prediction, not necessarily accurate understanding.
 
+
 > The distinction between recognisability and visibility reveals boroughs that dominate AI attention despite weak true understanding.
 
 ### Structural Analysis
