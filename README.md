@@ -55,9 +55,9 @@ Each project follows: Problem → Data → Method → Modeling → Results → I
 
 ## Tools & Skills
 
-**Programming & Scripting:** Python, SQL 
-**Machine Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch  
-**Data Engineering & Pipelines:** ETL, Spark 
+**Programming & Scripting:** Python, SQL
+**Machine Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch 
+**Data Engineering & Pipelines:** ETL, Spark
 **Visualization & Analysis:** Pandas, NumPy, Matplotlib, Seaborn, Plotly  
 **Version Control & Collaboration:** Git, GitHub  
 **Environment:** Jupyter Notebook, Cloud (AWS/GCP)
