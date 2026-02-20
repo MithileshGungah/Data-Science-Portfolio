@@ -1,6 +1,6 @@
 # Mithilesh Gungah
 
-## About This Portfolio
+## Data Science Portfolio
 
 Projects demonstrate my ability to:
 
