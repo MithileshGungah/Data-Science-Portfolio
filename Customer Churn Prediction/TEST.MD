@@ -204,6 +204,11 @@ Deploy **XGBoost** to maximize churn detection and support proactive, cost-effec
 
 ---
 
+## View Code
+
+[![View Code](https://img.shields.io/badge/View%20Code-000000?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
+
+---
 ## Contact
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
