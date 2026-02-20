@@ -9,7 +9,8 @@
 
 ## 1. Problem Statement
 
-Customer churn represents a **direct revenue risk** for subscription-based businesses.  
+Customer churn represents a **direct revenue risk** for subscription-based businesses.
+
 This project focuses on identifying **customers most likely to churn** early enough to enable targeted, cost-effective retention strategies.
 
 ### Business Context
