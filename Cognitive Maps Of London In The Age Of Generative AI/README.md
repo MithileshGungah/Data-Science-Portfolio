@@ -2,7 +2,7 @@
 <h3 align="center">Auditing how multimodal LLMs represent urban space through borough recognition, spatial bias, and cognitive map reconstruction</h3>
 
 <p align="center">
-  <img src="../images/LLM_Boroughs.png" alt="LLM Borough Recognition Map" width="700">
+  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition Map" width="700">
 </p>
 
 ---
@@ -98,7 +98,7 @@ The audit shows that multimodal LLMs construct uneven cognitive maps of London:
 - Partial human alignment: some human-like centrality patterns appear, but error flows indicate digitally induced distortion
 
 <p align="center">
-  <img src="../images/poster.jpg" alt="Results Summary Poster" width="700">
+  <img src="poster.jpg" alt="Results Summary Poster" width="700">
 </p>
 
 ---
