@@ -2,7 +2,7 @@
 <h3 align="center">Auditing how multimodal LLMs represent urban space through borough recognition, spatial bias, and cognitive map reconstruction</h3>
 
 <p align="center">
-  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition Map" width="700">
+  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition Map" width="300">
 </p>
 
 ---
