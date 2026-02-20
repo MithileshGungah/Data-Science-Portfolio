@@ -4,7 +4,7 @@ From Milgram to Machine: Auditing how multimodal LLMs construct, distort, and pr
 </h3>
 
 <p align="center">
-  <img src="../images/LLM_Boroughs.png" alt="LLM Borough Recognition and Visibility" width="750">
+  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition and Visibility" width="750">
 </p>
 
 ---
@@ -139,7 +139,7 @@ Beyond scalar metrics, system-level structure was analysed using:
 ## 5. Results & Key Findings
 
 <p align="center">
-  <img src="../images/poster.jpg" alt="Poster Summary of Results" width="750">
+  <img src="poster.jpg" alt="Poster Summary of Results" width="750">
 </p>
 
 ### Overall Performance
