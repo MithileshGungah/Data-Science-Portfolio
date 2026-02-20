@@ -80,6 +80,27 @@ To situate model behaviour in real urban structure:
 
 This project adapts **Stanley Milgram’s urban recognisability experiments** to a multimodal AI setting.
 
+### Background: Stanley Milgram’s Urban Recognisability Experiment
+
+In the 1970s, social psychologist **Stanley Milgram** investigated how people form mental representations of cities.  
+Rather than asking participants to draw maps, Milgram measured **urban recognisability** by testing whether individuals could identify locations from limited perceptual cues.
+
+Participants were shown:
+- partial visual scenes, or
+- short descriptive cues,
+
+and were asked to guess **which part of the city** they were observing.
+
+Milgram’s core insight was that cities are remembered **unevenly**:
+- central, symbolic, and culturally salient areas are over-recognised
+- peripheral and residential districts are systematically overlooked
+
+These asymmetries revealed what Milgram described as **cognitive maps** — internal representations shaped not by geographic accuracy, but by **salience, symbolism, and social exposure**.
+
+Later work by Quercia et al. demonstrated that recognisability correlates strongly with **centrality, affluence, and digital visibility**, reinforcing the idea that urban perception is socially constructed rather than spatially neutral.
+
+This project adapts Milgram’s recognisability logic to **multimodal Large Language Models**, treating model predictions as behavioural signals from which AI-generated cognitive maps can be reconstructed.
+
 ### Experimental Design
 
 Two complementary recognition tasks were used:
