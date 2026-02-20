@@ -14,7 +14,7 @@ Each project demonstrates my ability to:
 
 Every project follows a structured approach:  
 
-**Problem → Data → Method → Modeling → Results → Impact**
+**Problem → Data → Method → Modeling → Results → Impact → Future work**
 
 > “I transform raw data into insights that inform strategy, optimize processes, and solve real-world problems.”
 
