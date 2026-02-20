@@ -1,5 +1,5 @@
 # Customer Churn Prediction Engine
-*A business-aligned machine learning system for proactive customer retention*
+A business-aligned machine learning system for proactive customer retention
 
 <p align="center">
   <img src="churn.jpg" alt="Customer Churn Analysis" width="420">
@@ -170,14 +170,9 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 While the current solution delivers strong business value, several extensions could further improve performance and production readiness:
 
-### Cost-Sensitive Optimization
-- Introduce custom loss functions to penalize missed churners
-- Optimize probability thresholds based on retention ROI
-
 ### Advanced Feature Engineering
 - Interaction features (e.g., tenure × contract type)
 - Temporal behavior if historical data becomes available
-- Customer Lifetime Value (CLV)–weighted predictions
 
 ### Model Enhancements
 - Bayesian hyperparameter optimization
@@ -199,7 +194,7 @@ While the current solution delivers strong business value, several extensions co
 ## Conclusion
 
 This project demonstrates a **full, business-aligned churn prediction pipeline**, combining:
-- Rigorous EDA
+- Explanatory Data Analysis
 - Feature engineering
 - Model benchmarking
 - Metric-driven decision-making
