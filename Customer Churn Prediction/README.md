@@ -1,6 +1,5 @@
-# Customer Churn Prediction Engine
-
-A business-aligned machine learning system for proactive customer retention
+<h1 align="center">Customer Churn Prediction Engine</h1>
+<h3 align="center">A business-aligned machine learning system for proactive customer retention</h3>
 
 <p align="center">
   <img src="churn_rate.png" alt="Customer Churn Rate" width="500">
