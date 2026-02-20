@@ -71,7 +71,7 @@ Every project follows a structured approach:
 `Git`, `GitHub`
 
 ### Tools & Environments
-`Jupyter Notebook`, `AWS`, `GCP`
+`Jupyter Notebook`, `Azure`, `AWS`, `GCP`
 
 ---
 
