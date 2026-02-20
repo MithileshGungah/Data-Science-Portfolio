@@ -3,7 +3,7 @@
 A business-aligned machine learning system for proactive customer retention
 
 <p align="center">
-  <img src="churn_rate.png" alt="Customer Churn Rate" width="700">
+  <img src="churn_rate.png" alt="Customer Churn Rate" width="500">
 </p>
 
 ---
