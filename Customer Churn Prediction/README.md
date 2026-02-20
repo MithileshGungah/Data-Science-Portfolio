@@ -168,7 +168,7 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 ---
 
-## Future Work & Enhancements
+## 7. Future Work & Enhancements
 
 While the current solution delivers strong business value, several extensions could further improve performance and production readiness:
 
