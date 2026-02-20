@@ -4,7 +4,7 @@ From Milgram to Machine: Auditing how multimodal LLMs construct, distort, and pr
 </h3>
 
 <p align="center">
-  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition and Visibility" width="500">
+  <img src="LLM_Boroughs.png" alt="LLM Borough Recognition and Visibility" width="500" height="400">
 </p>
 
 ---
