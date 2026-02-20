@@ -215,5 +215,5 @@ This project demonstrates a **complete, benchmark-driven churn modeling pipeline
 
 ## Contact
 
-- Email: [mithileshgungah@gmail.com](mailto:mithileshgungah@gmail.com)  
-- GitHub: [https://github.com/mithileshgungah](https://github.com/mithileshgungah)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
