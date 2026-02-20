@@ -70,7 +70,7 @@ A structured, production-style workflow was followed:
 - Encoded categorical variables:
   - Binary features → 0/1
   - Multi-class features → One-Hot Encoding
-- Train–test split: **80% / 20%**
+- Train-test split: **80% / 20%**
 
 ### Feature Engineering
 - Constructed full dummy-variable matrix
@@ -154,7 +154,7 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 - Target high-risk customers flagged by the model
 - Incentivize contract upgrades for month-to-month users
 - Bundle support services for fiber customers
-- Monitor recall–precision trade-offs against retention ROI
+- Monitor recall-precision trade-offs against retention ROI
 - Retrain the model periodically with new customer data
 
 ---
@@ -194,7 +194,7 @@ While the current solution delivers strong business value, several extensions co
 ## Conclusion
 
 This project demonstrates a **full, business-aligned churn prediction pipeline**, combining:
-- Explanatory Data Analysis
+- Explanatory data analysis
 - Feature engineering
 - Model benchmarking
 - Metric-driven decision-making
