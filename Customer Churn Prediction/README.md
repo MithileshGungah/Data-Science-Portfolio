@@ -161,13 +161,6 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 ---
 
-## Technology Stack
-
-- **Language:** Python 3.9  
-- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
-
----
-
 ## 7. Future Work & Enhancements
 
 While the current solution delivers strong business value, several extensions could further improve performance and production readiness:
@@ -203,6 +196,13 @@ This project demonstrates a **full, business-aligned churn prediction pipeline**
 
 **Final Recommendation:**  
 Deploy **XGBoost** to maximize churn detection and support proactive, cost-effective retention strategies.
+
+---
+
+## Technology Stack
+
+- **Language:** Python 3.12  
+- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
 ---
 
