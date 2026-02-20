@@ -1,7 +1,8 @@
 # Customer Churn Prediction Engine
 
 <p align="center">
-  <img src="churn.jpg" alt="Customer Churn Analysis" width="400">
+  <img src="churn.jpg" alt="Customer Churn Analysis" width="400"><br>
+  <img src="churn_rate.png" alt="Customer Churn Rate" width="400">
 </p>
 
 ---
