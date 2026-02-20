@@ -12,7 +12,7 @@ From Milgram to Machine: Auditing how multimodal LLMs construct, distort, and pr
 ## 1. Problem Statement
 
 Cities are not perceived uniformly.  
-Decades of urban psychology research show that **central and symbolic areas dominate mental maps**, while peripheral districts fade from memory.
+Decades of urban psychology research show that **central and symbolically salient areas dominate mental maps**, while peripheral districts fade from memory.
 
 As Large Language Models increasingly mediate **mapping, navigation, travel, and urban decision-making**, a critical question emerges:
 
@@ -22,9 +22,9 @@ This project investigates whether multimodal LLMs replicate, amplify, or reshape
 
 ### Business & Societal Context
 
-- LLMs are embedded in **location-based services**, recommendation engines, and urban analytics
-- Uneven digital representation risks **reinforcing spatial inequality**
-- Borough-level misrepresentation can directly affect:
+- LLMs are embedded in **location-based services**, recommendation engines, and urban analytics  
+- Uneven digital representation risks **reinforcing spatial inequality at scale**  
+- Borough-level misrepresentation can affect:
   - travel and navigation recommendations
   - cultural and commercial visibility
   - urban planning and smart-city tools
@@ -45,7 +45,7 @@ Develop a **replicable spatial auditing framework** that:
 
 ### Urban Coverage
 
-- **Geography:** All 33 boroughs of Greater London
+- **Geography:** All 33 boroughs of Greater London  
 - **Spatial unit:** Boroughs (authoritative, recognisable, policy-relevant)
 
 ### Multimodal Inputs
@@ -97,13 +97,13 @@ Participants were shown:
 
 and asked to guess **which part of the city** they were observing.
 
-Milgram’s key insight was that cities are remembered **unevenly**:
+Milgram’s central insight was that cities are remembered **unevenly**:
 - central, symbolic, and culturally salient areas are over-recognised
 - peripheral and residential districts are systematically overlooked
 
 These asymmetries revealed what Milgram termed **cognitive maps** — internal representations shaped by **salience, symbolism, and exposure**, rather than geographic accuracy.
 
-Later work by Quercia et al. showed that recognisability correlates strongly with **centrality, affluence, and digital visibility**, reinforcing the idea that urban perception is socially constructed.
+Later work by Quercia et al. demonstrated that recognisability correlates strongly with **centrality, affluence, and digital visibility**, reinforcing the idea that urban perception is socially constructed.
 
 This project adapts Milgram’s recognisability logic to **multimodal Large Language Models**, treating model predictions as behavioural signals from which AI-generated cognitive maps can be reconstructed.
 
@@ -131,23 +131,31 @@ Because LLMs do not expose explicit spatial representations, **urban cognition i
 
 ### Core Indices
 
-Two complementary metrics were engineered.
+### Recognisability
 
-**Recognisability**  
-Measures how often a borough is correctly identified:
+**What it measures**  
+How often a borough is correctly identified.
 
-**Recognisability = TP / (TP + FN)**
+**Definition**  
+Recognisability = TP / (TP + FN)
 
-High values indicate **distinctive, well-encoded places**.
+**Interpretation**  
+Higher values indicate boroughs that are distinctive and well-encoded in the model’s internal representation.
 
-**Visibility**  
-Measures how often a borough is predicted overall:
+---
 
-**Visibility = (TP + FP) / (TP + FP + FN + TN)**
+### Visibility
 
-High visibility can indicate **salience or over-prediction**, not accuracy.
+**What it measures**  
+How often a borough is predicted overall, regardless of correctness.
 
-> This distinction reveals boroughs that dominate AI attention despite weak understanding.
+**Definition**  
+Visibility = (TP + FP) / (TP + FP + FN + TN)
+
+**Interpretation**  
+High visibility reflects salience or over-prediction, not necessarily accurate understanding.
+
+> The distinction between recognisability and visibility reveals boroughs that dominate AI attention despite weak true understanding.
 
 ### Structural Analysis
 
