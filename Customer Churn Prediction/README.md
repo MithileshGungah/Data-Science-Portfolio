@@ -194,6 +194,8 @@ This project demonstrates a **full, business-aligned churn prediction pipeline**
 - Model benchmarking
 - Metric-driven decision-making
 
+By prioritizing recall over raw accuracy, the final solution aligns model performance with business impact.
+
 **Final Recommendation:**  
 Deploy **XGBoost** to maximize churn detection and support proactive, cost-effective retention strategies.
 
@@ -201,7 +203,7 @@ Deploy **XGBoost** to maximize churn detection and support proactive, cost-effec
 
 ## Technology Stack
 
-- **Language:** Python 3.12  
+- **Language:** Python 3.12
 - **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
 ---
