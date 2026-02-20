@@ -1,27 +1,29 @@
 # Cognitive Maps of London in the Age of Generative AI  
-## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space
+## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space  
 
-### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models
+### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models  
 
 ---
 
 ## Executive Summary (For Recruiters)
 
 **What this project is**  
-A research-driven audit of how multimodal Large Language Models internally represent cities, using London as a controlled case study.
+A research-driven audit of how multimodal Large Language Models (LLMs) internally represent cities, using London as a controlled case study.
 
 **Why it matters**  
-LLMs increasingly power mapping, navigation, travel, and urban analytics. If their internal “mental maps” are biased, they can systematically amplify central areas while rendering peripheral communities digitally invisible—reinforcing spatial inequality at scale.
+**LLMs are becoming spatial gatekeepers.**  
+They increasingly power mapping, navigation, travel, and urban analytics. If their internal “mental maps” are biased, they can systematically amplify central areas while rendering peripheral communities digitally invisible—reinforcing spatial inequality at scale.
 
 **What I built**
-- Adapted Stanley Milgram’s urban recognisability experiments to multimodal LLMs  
+- Adapted **Stanley Milgram’s human urban recognisability experiments** to multimodal LLMs  
 - Designed a spatial auditing framework using **recognisability** and **visibility** metrics  
 - Evaluated borough-level recognition across **image and text modalities**  
-- Applied **NLP-based thematic analysis** to explain *why* certain places are more recognisable  
-- Reconstructed AI-generated cognitive maps and benchmarked them against human patterns  
+- Applied **NLP-based thematic analysis** to explain *why* certain places are recognised  
+- Reconstructed AI-generated cognitive maps and **benchmarked them against human studies**
 
 **Key findings**
-- **Both image-based and text-based models independently over-recognise central London boroughs**  
+- **Both image-based and text-based models independently over-recognise central London boroughs**, mirroring classic human cognitive maps  
+- **AI-generated cognitive maps amplify human centrality bias**, producing sharper central dominance and deeper peripheral suppression than observed in human studies  
 - Peripheral boroughs are frequently misclassified or completely invisible  
 - Image-based and text-based reasoning produce structurally different spatial maps  
 - NLP analysis shows text recognition is driven by themes such as culture, transport, and “vibe,” not physical form alone  
@@ -35,9 +37,7 @@ LLMs increasingly power mapping, navigation, travel, and urban analytics. If the
 
 ---
 
-<p align="center">
-  <img src="LLM_Boroughs.png" alt="LLM borough recognisability and visibility across image and text modalities" width="700">
-</p>
+![LLM borough recognisability and visibility across image and text modalities](LLM_Boroughs.png)
 
 ---
 
@@ -48,9 +48,9 @@ Urban psychology research shows that **central and symbolically salient areas do
 
 As Large Language Models increasingly mediate **mapping, navigation, travel, and urban decision-making**, a critical question emerges:
 
-> **How do AI systems “see” cities—and whose places become visible or invisible as a result?**
+> **How do AI systems “see” cities — and whose places become visible or invisible as a result?**
 
-This project investigates whether multimodal LLMs replicate, amplify, or reshape human spatial biases when recognising and describing urban space.
+This project investigates whether multimodal LLMs **replicate, amplify, or distort** known human spatial biases.
 
 ### Business & Societal Context
 - LLMs are embedded in location-based services, recommendation engines, and urban analytics  
@@ -66,11 +66,32 @@ Develop a **replicable spatial auditing framework** that:
 - Measures how LLMs recognise urban areas across image and text  
 - Identifies central amplification, peripheral suppression, and attractor effects  
 - Reconstructs model-generated cognitive maps  
-- Benchmarks AI spatial perception against known human recognisability patterns  
+- Benchmarks AI spatial perception against established human recognisability patterns  
 
 ---
 
-## 2. Data Overview
+## 2. Human Baseline: Urban Cognitive Maps
+
+### Stanley Milgram’s Urban Recognisability Experiment
+
+In the 1970s, social psychologist **Stanley Milgram** studied how people form mental representations of cities.
+
+Rather than asking participants to draw maps, he tested whether individuals could identify locations from:
+- partial visual scenes  
+- short descriptive cues  
+
+Key findings from human studies:
+- central and symbolic areas are consistently over-recognised  
+- peripheral and residential districts are systematically overlooked  
+- recognisability correlates with **centrality, affluence, and exposure**
+
+These asymmetries form **cognitive maps**—representations shaped by salience and social visibility rather than geographic accuracy.
+
+This project applies the same logic to **multimodal LLMs**, enabling direct comparison between **human and AI urban cognition**.
+
+---
+
+## 3. Data Overview
 
 ### Urban Coverage
 - **Geography:** All 33 boroughs of Greater London  
@@ -100,7 +121,6 @@ Develop a **replicable spatial auditing framework** that:
 | Total model predictions | 990 |
 
 ### External Contextual Data
-To situate model behaviour in real urban structure:
 - Index of Multiple Deprivation (IMD 2019)  
 - UK Census data (2021)  
 - Population density  
@@ -109,173 +129,104 @@ To situate model behaviour in real urban structure:
 
 ---
 
-## 3. Methodology
+## 4. Experimental Design
 
-This project adapts **Stanley Milgram’s urban recognisability experiments** to a multimodal AI setting.
+Two complementary recognition tasks were used.
 
-### Background: Milgram’s Urban Recognisability Experiment
-
-In the 1970s, social psychologist Stanley Milgram studied how people form mental representations of cities.  
-Rather than asking participants to draw maps, he measured **recognisability** by testing whether people could identify locations from limited perceptual cues.
-
-Participants were shown:
-- partial visual scenes, or  
-- short descriptive cues  
-
-and asked to guess which part of the city they were observing.
-
-Milgram’s insight was that cities are remembered unevenly:
-- central and symbolic areas are over-recognised  
-- peripheral and residential districts are systematically overlooked  
-
-These asymmetries form **cognitive maps**—internal representations shaped by salience and exposure rather than geographic accuracy.
-
-This project applies the same logic to multimodal LLMs, treating model predictions as behavioural signals from which AI-generated cognitive maps can be reconstructed.
-
-### Experimental Design
-
-Two complementary recognition tasks were used:
-
-**Image-Based Recognition**
-- Input: Street-level images  
-- Task: Identify the London borough  
+### Image-Based Recognition
+- Input: Street-level image  
+- Task: Predict London borough  
 - Output: Borough prediction plus justification  
 
-**Text-Based Recognition**
+### Text-Based Recognition
 - Input: Borough-specific sensory description  
-- Task: Identify which borough is being described  
+- Task: Predict London borough  
 - Output: Single borough prediction  
 
-Both tasks produce confusion matrices that function as cognitive maps, revealing how the model structures urban familiarity.
+Both tasks generate **confusion matrices** that function as AI cognitive maps.
 
 ---
 
-## 4. Auditing & Evaluation Framework
+## 5. Auditing & Evaluation Framework
 
 Because LLMs do not expose explicit spatial representations, **urban cognition is inferred indirectly** through prediction structure.
 
 ### Core Metrics
 
-### Recognisability
-**What it measures**  
-How often a borough is correctly identified.
+**Recognisability**  
+- Definition: `TP / (TP + FN)`  
+- Measures how often a borough is correctly identified  
 
-**Definition**  
-Recognisability = TP / (TP + FN)
+**Visibility**  
+- Definition: `(TP + FP) / (TP + FP + FN + TN)`  
+- Measures how often a borough is predicted overall  
 
-**Interpretation**  
-High values indicate boroughs that are distinctive and well-encoded in the model’s internal representation.
-
----
-
-### Visibility
-**What it measures**  
-How often a borough is predicted overall, regardless of correctness.
-
-**Definition**  
-Visibility = (TP + FP) / (TP + FP + FN + TN)
-
-**Interpretation**  
-High visibility reflects salience or over-prediction, not necessarily accurate understanding.
-
-> The distinction between recognisability and visibility reveals boroughs that dominate AI attention despite weak true understanding.
+> Comparing recognisability and visibility reveals boroughs that dominate AI attention despite weak understanding.
 
 ### Structural Analysis
 - Confusion matrices (borough and regional levels)  
 - Principal Component Analysis (PCA)  
-- Co-confusion clustering for attractor detection  
-- Spearman rank correlation for alignment testing  
-- Frobenius norm for cross-modality divergence  
+- Co-confusion clustering (attractor detection)  
+- Spearman rank correlation (human–AI alignment)  
+- Frobenius norm (cross-modality divergence)  
 
 ---
 
-## 5. NLP & Thematic Analysis
+## 6. NLP & Thematic Analysis
 
-To understand *why* text-based recognition differs from image-based reasoning, NLP techniques were applied to analyse semantic structure.
+To understand *why* text-based recognition differs from image-based reasoning, NLP techniques were applied.
 
 ### Approach
 - Borough descriptions embedded using Sentence Transformers  
 - Latent themes extracted using BERTopic  
-- Theme prevalence compared against recognisability and visibility scores  
+- Theme prevalence compared against recognisability and visibility  
 
-### Key Themes Identified
+### Key Themes
 - Culture and nightlife  
 - Transport and connectivity  
 - Food and commerce  
 - Regeneration and development  
 - Atmosphere and “vibe”  
 
-### Key Observations
-- Text-based recognition is driven by **experiential and symbolic themes**, not physical geometry  
-- The theme **“vibe”** shows the strongest positive correlation with recognisability  
-- This explains why text-based accuracy substantially outperforms image-based accuracy  
+**Key insight:**  
+Text-based recognition is driven by **experiential and symbolic themes**, explaining its stronger alignment with human urban perception.
 
 ---
 
-## 6. Results & Key Findings
+## 7. Results & Key Findings
 
-<p align="center">
-  <img src="poster.jpg" alt="Summary of results: central amplification, peripheral suppression, and modality divergence" width="800">
-</p>
+![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
 ### Overall Performance
-- Image-based accuracy: **15.4%** (well above chance for 33 classes)  
-- Text-based accuracy: **39.0%**  
-- Both modalities are uneven, but text performs substantially better  
+- Image-based accuracy: **15.4%** (above chance for 33 classes)  
+- Text-based accuracy: **39.0%**
 
-### Central Amplification
-- **Across both image and text modalities**, core boroughs (e.g. Westminster, Camden, City of London) dominate recognisability  
-- Central areas achieve near-perfect text recognition  
+### Human–AI Comparison
+- Both modalities reproduce classic **human centrality bias**  
+- AI **amplifies** this bias, producing sharper central dominance and deeper peripheral suppression  
 
-### Peripheral Suppression
-- Outer and southern boroughs are frequently misclassified or invisible  
-- Some boroughs receive zero correct predictions across both modalities  
+### Structural Findings
+- Central amplification across both modalities  
+- Peripheral suppression and invisibility  
+- Attractor boroughs absorbing misclassifications  
+- Fragmented multimodal representations  
 
-### Attractor Effects
-- Certain boroughs act as default fallbacks, absorbing misclassifications under uncertainty  
-
-### Cross-Modality Fragmentation
-- Image and text cognitive maps diverge structurally  
-- Images cluster around suburban form  
-- Text clusters around symbolic centrality  
-
-*Taken together, both modalities independently prioritise central boroughs, but do so using different signals—physical form in images and linguistic salience in text.*
-
-### Urban Inequality Signal
-- Recognition aligns with affluence, connectivity, and digital visibility  
-- NLP themes associated with cultural exposure dominate AI attention  
+*AI does not merely copy human cognitive maps — it reshapes and exaggerates them.*
 
 ---
 
-## 7. Business Impact & Implications
+## 8. Business Impact & Implications
 
-LLMs are becoming **spatial gatekeepers**.
-
-When their internal geographies are uneven:
+When LLMs act as spatial gatekeepers:
 - some places become hyper-visible  
 - others risk digital erasure  
-- existing inequalities can be reinforced at scale  
-
-### Practical Implications
-- Mapping and navigation systems may privilege central narratives  
-- Peripheral communities risk exclusion from AI-mediated discovery  
-- Urban analytics built on LLMs require explicit fairness auditing  
+- inequalities scale automatically  
 
 ### Recommended Actions
-- Introduce spatial bias audits for geographic AI systems  
+- Introduce spatial bias audits for geographic AI  
 - Monitor recognisability and visibility, not accuracy alone  
-- Balance digital exposure in retrieval and evaluation pipelines  
-- Track representational drift as models evolve  
-
----
-
-## 8. Future Work
-
-- Multi-city replication (e.g. New York, Paris, Tokyo)  
-- Finer spatial granularity (wards and neighbourhoods)  
-- Cross-architecture benchmarking, including open-source models  
-- Longitudinal monitoring across model versions  
-- Direct human–AI cognitive alignment experiments  
+- Balance geographic exposure in evaluation pipelines  
+- Track representational drift over time  
 
 ---
 
