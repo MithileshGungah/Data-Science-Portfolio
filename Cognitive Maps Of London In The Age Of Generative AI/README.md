@@ -1,91 +1,88 @@
 # Cognitive Maps of London in the Age of Generative AI  
-## How Do Multimodal LLMs “See” Cities — and Whose Places Become Visible?
+## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space
 
-### Auditing Spatial Bias, Centrality, and Urban Representation in Large Language Models
+### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models
 
 ---
 
 ## Executive Summary (For Recruiters)
 
 **What this project is**  
-A research-driven audit of how multimodal Large Language Models internally represent urban space, using London as a controlled case study.
+A research-driven audit of how multimodal Large Language Models internally represent cities, using London as a controlled case study.
 
 **Why it matters**  
-LLMs increasingly power mapping, navigation, travel, and urban analytics. If their internal representations of cities are biased, they can amplify central areas while rendering peripheral communities digitally invisible — reinforcing spatial inequality at scale.
+LLMs increasingly power mapping, navigation, travel, and urban analytics. If their internal “mental maps” are biased, they can systematically amplify central areas while rendering peripheral communities digitally invisible—reinforcing spatial inequality at scale.
 
-**What I did**
-- Adapted Stanley Milgram’s urban recognisability experiments to multimodal LLMs
-- Designed a spatial auditing framework using recognisability and visibility metrics
-- Evaluated borough-level recognition across image and text modalities
-- Reconstructed AI-generated cognitive maps from model predictions
-- Benchmarked AI spatial perception against known human patterns
+**What I built**
+- Adapted Stanley Milgram’s urban recognisability experiments to multimodal LLMs  
+- Designed a spatial auditing framework using **recognisability** and **visibility** metrics  
+- Evaluated borough-level recognition across **image and text modalities**  
+- Applied **NLP-based thematic analysis** to explain *why* certain places are more recognisable  
+- Reconstructed AI-generated cognitive maps and benchmarked them against human patterns  
 
 **Key findings**
-- Central London boroughs are systematically over-recognised
-- Peripheral boroughs are frequently misclassified or invisible
-- Image and text modalities produce structurally different spatial maps
-- Model perception aligns more with digital visibility and affluence than geography alone
+- Central London boroughs are consistently over-recognised  
+- Peripheral boroughs are frequently misclassified or completely invisible  
+- Image-based and text-based reasoning produce structurally different spatial maps  
+- NLP analysis shows text recognition is driven by themes such as culture, transport, and “vibe,” not physical form alone  
 
 **Skills demonstrated**
-- Research-grade problem framing
-- Multimodal ML evaluation beyond accuracy
-- Bias and fairness auditing
-- Statistical analysis and metric design
-- Python, NLP, and data analysis pipelines
+- Multimodal ML evaluation beyond accuracy  
+- NLP (embeddings, topic modeling, semantic analysis)  
+- Bias and fairness auditing  
+- Metric design and statistical analysis  
+- Python-based data and evaluation pipelines  
 
 ---
 
 ## 1. Problem Statement
 
 Cities are not perceived uniformly.  
-Decades of urban psychology research show that **central and symbolically salient areas dominate mental maps**, while peripheral districts fade from memory.
+Urban psychology research shows that **central and symbolically salient areas dominate mental maps**, while peripheral districts fade from memory.
 
 As Large Language Models increasingly mediate **mapping, navigation, travel, and urban decision-making**, a critical question emerges:
 
-> **How do AI systems “see” cities — and whose places become visible or invisible as a result?**
+> **How do AI systems “see” cities—and whose places become visible or invisible as a result?**
 
 This project investigates whether multimodal LLMs replicate, amplify, or reshape human spatial biases when recognising and describing urban space.
 
 ### Business & Societal Context
-
-- LLMs are embedded in location-based services, recommendation engines, and urban analytics
-- Uneven digital representation risks reinforcing spatial inequality
+- LLMs are embedded in location-based services, recommendation engines, and urban analytics  
+- Uneven digital representation risks reinforcing spatial inequality  
 - Borough-level misrepresentation can affect:
-  - travel and navigation recommendations
-  - cultural and commercial visibility
-  - urban planning and smart-city tools
-  - fairness in geographic AI systems
+  - travel and navigation recommendations  
+  - cultural and commercial visibility  
+  - urban planning and smart-city tools  
+  - fairness in geographic AI systems  
 
 ### Research Objective
-
 Develop a **replicable spatial auditing framework** that:
-- Measures how LLMs recognise urban areas across image and text
-- Identifies central amplification, peripheral suppression, and attractor effects
-- Reconstructs model-generated cognitive maps
-- Benchmarks AI spatial perception against known human recognisability patterns
+- Measures how LLMs recognise urban areas across image and text  
+- Identifies central amplification, peripheral suppression, and attractor effects  
+- Reconstructs model-generated cognitive maps  
+- Benchmarks AI spatial perception against known human recognisability patterns  
 
 ---
 
 ## 2. Data Overview
 
 ### Urban Coverage
-
 - **Geography:** All 33 boroughs of Greater London  
 - **Spatial unit:** Boroughs (authoritative, recognisable, policy-relevant)
 
 ### Multimodal Inputs
 
 **Image-based**
-- 495 Google Street View images
-- 15 images per borough
-- Random sampling within borough boundaries
-- Landmarks and transport hubs excluded to avoid trivial cues
+- 495 Google Street View images  
+- 15 images per borough  
+- Random sampling within borough boundaries  
+- Landmarks and transport hubs excluded to avoid trivial cues  
 
 **Text-based**
-- 495 borough-specific sensory descriptions
-- Generated by the model itself
-- Borough names withheld during inference
-- Focus on atmosphere, architecture, people, and movement
+- 495 borough-specific sensory descriptions  
+- Generated by the model itself  
+- Borough names withheld during inference  
+- Focus on atmosphere, architecture, people, and movement  
 
 ### Dataset Summary
 
@@ -97,13 +94,12 @@ Develop a **replicable spatial auditing framework** that:
 | Total model predictions | 990 |
 
 ### External Contextual Data
-
 To situate model behaviour in real urban structure:
-- Index of Multiple Deprivation (IMD 2019)
-- UK Census data (2021)
-- Population density
-- Transport connectivity
-- Digital visibility proxies (Google Maps imagery counts)
+- Index of Multiple Deprivation (IMD 2019)  
+- UK Census data (2021)  
+- Population density  
+- Transport connectivity  
+- Digital visibility proxies (Google Maps imagery counts)  
 
 ---
 
@@ -117,34 +113,34 @@ In the 1970s, social psychologist Stanley Milgram studied how people form mental
 Rather than asking participants to draw maps, he measured **recognisability** by testing whether people could identify locations from limited perceptual cues.
 
 Participants were shown:
-- partial visual scenes, or
-- short descriptive cues,
+- partial visual scenes, or  
+- short descriptive cues  
 
 and asked to guess which part of the city they were observing.
 
-Milgram’s core insight was that cities are remembered unevenly:
-- central, symbolic, and culturally salient areas are over-recognised
-- peripheral and residential districts are systematically overlooked
+Milgram’s insight was that cities are remembered unevenly:
+- central and symbolic areas are over-recognised  
+- peripheral and residential districts are systematically overlooked  
 
-These asymmetries revealed what he described as **cognitive maps** — internal representations shaped by salience and exposure rather than geographic accuracy.
+These asymmetries form **cognitive maps**—internal representations shaped by salience and exposure rather than geographic accuracy.
 
 This project applies the same logic to multimodal LLMs, treating model predictions as behavioural signals from which AI-generated cognitive maps can be reconstructed.
 
 ### Experimental Design
 
-Two complementary recognition tasks were used.
+Two complementary recognition tasks were used:
 
 **Image-Based Recognition**
-- Input: Street-level images
-- Task: Identify the London borough
-- Output: Borough prediction plus justification
+- Input: Street-level images  
+- Task: Identify the London borough  
+- Output: Borough prediction plus justification  
 
 **Text-Based Recognition**
-- Input: Borough-specific sensory description
-- Task: Identify which borough is being described
-- Output: Single borough prediction
+- Input: Borough-specific sensory description  
+- Task: Identify which borough is being described  
+- Output: Single borough prediction  
 
-Both tasks generate confusion matrices that function as cognitive maps, revealing how the model structures urban familiarity.
+Both tasks produce confusion matrices that function as cognitive maps, revealing how the model structures urban familiarity.
 
 ---
 
@@ -155,7 +151,6 @@ Because LLMs do not expose explicit spatial representations, **urban cognition i
 ### Core Metrics
 
 ### Recognisability
-
 **What it measures**  
 How often a borough is correctly identified.
 
@@ -163,12 +158,11 @@ How often a borough is correctly identified.
 Recognisability = TP / (TP + FN)
 
 **Interpretation**  
-Higher values indicate boroughs that are distinctive and well-encoded in the model’s internal representation.
+High values indicate boroughs that are distinctive and well-encoded in the model’s internal representation.
 
 ---
 
 ### Visibility
-
 **What it measures**  
 How often a borough is predicted overall, regardless of correctness.
 
@@ -181,99 +175,106 @@ High visibility reflects salience or over-prediction, not necessarily accurate u
 > The distinction between recognisability and visibility reveals boroughs that dominate AI attention despite weak true understanding.
 
 ### Structural Analysis
-
-Beyond scalar metrics, system-level structure was analysed using:
-- Confusion matrices (borough and regional levels)
-- Principal Component Analysis (PCA)
-- Co-confusion clustering for attractor detection
-- Spearman rank correlation for alignment testing
-- Frobenius norm for cross-modality divergence
+- Confusion matrices (borough and regional levels)  
+- Principal Component Analysis (PCA)  
+- Co-confusion clustering for attractor detection  
+- Spearman rank correlation for alignment testing  
+- Frobenius norm for cross-modality divergence  
 
 ---
 
-## 5. Results & Key Findings
+## 5. NLP & Thematic Analysis
+
+To understand *why* text-based recognition differs from image-based reasoning, NLP techniques were applied to analyse semantic structure.
+
+### Approach
+- Borough descriptions embedded using Sentence Transformers  
+- Latent themes extracted using BERTopic  
+- Theme prevalence compared against recognisability and visibility scores  
+
+### Key Themes Identified
+- Culture and nightlife  
+- Transport and connectivity  
+- Food and commerce  
+- Regeneration and development  
+- Atmosphere and “vibe”  
+
+### Key Observations
+- Text-based recognition is driven by **experiential and symbolic themes**, not physical geometry  
+- The theme **“vibe”** shows the strongest positive correlation with recognisability  
+- This explains why text-based accuracy substantially outperforms image-based accuracy  
+
+---
+
+## 6. Results & Key Findings
 
 ### Overall Performance
-
-- Image-based accuracy: **15.4%** (well above chance for 33 classes)
-- Text-based accuracy: **39.0%**
-- Text strongly outperforms image recognition, but both remain uneven
+- Image-based accuracy: **15.4%** (well above chance for 33 classes)  
+- Text-based accuracy: **39.0%**  
+- Both modalities are uneven, but text performs substantially better  
 
 ### Central Amplification
-
-- Core boroughs (e.g. Westminster, Camden, City of London) dominate recognisability
-- Central areas achieve near-perfect text recognition
-- Peripheral boroughs frequently receive zero correct predictions
+- Core boroughs (e.g. Westminster, Camden, City of London) dominate recognisability  
+- Central areas achieve near-perfect text recognition  
 
 ### Peripheral Suppression
-
-- Outer and southern boroughs are consistently overlooked
-- Some boroughs are invisible across both modalities
+- Outer and southern boroughs are frequently misclassified or invisible  
+- Some boroughs receive zero correct predictions across both modalities  
 
 ### Attractor Effects
-
-- Image modality: certain boroughs absorb disproportionate misclassifications
-- Text modality: symbolic inner boroughs dominate error inflow
-- These boroughs act as default fallbacks under uncertainty
+- Certain boroughs act as default fallbacks, absorbing misclassifications under uncertainty  
 
 ### Cross-Modality Fragmentation
-
-- Recognisability alignment (image vs text): ρ ≈ 0.44
-- Visibility alignment (image vs text): ρ ≈ 0.29
-- Structural divergence confirmed via matrix analysis
-- Images cluster around suburban form
-- Text clusters around symbolic centrality
+- Image and text cognitive maps diverge structurally  
+- Images cluster around suburban form  
+- Text clusters around symbolic centrality  
 
 ### Urban Inequality Signal
-
-- Recognition aligns with affluence, population density, transport connectivity, and digital visibility
-- Deprived and suburban boroughs remain systematically under-represented
+- Recognition aligns with affluence, connectivity, and digital visibility  
+- NLP themes associated with cultural exposure dominate AI attention  
 
 ---
 
-## 6. Business Impact & Implications
+## 7. Business Impact & Implications
 
 LLMs are becoming **spatial gatekeepers**.
 
 When their internal geographies are uneven:
-- some places become hyper-visible
-- others risk digital erasure
-- existing inequalities can be reinforced at scale
+- some places become hyper-visible  
+- others risk digital erasure  
+- existing inequalities can be reinforced at scale  
 
 ### Practical Implications
-
-- Mapping and navigation systems may privilege central narratives
-- Peripheral communities risk exclusion from AI-mediated discovery
-- Urban analytics built on LLMs require explicit fairness auditing
+- Mapping and navigation systems may privilege central narratives  
+- Peripheral communities risk exclusion from AI-mediated discovery  
+- Urban analytics built on LLMs require explicit fairness auditing  
 
 ### Recommended Actions
-
-- Introduce spatial bias audits for geographic AI systems
-- Monitor recognisability and visibility, not accuracy alone
-- Balance digital exposure in retrieval and evaluation pipelines
-- Track representational drift as models evolve
+- Introduce spatial bias audits for geographic AI systems  
+- Monitor recognisability and visibility, not accuracy alone  
+- Balance digital exposure in retrieval and evaluation pipelines  
+- Track representational drift as models evolve  
 
 ---
 
-## 7. Future Work
+## 8. Future Work
 
-Planned extensions include:
-- Multi-city replication (e.g. New York, Paris, Tokyo)
-- Finer spatial granularity (wards and neighbourhoods)
-- Cross-architecture benchmarking, including open-source models
-- Longitudinal monitoring across model versions
-- Direct human–AI cognitive alignment experiments
+- Multi-city replication (e.g. New York, Paris, Tokyo)  
+- Finer spatial granularity (wards and neighbourhoods)  
+- Cross-architecture benchmarking, including open-source models  
+- Longitudinal monitoring across model versions  
+- Direct human–AI cognitive alignment experiments  
 
 ---
 
 ## Technology Stack
 
-- **Language:** Python
-- **Models:** Gemini 2.5 Flash (model-agnostic pipeline)
-- **NLP:** Sentence Transformers, BERTopic
-- **Analysis:** Pandas, NumPy, SciPy
-- **Evaluation:** Confusion matrices, PCA, Spearman correlation
-- **External Data:** UK Census, IMD, Google Maps APIs
+- **Language:** Python  
+- **Models:** Gemini 2.5 Flash (model-agnostic pipeline)  
+- **NLP:** Sentence Transformers, BERTopic  
+- **Analysis:** Pandas, NumPy, SciPy  
+- **Evaluation:** Confusion matrices, PCA, Spearman correlation  
+- **External Data:** UK Census, IMD, Google Maps APIs  
 
 ---
 
