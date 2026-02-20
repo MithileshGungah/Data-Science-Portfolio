@@ -2,7 +2,7 @@
 ### MSc Data Science | Former Data Engineer
 
 Building data-driven solutions that turn raw data into actionable decisions.  
-I combine engineering discipline with analytical depth to create reproducible and production-ready ML workflows.
+I combine engineering discipline with analytical depth to create reproducible, production-ready ML workflows.
 
 ---
 
@@ -16,7 +16,7 @@ Projects demonstrate my ability to:
 - Interpret results and extract actionable insights
 - Communicate findings clearly
 
-Each project follows: Problem → Data → Method → Modeling → Results → Impact.
+Each project follows a structured approach: **Problem → Data → Method → Modeling → Results → Impact**
 
 ---
 
@@ -56,27 +56,27 @@ Each project follows: Problem → Data → Method → Modeling → Results → I
 ## Skills & Tools
 
 ### Programming & Scripting
-- `Python`, `SQL`
+`Python`, `SQL`
 
 ### Machine Learning & AI
-- `Scikit-learn`, `XGBoost`, `TensorFlow`, `PyTorch`
+`Scikit-learn`, `XGBoost`, `TensorFlow`, `PyTorch`
 
 ### Data Engineering & Pipelines
-- `ETL`, `Apache Spark`
+`ETL`, `Apache Spark`
 
 ### Data Analysis & Visualization
-- `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `Plotly`
+`Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `Plotly`
 
 ### Version Control & Collaboration
-- `Git`, `GitHub`
+`Git`, `GitHub`
 
 ### Tools & Environments
-- `Jupyter Notebook`, `AWS`, `GCP`
+`Jupyter Notebook`, `AWS`, `GCP`
 
 ---
 
 ## Contact
 
-LinkedIn: [https://www.linkedin.com/in/mithilesh-gungah-331133215/](#)  
-GitHub: https://github.com/mithileshgungah  
-Email: mithileshgungah@gmail.com
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)  
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mithileshgungah)  
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)
