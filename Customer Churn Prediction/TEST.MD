@@ -202,10 +202,6 @@ This project demonstrates a **full, business-aligned churn prediction pipeline**
 **Final Recommendation:**  
 Deploy **XGBoost** to maximize churn detection and support proactive, cost-effective retention strategies.
 
----
-
-## View Code
-
 [![View Code](https://img.shields.io/badge/View%20Code-000000?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
 
 ---
