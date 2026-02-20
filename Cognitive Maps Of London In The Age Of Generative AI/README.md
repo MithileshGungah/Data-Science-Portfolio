@@ -21,7 +21,7 @@ LLMs increasingly power mapping, navigation, travel, and urban analytics. If the
 - Reconstructed AI-generated cognitive maps and benchmarked them against human patterns  
 
 **Key findings**
-- Central London boroughs are consistently over-recognised  
+- **Both image-based and text-based models independently over-recognise central London boroughs**  
 - Peripheral boroughs are frequently misclassified or completely invisible  
 - Image-based and text-based reasoning produce structurally different spatial maps  
 - NLP analysis shows text recognition is driven by themes such as culture, transport, and “vibe,” not physical form alone  
@@ -32,6 +32,12 @@ LLMs increasingly power mapping, navigation, travel, and urban analytics. If the
 - Bias and fairness auditing  
 - Metric design and statistical analysis  
 - Python-based data and evaluation pipelines  
+
+---
+
+<p align="center">
+  <img src="LLM_Boroughs.png" alt="LLM borough recognisability and visibility across image and text modalities" width="700">
+</p>
 
 ---
 
@@ -172,7 +178,6 @@ Visibility = (TP + FP) / (TP + FP + FN + TN)
 **Interpretation**  
 High visibility reflects salience or over-prediction, not necessarily accurate understanding.
 
-
 > The distinction between recognisability and visibility reveals boroughs that dominate AI attention despite weak true understanding.
 
 ### Structural Analysis
@@ -209,13 +214,17 @@ To understand *why* text-based recognition differs from image-based reasoning, N
 
 ## 6. Results & Key Findings
 
+<p align="center">
+  <img src="poster.jpg" alt="Summary of results: central amplification, peripheral suppression, and modality divergence" width="800">
+</p>
+
 ### Overall Performance
 - Image-based accuracy: **15.4%** (well above chance for 33 classes)  
 - Text-based accuracy: **39.0%**  
 - Both modalities are uneven, but text performs substantially better  
 
 ### Central Amplification
-- Core boroughs (e.g. Westminster, Camden, City of London) dominate recognisability  
+- **Across both image and text modalities**, core boroughs (e.g. Westminster, Camden, City of London) dominate recognisability  
 - Central areas achieve near-perfect text recognition  
 
 ### Peripheral Suppression
@@ -229,6 +238,8 @@ To understand *why* text-based recognition differs from image-based reasoning, N
 - Image and text cognitive maps diverge structurally  
 - Images cluster around suburban form  
 - Text clusters around symbolic centrality  
+
+*Taken together, both modalities independently prioritise central boroughs, but do so using different signals—physical form in images and linguistic salience in text.*
 
 ### Urban Inequality Signal
 - Recognition aligns with affluence, connectivity, and digital visibility  
