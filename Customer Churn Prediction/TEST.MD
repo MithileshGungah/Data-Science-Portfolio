@@ -62,7 +62,7 @@ A structured, production-style workflow was followed:
 
 ---
 
-## 4. Data Preparation & Feature Engineering
+## Data Preparation & Feature Engineering
 
 ### Preprocessing
 - Converted `TotalCharges` to numeric with missing-value handling
@@ -79,7 +79,7 @@ A structured, production-style workflow was followed:
 
 ---
 
-## 5. Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 EDA revealed **clear, actionable churn drivers**:
 
@@ -94,7 +94,7 @@ Churn is primarily driven by **service experience and contract structure**, not 
 
 ---
 
-## 6. Modeling Strategy
+## 4. Modeling Strategy
 
 Models were trained and compared using a **consistent evaluation framework**.
 
@@ -108,7 +108,7 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 ---
 
-## 7. Model Performance & Results
+## 5. Model Performance & Results
 
 ### Benchmark Comparison
 
@@ -121,7 +121,7 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 ---
 
-## 8. Final Model Selection
+## Final Model Selection
 
 ### Selected Model: **XGBoost**
 
@@ -135,12 +135,12 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 | Actual \ Predicted | No Churn | Churn |
 |------------------|----------|-------|
-| No Churn         | 782      | 251   |
-| Churn            | 115      | 259   |
+| No Churn         | 787      | 246   |
+| Churn            | 116      | 258   |
 
 ---
 
-## 9. Business Impact & Recommendations
+## 6. Business Impact & Recommendations
 
 ### Key Drivers of Churn
 1. Contract type (Month-to-month)
@@ -159,14 +159,14 @@ Hyperparameter tuning was performed using cross-validation where applicable.
 
 ---
 
-## 10. Technology Stack
+## Technology Stack
 
 - **Language:** Python 3.9  
 - **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
 
 ---
 
-## 11. Future Work & Enhancements
+## Future Work & Enhancements
 
 While the current solution delivers strong business value, several extensions could further improve performance and production readiness:
 
