@@ -2,15 +2,21 @@
 
 ## Data Science Portfolio
 
-Projects demonstrate my ability to:
+Welcome to my Data Science Portfolio - a showcase of projects where **data meets actionable insight**.
 
-- Define and structure complex problems
-- Explore and preprocess diverse datasets
-- Engineer features and train ML models
-- Interpret results and extract actionable insights
-- Communicate findings clearly
+Each project demonstrates my ability to:
 
-Each project follows a structured approach: **Problem → Data → Method → Modeling → Results → Impact**
+- **Solve complex problems** by framing them clearly and strategically  
+- **Dive deep into data**: clean, explore, and preprocess diverse datasets  
+- **Engineer meaningful features** and build robust machine learning models  
+- **Interpret and communicate results** to inform decisions and drive impact  
+- **Deliver measurable outcomes** that turn analysis into action  
+
+Every project follows a structured approach:  
+
+**Problem → Data → Method → Modeling → Results → Impact**
+
+> “I transform raw data into insights that inform strategy, optimize processes, and solve real-world problems.”
 
 ---
 
