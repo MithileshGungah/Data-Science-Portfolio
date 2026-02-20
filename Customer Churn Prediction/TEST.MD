@@ -72,6 +72,7 @@ A structured, production-style workflow was followed:
   - Binary features → 0/1
   - Multi-class features → One-Hot Encoding
 - Train-test split: **80% / 20%**
+- Feature scaling was applied for scale-sensitive models (e.g., Logistic Regression); tree-based models did not require scaling
 
 ### Feature Engineering
 - Constructed full dummy-variable matrix
