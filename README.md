@@ -55,17 +55,17 @@ Each project follows: Problem → Data → Method → Modeling → Results → I
 
 ## Tools & Skills
 
-**Programming & Scripting:** Python, SQL, R  
+**Programming & Scripting:** Python, SQL 
 **Machine Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch  
-**Data Engineering & Pipelines:** ETL, Airflow, Spark, Docker  
+**Data Engineering & Pipelines:** ETL, Spark 
 **Visualization & Analysis:** Pandas, NumPy, Matplotlib, Seaborn, Plotly  
 **Version Control & Collaboration:** Git, GitHub  
-**Environment:** Linux, Jupyter Notebook, Cloud (AWS/GCP)
+**Environment:** Jupyter Notebook, Cloud (AWS/GCP)
 
 ---
 
 ## Contact
 
-- LinkedIn: [https://www.linkedin.com/in/mithilesh-gungah-331133215/](#)  
-- GitHub: https://github.com/mithileshgungah  
-- Email: mithileshgungah@gmail.com
+LinkedIn: [https://www.linkedin.com/in/mithilesh-gungah-331133215/](#)  
+GitHub: https://github.com/mithileshgungah  
+Email: mithileshgungah@gmail.com
