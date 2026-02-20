@@ -97,9 +97,7 @@ Churn is primarily driven by **service experience and contract structure**, not 
 
 ## 4. Modeling Strategy
 
-Models were trained and compared using a **consistent evaluation framework**.
-
-Models were also evaluated using a fixed test set to ensure fair, apples-to-apples comparison.
+Models were trained and compared using a **consistent evaluation framework**, with all models evaluated on a fixed hold-out test set to ensure fair, apples-to-apples comparison.
 
 ### Models Evaluated
 - Logistic Regression (baseline & tuned)
