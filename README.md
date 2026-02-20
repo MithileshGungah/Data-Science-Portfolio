@@ -1,6 +1,5 @@
-# Mithilesh Gungah
-
-## Data Science Portfolio
+<h1 align="center">Mithilesh Gungahh1>
+<h3 align="center">Data Science Portfolio</h3>
 
 Welcome to my Data Science Portfolio - a showcase of projects where **data meets actionable insight**.
 
