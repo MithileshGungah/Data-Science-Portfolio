@@ -1,10 +1,4 @@
 # Mithilesh Gungah
-### MSc Data Science | Former Data Engineer
-
-Building data-driven solutions that turn raw data into actionable decisions.  
-I combine engineering discipline with analytical depth to create reproducible, production-ready ML workflows.
-
----
 
 ## About This Portfolio
 
