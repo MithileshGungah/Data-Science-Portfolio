@@ -41,7 +41,7 @@ They increasingly power mapping, navigation, travel, and urban analytics. If the
 
 ---
 
-## 1. Problem Statement
+## 1. Problem — Spatial Bias in AI City Perception
 
 Cities are not perceived uniformly.  
 Urban psychology research shows that **central and symbolically salient areas dominate mental maps**, while peripheral districts fade from memory.
@@ -70,9 +70,11 @@ Develop a **replicable spatial auditing framework** that:
 
 ---
 
-## 2. Human Baseline: Urban Cognitive Maps
+## 2. Data — Human Baselines and Multimodal Inputs
 
-### Stanley Milgram’s Urban Recognisability Experiment
+### Human Baseline: Urban Cognitive Maps
+
+#### Stanley Milgram’s Urban Recognisability Experiment
 
 In the 1970s, social psychologist **Stanley Milgram** studied how people form mental representations of cities.
 
@@ -90,8 +92,6 @@ These asymmetries form **cognitive maps**—representations shaped by salience a
 This project applies the same logic to **multimodal LLMs**, enabling direct comparison between **human and AI urban cognition**.
 
 ---
-
-## 3. Data Overview
 
 ### Urban Coverage
 - **Geography:** All 33 boroughs of Greater London  
@@ -129,7 +129,7 @@ This project applies the same logic to **multimodal LLMs**, enabling direct comp
 
 ---
 
-## 4. Experimental Design
+## 3. Method — Experimental Design
 
 Two complementary recognition tasks were used.
 
@@ -147,7 +147,7 @@ Both tasks generate **confusion matrices** that function as AI cognitive maps.
 
 ---
 
-## 5. Auditing & Evaluation Framework
+## 4. Modeling — Auditing & NLP Framework
 
 Because LLMs do not expose explicit spatial representations, **urban cognition is inferred indirectly** through prediction structure.
 
@@ -170,18 +170,16 @@ Because LLMs do not expose explicit spatial representations, **urban cognition i
 - Spearman rank correlation (human–AI alignment)  
 - Frobenius norm (cross-modality divergence)  
 
----
-
-## 6. NLP & Thematic Analysis
+### NLP & Thematic Analysis
 
 To understand *why* text-based recognition differs from image-based reasoning, NLP techniques were applied.
 
-### Approach
+**Approach**
 - Borough descriptions embedded using Sentence Transformers  
 - Latent themes extracted using BERTopic  
 - Theme prevalence compared against recognisability and visibility  
 
-### Key Themes
+**Key Themes**
 - Culture and nightlife  
 - Transport and connectivity  
 - Food and commerce  
@@ -193,7 +191,7 @@ Text-based recognition is driven by **experiential and symbolic themes**, explai
 
 ---
 
-## 7. Results & Key Findings
+## 5. Results — Human–AI Cognitive Maps
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
@@ -215,7 +213,7 @@ Text-based recognition is driven by **experiential and symbolic themes**, explai
 
 ---
 
-## 8. Business Impact & Implications
+## 6. Impact — Business & Societal Implications
 
 When LLMs act as spatial gatekeepers:
 - some places become hyper-visible  
@@ -230,24 +228,24 @@ When LLMs act as spatial gatekeepers:
 
 ---
 
-## 9. Future Work & Extensions
+## 7. Future Work — Extensions and Research Directions
 
 This project establishes a foundation for auditing spatial cognition in AI systems. Key extensions include:
 
 - **Multi-city replication**  
-  Apply the framework to other global cities (e.g. New York, Paris, Tokyo) to test cultural generalisability.
+  Apply the framework to other global cities (e.g. New York, Paris, Tokyo)
 
 - **Finer spatial granularity**  
-  Move from borough-level analysis to neighbourhoods or wards to capture micro-scale spatial bias.
+  Move from borough-level analysis to neighbourhoods or wards
 
 - **Cross-model benchmarking**  
-  Systematically compare closed and open-source multimodal models to assess architectural effects.
+  Compare closed and open-source multimodal models
 
 - **Temporal drift analysis**  
-  Track how AI cognitive maps evolve across model versions and retraining cycles.
+  Track changes across model versions and retraining cycles
 
 - **Human–AI alignment studies**  
-  Directly compare AI outputs with contemporary human recognition data to measure divergence over time.
+  Compare AI outputs with contemporary human recognition data
 
 ---
 
