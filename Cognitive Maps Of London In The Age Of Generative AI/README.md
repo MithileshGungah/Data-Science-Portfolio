@@ -253,6 +253,15 @@ This matters for:
 
 ---
 
+## Code
+
+[View Code](https://github.com/mithileshgungah)
+
+> Full datasets and imagery may be restricted due to licensing.  
+> Reproducible evaluation pipelines, prompt templates, and metric code are available on request.
+
+---
+
 **Author:** Mithilesh Gungah  
 **Degree:** MSc Data Science, Middlesex University London  
 **Supervisor:** Dr. Giovanni Quattrone
