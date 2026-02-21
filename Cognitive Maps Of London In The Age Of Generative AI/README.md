@@ -9,14 +9,14 @@
 **What this project is**  
 A research-driven audit of how **multimodal Large Language Models (LLMs)** internally represent cities, using London as a controlled, policy-relevant case study.
 
-Rather than training a new model, this project **evaluates learned models as real-world socio-technical systems**, probing how spatial knowledge, bias, and salience emerge from model behaviour.
+Rather than training a new model, this project **evaluates learned models as real-world socio-technical systems**, analysing how spatial knowledge, bias, and salience emerge from model behaviour.
 
 **Why it matters**  
 **LLMs are becoming spatial gatekeepers.**  
-They increasingly power mapping, navigation, travel discovery, and urban analytics. If their internal “mental maps” are uneven, they can systematically amplify central areas while rendering peripheral communities digitally invisible—reinforcing spatial inequality at scale.
+They increasingly power mapping, navigation, travel discovery, and urban analytics. If their internal “mental maps” are uneven, they can systematically amplify central areas while rendering peripheral communities digitally invisible — reinforcing spatial inequality at scale.
 
 This project asks a critical question:  
-> *Do AI systems perceive cities the way humans do—or do they distort urban space even further?*
+> *Do AI systems perceive cities the way humans do — or do they distort urban space even further?*
 
 **What I built**
 - Adapted **Stanley Milgram’s human urban recognisability experiments** to multimodal LLMs  
@@ -27,13 +27,13 @@ This project asks a critical question:
 - Applied **NLP-based thematic analysis** to:
   - image-task **justifications**, and  
   - text-based **sensory descriptions**
-- Reconstructed **AI-generated cognitive maps** and **benchmarked them against human studies**
+- Reconstructed **AI-generated cognitive maps** and benchmarked them against established human studies
 
 **Key findings**
 - **Both image-based and text-based models independently over-recognise central London boroughs**, mirroring classic human cognitive maps  
 - **AI-generated cognitive maps amplify human centrality bias**, producing stronger central dominance and deeper peripheral suppression than observed in human studies  
 - Several outer boroughs are frequently misclassified or entirely invisible  
-- Image and text modalities produce **different spatial representations**, meaning the same borough can “look” different to the model depending on modality  
+- Image and text modalities rely on different signals, leading to inconsistent spatial understanding  
 - NLP analysis shows recognition is driven by **culture, transport, and “vibe”**, not physical form alone  
 
 **Skills demonstrated**
@@ -56,7 +56,7 @@ Decades of urban psychology research show that **central and symbolically salien
 
 As Large Language Models increasingly mediate **mapping, navigation, travel, and urban decision-making**, a critical question emerges:
 
-> **How do AI systems “see” cities—and whose places become visible or invisible as a result?**
+> **How do AI systems “see” cities — and whose places become visible or invisible as a result?**
 
 This project investigates whether multimodal LLMs:
 - replicate known human spatial biases,
@@ -96,7 +96,7 @@ Human studies consistently show that:
 - peripheral and residential districts are overlooked,
 - recognisability correlates with **centrality, affluence, and exposure**.
 
-These asymmetries form **cognitive maps**—mental representations shaped by salience rather than geographic accuracy.
+These asymmetries form **cognitive maps** — mental representations shaped by salience rather than geographic accuracy.
 
 This project applies the same logic to **multimodal LLMs**, enabling direct **human–AI comparison**.
 
@@ -178,7 +178,7 @@ Measures how often a borough dominates predictions, regardless of accuracy.
 ### Structural Analysis
 - Confusion matrices (borough and regional levels)  
 - Principal Component Analysis (PCA)  
-- Co-confusion clustering (systematic “default guess” patterns)  
+- Co-confusion clustering (systematic default predictions)  
 - Spearman rank correlation (human–AI alignment)  
 - Frobenius norm (cross-modality divergence)
 
@@ -203,8 +203,8 @@ To explain *why* recognition patterns differ across modalities, NLP techniques w
 - Atmosphere (“vibe”)
 
 **Key insight**  
-Recognition (especially in text) is driven by **experiential and symbolic language**, not physical geometry.  
-This helps explain why text-based recognition substantially outperforms image-only recognition and aligns more closely with human perception.
+Recognition is driven by **experiential and symbolic language**, not physical geometry.  
+This explains why text-based recognition substantially outperforms image-only recognition and aligns more closely with human urban perception.
 
 ---
 
@@ -212,21 +212,23 @@ This helps explain why text-based recognition substantially outperforms image-on
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
-### Performance
+### Overall Performance
 - Image-based accuracy: **15.4%** (above chance for 33 classes)  
 - Text-based accuracy: **39.0%**
 
+Text-based recognition substantially outperforms image-based recognition, but both modalities show uneven spatial understanding.
+
 ### Human–AI Comparison
-- Both modalities reproduce **human centrality bias**  
-- AI **amplifies** this bias beyond human levels  
+- Both image and text modalities reproduce **human centrality bias**  
+- AI systems **amplify this bias**, showing stronger central dominance and deeper peripheral neglect than observed in human studies  
 
-### Structural Findings (Recruiter-Friendly)
-- **Central areas dominate predictions across both image and text**, receiving disproportionate attention regardless of modality  
-- **Many outer boroughs are rarely or never identified correctly**, making them effectively invisible in AI perception  
-- **Certain boroughs become “default guesses” under uncertainty**, absorbing misclassifications from many other areas  
-- **Image-based and text-based reasoning rely on different signals**, leading to inconsistent spatial understanding across modalities  
+### Structural Findings
+- **Central London boroughs dominate predictions across both modalities**, receiving disproportionate attention regardless of input type  
+- **Many outer boroughs are rarely or never identified correctly**, making them effectively invisible in AI-generated spatial representations  
+- **Certain boroughs consistently act as default predictions under uncertainty**, absorbing misclassifications from multiple areas  
+- **Image-based and text-based reasoning rely on different cues**, leading to inconsistent spatial understanding depending on modality  
 
-*AI does not merely copy human cognitive maps—it reshapes and exaggerates them.*
+These results indicate that AI systems do not simply mirror human cognitive maps — they **reshape and intensify existing spatial biases**.
 
 ---
 
@@ -283,7 +285,7 @@ This has direct implications for:
 
 ## Contact
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)  
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
 
 ---
