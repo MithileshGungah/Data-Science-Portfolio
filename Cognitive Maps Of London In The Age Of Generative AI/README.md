@@ -168,7 +168,7 @@ Measures how often a borough dominates predictions, regardless of accuracy.
 
 ---
 
-## 5. NLP & Thematic Analysis
+## NLP & Thematic Analysis
 
 To explain *why* text-based recognition outperforms image-based recognition, NLP methods were applied.
 
@@ -189,7 +189,7 @@ Text-based recognition is driven by **experiential and symbolic language**, not 
 
 ---
 
-## 6. Results — Human–AI Cognitive Maps
+## 5. Results — Human–AI Cognitive Maps
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
@@ -211,7 +211,7 @@ Text-based recognition is driven by **experiential and symbolic language**, not 
 
 ---
 
-## 7. Impact — Why This Matters Beyond London
+## 6. Impact — Why This Matters Beyond London
 
 When LLMs act as spatial gatekeepers:
 - some places become hyper-visible,
@@ -232,7 +232,7 @@ This matters for:
 
 ---
 
-## 8. Future Work — Research and Extensions
+## 7. Future Work — Research and Extensions
 
 - **Multi-city replication** (e.g. New York, Paris, Tokyo)  
 - **Finer spatial granularity** (neighbourhoods, wards)  
