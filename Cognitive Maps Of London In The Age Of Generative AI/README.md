@@ -230,10 +230,31 @@ When LLMs act as spatial gatekeepers:
 
 ---
 
+## 9. Future Work & Extensions
+
+This project establishes a foundation for auditing spatial cognition in AI systems. Key extensions include:
+
+- **Multi-city replication**  
+  Apply the framework to other global cities (e.g. New York, Paris, Tokyo) to test cultural generalisability.
+
+- **Finer spatial granularity**  
+  Move from borough-level analysis to neighbourhoods or wards to capture micro-scale spatial bias.
+
+- **Cross-model benchmarking**  
+  Systematically compare closed and open-source multimodal models to assess architectural effects.
+
+- **Temporal drift analysis**  
+  Track how AI cognitive maps evolve across model versions and retraining cycles.
+
+- **Human–AI alignment studies**  
+  Directly compare AI outputs with contemporary human recognition data to measure divergence over time.
+
+---
+
 ## Technology Stack
 
 - **Language:** Python  
-- **Models:** Gemini 2.5 Flash (model-agnostic pipeline)  
+- **Models:** Gemini 2.5 Flash, GPT-4o, Claude (model-agnostic pipeline)  
 - **NLP:** Sentence Transformers, BERTopic  
 - **Analysis:** Pandas, NumPy, SciPy  
 - **Evaluation:** Confusion matrices, PCA, Spearman correlation  
