@@ -255,10 +255,17 @@ This matters for:
 
 ## Code
 
-[View Code](https://github.com/mithileshgungah)
+[![View Code](https://img.shields.io/badge/View%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mithileshgungah)
 
 > Full datasets and imagery may be restricted due to licensing.  
 > Reproducible evaluation pipelines, prompt templates, and metric code are available on request.
+
+---
+
+## Contact
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
 
 ---
 
