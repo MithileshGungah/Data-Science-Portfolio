@@ -396,7 +396,7 @@ This has direct implications for:
 - **NLP:** Sentence Transformers, BERTopic  
 - **Analysis:** Pandas, NumPy, SciPy  
 - **Evaluation:** Confusion matrices, PCA, rank correlation  
-- **Visualisation:** Matplotlib, Seaborn  
+- **Visualisation:** Matplotlib, Seaborn, Plotly 
 - **Inference & Data Collection:** API-based model querying, Google Street View API  
 - **External Data:** UK Census, IMD, Google Maps APIs
 
