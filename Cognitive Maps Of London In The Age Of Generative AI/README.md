@@ -1,4 +1,4 @@
-# Cognitive Maps of London in the Age of Generative AI  
+# Cognitive Maps of London In The Age of Generative AI  
 ## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space  
 ### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models  
 
