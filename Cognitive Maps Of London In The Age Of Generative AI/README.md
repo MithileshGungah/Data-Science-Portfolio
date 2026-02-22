@@ -274,22 +274,29 @@ How often a borough dominates model predictions, regardless of correctness.
 
 ## 4.1 Representation Analysis & Dimensionality Reduction
 
-To analyse the structure of the model’s internal representations, textual outputs from both modalities were treated as numerical features in a shared latent space.
+To analyse the structure of the model’s spatial behaviour, borough-level performance metrics were treated as numerical features in a shared analytical space.
 
 ### Representation Space
-Image-task justifications and text-based sensory descriptions were mapped into a high-dimensional vector space using pretrained sentence-level embeddings. These vectors serve as a proxy for the model’s latent semantic organisation of urban space.
+For each borough, **recognisability** and **visibility** scores were computed from the confusion matrices. These metrics form a low-dimensional feature representation capturing how frequently and how accurately each borough is identified by the model.
+
+This representation serves as a behavioural proxy for the model’s spatial priorities and biases, rather than a direct analysis of internal model activations.
 
 ### Dimensionality Reduction
-**Principal Component Analysis (PCA)** was applied to the embedding space to reduce dimensionality while preserving variance. PCA enables visualisation of borough relationships and reveals groups of boroughs that the model treats as semantically similar, even when geographically distant.
+**Principal Component Analysis (PCA)** was applied to the borough-level metric space to identify dominant patterns of variation across boroughs. PCA enables visualisation of similarities and differences in how boroughs are treated by the model, revealing groups of boroughs with comparable recognition and visibility profiles.
+
+Boroughs that cluster closely in PCA space are interpreted as being treated similarly by the model in terms of spatial prominence and recognisability.
 
 ### Correlation Analysis
 Correlation analysis was used to relate:
 - recognisability and visibility metrics,  
-- positions in latent space, and  
+- positions in PCA space, and  
 - external socio-economic indicators (e.g. Index of Multiple Deprivation).
 
+This analysis tests whether systematic patterns in model behaviour align with real-world socio-economic structure.
+
 ### Key Insight
-Latent-space analysis shows that AI-generated cognitive maps are **structured rather than random**, with semantic similarity and socio-economic salience jointly shaping how urban areas are represented and prioritised.
+Metric-space analysis shows that AI-generated cognitive maps are **structured rather than random**.  
+Variation in borough treatment reflects consistent behavioural patterns linked to visibility, recognisability, and socio-economic salience, rather than uniform or purely geographic representation.
 
 ---
 
