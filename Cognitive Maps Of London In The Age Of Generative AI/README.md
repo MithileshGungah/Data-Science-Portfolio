@@ -302,15 +302,15 @@ Variation in borough treatment reflects consistent behavioural patterns linked t
 
 ## 4.2 NLP & Thematic Analysis (Image + Text)
 
-To understand how the model reasons and why recognition patterns differ across modalities, NLP techniques were applied to:
+To understand **how the model reasons** about place and **why recognition patterns differ across modalities**, NLP techniques were applied to two forms of model-generated text:
 
 - image-task **justifications**, and  
 - text-based **sensory descriptions**.
 
-### Approach
-- Sentence Transformer embeddings for all textual outputs  
-- BERTopic for latent theme extraction  
-- Correlation of theme prevalence with recognisability and visibility  
+### Analytical Approach
+- All textual outputs were embedded using **Sentence Transformers** to obtain dense semantic representations.  
+- **BERTopic** was applied to these embeddings to identify latent themes that characterise the signals the model relies on when making spatial predictions.  
+- Theme prevalence was then analysed in relation to **recognisability** and **visibility** metrics to assess which forms of reasoning are associated with stronger or weaker spatial performance.
 
 ### Dominant Themes by Modality
 
@@ -327,8 +327,8 @@ To understand how the model reasons and why recognition patterns differ across m
 - Land use and regeneration  
 
 ### Key Insight
-Spatial recognition in LLMs is driven less by geometric accuracy and more by **symbolic, experiential, and narrative cues**.  
-Text inputs encode these signals far more explicitly than images, explaining why text-based recognition both outperforms image-only recognition and aligns more closely with human cognitive maps.
+Across both modalities, spatial recognition in LLMs is shaped less by geometric or cartographic accuracy and more by **symbolic, experiential, and narrative cues**.  
+Text-based descriptions encode these signals more explicitly than images, helping explain both the higher recognition accuracy of text inputs and their closer alignment with established human cognitive maps.
 
 ---
 
