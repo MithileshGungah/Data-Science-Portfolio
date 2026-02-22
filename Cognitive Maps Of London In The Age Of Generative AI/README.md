@@ -91,7 +91,7 @@ Develop a **replicable spatial auditing framework** that:
 
 ---
 
-## 2. Human Baseline — Urban Cognitive Maps
+## Human Baseline — Urban Cognitive Maps
 
 ### Stanley Milgram’s Urban Recognisability Experiments
 
@@ -112,7 +112,7 @@ This project applies the same logic to **multimodal LLMs**, enabling direct **hu
 
 ---
 
-## 3. Data — Multimodal Urban Inputs
+## 2. Data — Multimodal Urban Inputs
 
 ### Urban Coverage
 - **Geography:** All 33 boroughs of Greater London  
@@ -155,7 +155,7 @@ This project applies the same logic to **multimodal LLMs**, enabling direct **hu
 
 ---
 
-## 4. Method — Multimodal Recognition Tasks
+## 3. Method — Multimodal Recognition Tasks
 
 Two complementary recognition tasks were designed.
 
@@ -173,7 +173,7 @@ Each task produces a **confusion matrix**, treated as a behavioural proxy for a 
 
 ---
 
-## 5. Modeling — Spatial Auditing Framework
+## 4. Modeling — Spatial Auditing Framework
 
 LLMs do not expose explicit spatial representations.  
 Urban cognition is therefore inferred **indirectly** from structured prediction behaviour.
@@ -201,7 +201,7 @@ How often a borough dominates model predictions, regardless of correctness.
 
 ---
 
-## 6. NLP & Thematic Analysis (Image + Text)
+## NLP & Thematic Analysis (Image + Text)
 
 To understand *why* recognition patterns differ across modalities, NLP techniques were applied to:
 
@@ -233,7 +233,7 @@ Text inputs encode these signals far more explicitly than images, explaining why
 
 ---
 
-## 7. Results — Human–AI Cognitive Maps
+## 5. Results — Human–AI Cognitive Maps
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
@@ -259,7 +259,7 @@ LLMs do not merely mirror human cognitive maps — they **reshape and intensify 
 
 ---
 
-## 8. Impact — Why This Matters Beyond London
+## 6. Impact — Why This Matters Beyond London
 
 When LLMs act as spatial gatekeepers:
 - some places become hyper-visible,  
@@ -280,7 +280,7 @@ This has implications for:
 
 ---
 
-## 9. Future Work
+## 7. Future Work
 
 - Multi-city replication (e.g. New York, Paris, Tokyo)  
 - Finer spatial granularity (neighbourhoods, wards)  
