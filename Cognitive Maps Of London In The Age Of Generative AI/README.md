@@ -35,7 +35,8 @@ This project asks a critical question:
 - **AI-generated cognitive maps amplify human centrality bias**, producing stronger central dominance and deeper peripheral suppression than observed in human experiments  
 - Several outer boroughs are frequently misclassified or effectively invisible  
 - Image and text modalities rely on **different cognitive signals**, leading to inconsistent spatial understanding  
-- NLP analysis shows recognition is driven by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, “vibe”), not physical form alone  
+- NLP analysis shows recognition is driven by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, “vibe”), not physical form alone
+- Wealthier, less deprived boroughs are both recognised more often and recognised more accurately: model visibility and recognisability are positively correlated with lower IMD scores, indicating that LLM spatial understanding aligns closely with existing socio-economic advantage  
 
 **Skills demonstrated**
 - Multimodal ML evaluation beyond accuracy  
@@ -247,7 +248,8 @@ Text-based recognition substantially outperforms image-based recognition, but bo
 - **Outer boroughs are frequently misclassified or never predicted correctly**, resulting in effective digital invisibility  
 - Certain boroughs act as **default cognitive anchors**, absorbing misclassifications from diverse locations  
 - PCA reveals that geographically distant boroughs are often **cognitively collapsed** into similar representations  
-- Image and text modalities show **structurally different cognitive maps**, indicating modality-dependent spatial reasoning  
+- Image and text modalities show **structurally different cognitive maps**, indicating modality-dependent spatial reasoning
+- Socio-economic status is strongly linked to model performance: boroughs with lower deprivation levels are not only predicted more frequently, but are also identified more correctly, while higher-deprivation areas suffer from both lower visibility and lower accuracy  
 
 ### Human–AI Comparison
 - AI systems replicate known human centrality bias  
@@ -301,7 +303,7 @@ This has implications for:
 
 ## Code
 
-[View Code on GitHub](https://github.com/mithileshgungah)
+[![View Code](https://img.shields.io/badge/View%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mithileshgungah)
 
 > Full datasets and imagery may be restricted due to licensing.  
 > Reproducible evaluation pipelines, prompt templates, and metric code are available on request.
