@@ -29,6 +29,7 @@ This project asks a simple but critical question:
   - image-task **justifications**, and  
   - text-based **sensory descriptions**.  
 - Reconstructed **AI-generated cognitive maps** from confusion structure and benchmarked them against established human studies.
+- All analysis was implemented in reproducible Python pipelines suitable for large-scale evaluation.
 
 **Key findings**
 - Both image-based and text-based models **systematically over-recognise central London**, reproducing classic human cognitive maps of the city  
