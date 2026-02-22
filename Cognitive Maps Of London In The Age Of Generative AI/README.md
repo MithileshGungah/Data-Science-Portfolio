@@ -173,6 +173,47 @@ Each task produces a **confusion matrix**, treated as a behavioural proxy for a 
 
 ---
 
+## 3.1 Model Configuration & Generation Control
+
+To ensure comparability and reproducibility across tasks and boroughs, all model queries were executed under fixed generation settings.
+
+- **Temperature:** 0.0  
+- **Decoding:** Deterministic  
+- **Prompt structure:** Fixed templates per task  
+- **No conversational memory or cross-sample context**
+
+A zero-temperature setting was chosen to minimise stochastic variation and ensure that observed spatial patterns reflect **systematic model behaviour**, rather than sampling noise.
+
+---
+
+## 3.2 Prompt Design & Task Templates
+
+All tasks used **fixed, task-specific prompt templates** to ensure consistent framing across samples and boroughs.
+
+### Image-Based Recognition Prompt
+
+~~~
+Where was this image taken? Which London borough is it located in?
+Provide a brief justification.
+~~~
+
+### Text-Based Description Prompt
+
+~~~
+Imagine you’re taking a slow walk through [borough], a neighbourhood in London.
+Describe everything you see, hear, and smell on a typical weekday afternoon.
+Include details about the shops, the people, the architecture, and the general atmosphere.
+Write it as if you’re observing it moment by moment, using vivid, sensory language.
+~~~
+
+### Text-Based Recognition Prompt
+
+~~~
+Where am I? Give me one choice only!
+~~~
+
+---
+
 ## 4. Modeling — Spatial Auditing Framework
 
 LLMs do not expose explicit spatial representations.  
@@ -319,4 +360,4 @@ This has implications for:
 
 **Author:** Mithilesh Gungah  
 **Degree:** MSc Data Science, Middlesex University London  
-**Supervisor:** Dr. Giovanni Quattrone  
+**Supervisor:** Dr. Giovanni Quattrone
