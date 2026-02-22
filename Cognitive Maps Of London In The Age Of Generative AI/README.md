@@ -302,7 +302,7 @@ Variation in borough treatment reflects consistent behavioural patterns linked t
 
 ## 4.2 NLP & Thematic Analysis (Image + Text)
 
-To understand *why* recognition patterns differ across modalities, NLP techniques were applied to:
+To understand how the model reasons and why recognition patterns differ across modalities, NLP techniques were applied to:
 
 - image-task **justifications**, and  
 - text-based **sensory descriptions**.
