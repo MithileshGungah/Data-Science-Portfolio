@@ -363,18 +363,18 @@ LLMs do not simply reflect human cognitive maps — they **reconstruct and inten
 When LLMs act as spatial gatekeepers:
 - some places become hyper-visible,  
 - others risk digital erasure,  
-- inequalities scale automatically.
+- inequalities can scale automatically.
 
-This has implications for:
+This has direct implications for:
 - travel and mapping platforms,  
-- local discovery and recommendation,  
+- local discovery and recommendation systems,  
 - urban analytics and policy tools,  
-- Responsible AI deployment.
+- responsible deployment of geographic AI.
 
 ### Recommended Actions
-- Introduce spatial bias audits for geographic AI  
-- Evaluate visibility alongside accuracy  
-- Balance geographic exposure in evaluation pipelines  
+- Introduce spatial bias audits for location-based AI systems  
+- Evaluate visibility alongside accuracy in model assessment  
+- Balance geographic exposure within evaluation pipelines  
 - Monitor representational drift across model versions  
 
 ---
