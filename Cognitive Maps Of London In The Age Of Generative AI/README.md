@@ -268,7 +268,28 @@ How often a borough dominates model predictions, regardless of correctness.
 
 ---
 
-## NLP & Thematic Analysis (Image + Text)
+## 4.1 Representation Analysis & Dimensionality Reduction
+
+To analyse the structure of the model’s internal representations, textual outputs from both modalities were treated as numerical features in a shared latent space.
+
+### Representation Space
+Image-task justifications and text-based sensory descriptions were mapped into a high-dimensional vector space using pretrained sentence-level embeddings. These vectors serve as a proxy for the model’s latent semantic organisation of urban space.
+
+### Dimensionality Reduction
+**Principal Component Analysis (PCA)** was applied to the embedding space to reduce dimensionality while preserving variance. PCA enables visualisation of borough relationships and reveals groups of boroughs that the model treats as semantically similar, even when geographically distant.
+
+### Correlation Analysis
+Correlation analysis was used to relate:
+- recognisability and visibility metrics,  
+- positions in latent space, and  
+- external socio-economic indicators (e.g. Index of Multiple Deprivation).
+
+### Key Insight
+Latent-space analysis shows that AI-generated cognitive maps are **structured rather than random**, with semantic similarity and socio-economic salience jointly shaping how urban areas are represented and prioritised.
+
+---
+
+## 4.2 NLP & Thematic Analysis (Image + Text)
 
 To understand *why* recognition patterns differ across modalities, NLP techniques were applied to:
 
