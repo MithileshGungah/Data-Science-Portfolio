@@ -193,8 +193,21 @@ All tasks used **fixed, task-specific prompt templates** to ensure consistent fr
 ### Image-Based Recognition Prompt
 
 ~~~
-Where was this image taken? Which London borough is it located in?
-Provide a brief justification.
+You are an expert in London’s urban geography.
+
+The image provided was taken somewhere in Greater London.
+Your task is to identify the single most likely borough, from the 33 official London boroughs, where this location belongs, based solely on the visual information available in the image.
+
+If the image appears ambiguous or lacks distinctive features, you must still make the most plausible guess based on whatever details are present.
+Do not state that identification is not possible.
+
+Respond using this exact format only:
+
+Borough: <your answer>
+Confidence: <Low / Medium / High>
+Justification: <What features in the image led you to this conclusion?>
+
+Do not include any additional commentary, explanation, or text outside the exact format specified.
 ~~~
 
 ### Text-Based Description Prompt
@@ -204,12 +217,25 @@ Imagine you’re taking a slow walk through [borough], a neighbourhood in London
 Describe everything you see, hear, and smell on a typical weekday afternoon.
 Include details about the shops, the people, the architecture, and the general atmosphere.
 Write it as if you’re observing it moment by moment, using vivid, sensory language.
+
+Please do not mention or explicitly infer the borough name in the description.
 ~~~
 
-### Text-Based Recognition Prompt
+After generating sensory descriptions for all boroughs, each description is then passed back to the model for a single-choice borough identification task using the following prompt:
 
 ~~~
-Where am I? Give me one choice only!
+Where am I?
+
+TASK:
+Read the description and identify which SINGLE London borough it most likely refers to.
+
+RULES:
+1) Choose exactly ONE London borough.
+2) Do NOT name neighbourhoods, areas, or landmarks.
+3) You must make a choice even if the description is ambiguous.
+4) Do NOT state that identification is not possible.
+
+Respond with the borough name only.
 ~~~
 
 ---
