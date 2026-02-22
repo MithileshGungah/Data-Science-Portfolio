@@ -406,7 +406,7 @@ This has direct implications for:
 
 [![View Code](https://img.shields.io/badge/View%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mithileshgungah)
 
-> Full datasets and imagery may be restricted due to licensing.
+> Full datasets and imagery may be restricted due to licensing.  
 > Please contact me for access to code, evaluation pipelines, prompt templates, or additional project materials.
 
 ---
