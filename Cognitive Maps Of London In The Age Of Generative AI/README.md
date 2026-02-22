@@ -213,7 +213,7 @@ Do not include any additional commentary, explanation, or text outside the exact
 ### Text-Based Description Prompt
 
 ~~~
-Imagine you’re taking a slow walk through [borough], a neighbourhood in London.
+Imagine you’re taking a slow walk through [borough], a borough in London.
 Describe everything you see, hear, and smell on a typical weekday afternoon.
 Include details about the shops, the people, the architecture, and the general atmosphere.
 Write it as if you’re observing it moment by moment, using vivid, sensory language.
