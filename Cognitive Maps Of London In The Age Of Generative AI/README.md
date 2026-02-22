@@ -55,7 +55,7 @@ This project asks a simple but critical question:
 ---
 
 ## Detailed DeepDive
-
+---
 ## 1. Problem — Spatial Bias in AI City Perception
 
 Cities are not perceived uniformly.  
