@@ -225,7 +225,7 @@ Write it as if you’re observing it moment by moment, using vivid, sensory lang
 Please do not mention or explicitly infer the borough name in the description.
 ~~~
 
-After generating sensory descriptions for all boroughs, each description is then passed back to the model for a single-choice borough identification task using the following prompt:
+After generating sensory descriptions for all boroughs, each description is submitted to the model in a separate, stateless inference call for a single-choice borough identification task, using the prompt shown below. All predictions are generated via the API with no conversational memory or shared session state, ensuring that each classification is independent and free from in-memory or carry-over bias.
 
 ~~~
 Where am I?
