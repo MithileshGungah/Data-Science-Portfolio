@@ -343,18 +343,18 @@ Text-based descriptions encode these signals more explicitly than images, helpin
 Text-based recognition substantially outperforms image-based recognition, but both exhibit uneven spatial understanding.
 
 ### Key Findings
-- **Central London boroughs dominate predictions** across both modalities, regardless of input origin  
-- **Outer boroughs are frequently misclassified or never predicted correctly**, resulting in effective digital invisibility  
-- Certain boroughs act as **default cognitive anchors**, absorbing misclassifications from diverse locations  
-- PCA reveals that geographically distant boroughs are often **cognitively collapsed** into similar representations  
-- Image and text modalities show **structurally different cognitive maps**, indicating modality-dependent spatial reasoning
-- Socio-economic status is strongly linked to model performance: boroughs with lower deprivation levels are not only predicted more frequently, but are also identified more correctly, while higher-deprivation areas suffer from both lower visibility and lower accuracy  
+- **Central London boroughs consistently dominate model predictions** across both image and text modalities, independent of input type.  
+- **Outer boroughs are systematically under-recognised**, with many frequently misclassified or never predicted correctly, resulting in effective digital invisibility.  
+- **A small number of boroughs function as cognitive defaults**, absorbing misclassifications from multiple, geographically distinct areas rather than errors being evenly distributed.  
+- **PCA reveals representational collapse**, where geographically distant boroughs are treated as cognitively similar based on shared recognition and visibility profiles.  
+- **Image-based and text-based models produce structurally different cognitive maps**, indicating modality-dependent spatial reasoning rather than a single unified representation.  
+- **Socio-economic status strongly predicts model behaviour**: less deprived boroughs are both more visible and more accurately recognised, while higher-deprivation areas experience compounded suppression in both frequency and accuracy.
 
 ### Human–AI Comparison
-- AI systems replicate known human centrality bias  
-- However, they **amplify it**, producing stronger central dominance and deeper peripheral suppression than observed in human experiments  
+- AI systems reproduce well-documented **human centrality bias** observed in classic urban cognition studies.  
+- Crucially, they **amplify this bias**, exhibiting stronger central dominance and deeper peripheral neglect than has been measured in human experiments.
 
-LLMs do not merely mirror human cognitive maps — they **reshape and intensify them**.
+LLMs do not simply reflect human cognitive maps — they **reconstruct and intensify them**, reshaping how urban space is prioritised and perceived in AI-mediated systems.
 
 ---
 
