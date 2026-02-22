@@ -382,11 +382,10 @@ This has direct implications for:
 
 ## 7. Future Work
 
-- Multi-city replication (e.g. New York, Paris, Tokyo)  
-- Finer spatial granularity (neighbourhoods, wards)  
-- Cross-model benchmarking  
-- Temporal drift analysis  
-- Direct contemporary human–AI alignment studies  
+- Extend the framework to additional global cities (e.g. New York, Paris, Tokyo) to test generalisability  
+- Apply the analysis at finer spatial scales (neighbourhoods, wards)  
+- Track temporal drift in AI-generated cognitive maps across model updates  
+- Compare AI spatial perception with contemporary human data  
 
 ---
 
@@ -397,7 +396,9 @@ This has direct implications for:
 - **NLP:** Sentence Transformers, BERTopic  
 - **Analysis:** Pandas, NumPy, SciPy  
 - **Evaluation:** Confusion matrices, PCA, rank correlation  
-- **External Data:** UK Census, IMD, Google Maps APIs  
+- **Visualisation:** Matplotlib, Seaborn  
+- **Inference & Data Collection:** API-based model querying, Google Street View API  
+- **External Data:** UK Census, IMD, Google Maps APIs
 
 ---
 
