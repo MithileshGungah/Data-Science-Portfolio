@@ -13,36 +13,36 @@ Rather than training a new model, this project treats deployed foundation models
 
 **Why it matters**  
 **LLMs are becoming spatial gatekeepers.**  
-They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. If their internal “mental maps” are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible — reinforcing spatial inequality at scale.
+They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. When their internal “mental maps” are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible — reinforcing spatial inequality at scale.
 
 This project asks a simple but critical question:  
 > *Do AI systems perceive cities the way humans do — or do they distort urban space even further?*
 
 **What I built**
-- Adapted **Stanley Milgram’s urban recognisability experiments** from human cognition to multimodal LLMs  
-- Designed a **spatial auditing framework** that measures *what models predict*, *how often they do so*, *what they confuse*, and *what signals they rely on*  
+- Adapted **Stanley Milgram’s urban recognisability experiments** from human cognition to multimodal LLMs.  
+- Designed a **spatial auditing framework** to measure *what models predict*, *how often they do so*, *what they systematically confuse*, and *which signals they rely on*.  
 - Introduced two complementary evaluation metrics:
-  - **Recognisability** — how accurately places are identified  
-  - **Visibility** — how strongly places dominate model predictions  
-- Evaluated borough-level recognition and **systematic misclassification patterns** across **image and text modalities**  
+  - **Recognisability** — how accurately places are identified.  
+  - **Visibility** — how strongly places dominate model predictions.  
+- Evaluated borough-level recognition and **structured misclassification patterns** across **image and text modalities**.  
 - Analysed **model reasoning and descriptions** using NLP:
   - image-task **justifications**, and  
-  - text-based **sensory descriptions**  
-- Reconstructed **AI-generated cognitive maps** from confusion structure and benchmarked them against established human studies  
+  - text-based **sensory descriptions**.  
+- Reconstructed **AI-generated cognitive maps** from confusion structure and benchmarked them against established human studies.
 
 **Key findings**
-- Both image-based and text-based models **systematically over-recognise central London**, closely mirroring classic human cognitive maps  
-- **AI-generated cognitive maps amplify human centrality bias**, producing stronger central dominance and deeper peripheral suppression than observed in human experiments  
-- Several outer boroughs are frequently misclassified or effectively invisible  
-- **Specific boroughs act as cognitive defaults**, absorbing misclassifications from multiple distinct areas, revealing asymmetric confusion patterns rather than random error  
-- Image and text modalities rely on **different cognitive signals**, leading to modality-dependent spatial understanding and inconsistent borough confusions  
-- Recognition is driven primarily by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, “vibe”), rather than physical form alone  
-- **Socio-economic advantage matters**: wealthier, less deprived boroughs are both predicted more often and recognised more accurately, with visibility and recognisability positively correlated with lower IMD scores  
+- Both image-based and text-based models **systematically over-recognise central London**, reproducing classic human cognitive maps of the city  
+- **AI-generated cognitive maps amplify this centrality bias**, exhibiting stronger central dominance and deeper peripheral suppression than observed in human studies 
+- **Outer boroughs are consistently under-recognised**, with several frequently misclassified or effectively absent from model predictions
+- **A small set of boroughs function as cognitive defaults**, absorbing misclassifications from multiple, geographically distinct areas rather than errors being randomly distributed
+- Image and text modalities rely on **different reasoning signals**, resulting in modality-dependent spatial understanding and structurally different cognitive maps
+- Recognition is driven primarily by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, “vibe”) rather than physical urban form alone 
+- **Socio-economic advantage strongly shapes model behaviour**: less deprived boroughs are both more visible and more accurately recognised, while higher-deprivation areas experience compounded suppression in both frequency and accuracy  
 
 **Skills demonstrated**
 - Multimodal ML evaluation beyond accuracy  
-- Confusion-matrix and misclassification analysis  
-- Metric design for bias, visibility, and representation auditing  
+- Confusion-matrix and systematic misclassification analysis  
+- Metric design for bias, visibility, and representational auditing  
 - NLP: embeddings, topic modelling, semantic analysis  
 - Dimensionality reduction and correlation analysis  
 - End-to-end Python data and evaluation pipelines  
