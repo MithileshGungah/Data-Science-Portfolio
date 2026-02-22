@@ -4,7 +4,7 @@
 
 ---
 
-## For Recruiters & Hiring Managers
+## Executive Summary (For Recruiters & Hiring Managers)
 
 **What this project is**  
 A research-driven audit of how **multimodal Large Language Models (LLMs)** internally represent cities, using London as a controlled, policy-relevant case study.
