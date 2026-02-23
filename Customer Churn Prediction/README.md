@@ -19,11 +19,15 @@ This project focuses on identifying **customers most likely to churn early enoug
 - Missing a churner (**false negative**) leads to irreversible revenue loss, while contacting a non-churner incurs relatively low cost  
 
 ### Objective
-Build a **cost-sensitive, recall-optimised churn prediction model** that:
-- Proactively flags at-risk customers  
-- Explicitly minimises false negatives  
-- Aligns evaluation metrics with business costs  
-- Produces insights actionable by retention and marketing teams  
+
+Because the cost of missing a churner is significantly higher than the cost of contacting a non-churner, this is an inherently **cost-sensitive classification problem**.
+
+The primary objective is therefore to build a **high-recall churn prediction model** that:
+- Proactively flags at-risk customers before churn occurs  
+- **Minimises false negatives**, which represent irreversible revenue loss  
+- Accepts a controlled increase in false positives as a deliberate trade-off  
+- Aligns evaluation metrics with real business costs rather than raw accuracy  
+- Produces insights actionable by retention and marketing teams
 
 ---
 
@@ -60,7 +64,7 @@ A structured, production-style workflow was followed to ensure **technical rigor
 6. Model benchmarking  
 7. Business-driven model selection  
 
-**Evaluation emphasis:** Recall, precision, and F1-score, rather than accuracy alone, to reflect asymmetric business costs.
+Because churn prevention carries **asymmetric business costs**, model evaluation focused on **recall, precision, and F1-score**, rather than accuracy alone. Recall was prioritised to minimise false negatives, ensuring that the majority of at-risk customers were identified for potential retention intervention.
 
 ---
 
