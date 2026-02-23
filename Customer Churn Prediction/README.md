@@ -14,16 +14,16 @@ Customer churn represents a **direct and recurring revenue risk** for subscripti
 This project focuses on identifying **customers most likely to churn early enough** to enable **targeted, cost-effective retention strategies**, rather than relying on reactive or untargeted outreach.
 
 ### Business Context
-- Observed churn rate: **26.5%**, indicating substantial revenue leakage
-- Existing retention efforts are **broad and inefficient**
-- Missing a churner (**false negative**) leads to irreversible revenue loss, while contacting a non-churner incurs relatively low cost
+- Observed churn rate: **26.5%**, indicating substantial revenue leakage  
+- Existing retention efforts are **broad and inefficient**  
+- Missing a churner (**false negative**) leads to irreversible revenue loss, while contacting a non-churner incurs relatively low cost  
 
 ### Objective
 Build a **cost-sensitive, recall-optimised churn prediction model** that:
-- Proactively flags at-risk customers
-- Explicitly minimises false negatives
-- Aligns evaluation metrics with business costs
-- Produces insights actionable by retention and marketing teams
+- Proactively flags at-risk customers  
+- Explicitly minimises false negatives  
+- Aligns evaluation metrics with business costs  
+- Produces insights actionable by retention and marketing teams  
 
 ---
 
@@ -32,7 +32,7 @@ Build a **cost-sensitive, recall-optimised churn prediction model** that:
 ### Dataset
 - **Source:** IBM Telco Customer Churn Dataset  
 - **Records:** 7,043 customers  
-- **Features:** 21 variables covering demographics, services, contracts, and billing
+- **Features:** 21 variables spanning demographics, services, contracts, and billing  
 
 | Aspect | Details |
 |------|--------|
@@ -42,9 +42,9 @@ Build a **cost-sensitive, recall-optimised churn prediction model** that:
 | Primary challenge | Class imbalance |
 
 ### Key Observations
-- `TotalCharges` required numeric conversion and missing-value handling
-- Moderate class imbalance required metric-aware evaluation
-- Dataset scale supports both interpretable and ensemble models
+- `TotalCharges` required numeric conversion and missing-value handling  
+- Moderate class imbalance required metric-aware evaluation  
+- Dataset scale supports both interpretable linear models and ensemble methods  
 
 ---
 
@@ -69,15 +69,15 @@ A structured, production-style workflow was followed to ensure **technical rigor
 All models were trained and evaluated using a **consistent evaluation framework**, with comparisons made on a fixed **20% hold-out test set** to ensure fair benchmarking.
 
 ### Models Evaluated
-- Logistic Regression (baseline & tuned)
-- Decision Tree (baseline & tuned)
-- Random Forest (baseline & tuned)
-- XGBoost (baseline & tuned)
+- Logistic Regression (baseline & tuned)  
+- Decision Tree (baseline & tuned)  
+- Random Forest (baseline & tuned)  
+- XGBoost (baseline & tuned)  
 
 ### Hyperparameter Tuning
-- Performed via **cross-validated hyperparameter optimisation**
-- Recall explicitly prioritised to reduce costly false negatives
-- XGBoost enhanced using class-imbalance weighting and recall-focused tuning
+- Performed via **cross-validated hyperparameter optimisation**  
+- Recall explicitly prioritised to reduce costly false negatives  
+- XGBoost enhanced using class-imbalance weighting and recall-focused tuning  
 
 ---
 
@@ -94,107 +94,120 @@ All models were trained and evaluated using a **consistent evaluation framework*
 
 ---
 
-## Final Model Selection
+## 6. Final Model Selection
 
 ### Selected Model: **Tuned XGBoost**
 
 **Rationale**
-- Achieves the **highest churn recall (82%)**, capturing the majority of at-risk customers
-- Delivers a **13 percentage-point absolute recall improvement** over baseline XGBoost
-- Represents a **19% relative increase in recall**
-- Reduces false negatives by approximately **42%**
-- Accepts lower precision as a deliberate trade-off to minimise business risk
+- Achieves the **highest churn recall (82%)**, capturing the majority of at-risk customers  
+- Delivers a **13 percentage-point absolute recall improvement** over baseline XGBoost  
+- Represents a **19% relative increase in recall**  
+- Reduces false negatives by approximately **42%**  
+- Accepts lower precision as a deliberate trade-off to minimise business risk  
 
 ### Confusion Matrix Comparison
 
 #### Baseline XGBoost
 
-| Actual \ Predicted | No Churn | Churn |
+| Actual \\ Predicted | No Churn | Churn |
 |------------------|----------|-------|
 | No Churn         | 787      | 246   |
 | Churn            | 116      | 258   |
 
 #### Tuned XGBoost (Recall-Focused)
 
-| Actual \ Predicted | No Churn | Churn |
+| Actual \\ Predicted | No Churn | Churn |
 |------------------|----------|-------|
 | No Churn         | 720      | 313   |
 | Churn            | 68       | 306   |
 
 **Key Difference:**  
-Hyperparameter tuning significantly reduces **false negatives** (from **116 → 68**, ~42% reduction), at the cost of increased false positives - a deliberate and appropriate trade-off for churn prediction.
+Hyperparameter tuning reduces **false negatives from 116 to 68 (~42%)**, at the cost of increased false positives — an appropriate trade-off for churn prevention.
 
 ---
 
-## 6. Business Impact
+## 7. Business Impact
 
-The churn prediction model enables a shift from **reactive churn response** to **proactive, data-driven retention**, allowing the business to intervene before revenue is lost.
+The churn prediction model enables a shift from **reactive churn response** to **proactive, data-driven retention**, allowing the business to intervene **before revenue is lost**.
+
+By prioritising recall, the model ensures that the majority of at-risk customers are identified, even if this requires additional outreach.
+
+---
 
 ### Key Drivers of Churn
 
-Model interpretation highlights the following primary churn drivers:
+Model interpretation shows churn is primarily driven by **contract structure, service experience, and early customer lifecycle factors**, rather than demographics:
 
 1. **Contract Type (Month-to-Month)**  
-   Customers on month-to-month contracts exhibit significantly higher churn risk due to lower switching barriers.
+   High churn due to low switching barriers and weak long-term commitment  
 
 2. **Customer Tenure**  
-   Churn is most pronounced among new and short-tenure customers, indicating onboarding and early experience gaps.
+   Elevated churn among new and short-tenure customers  
 
 3. **Monthly Charges**  
-   Higher monthly charges are associated with churn when perceived value does not match cost.
+   Higher charges increase churn when perceived value is low  
 
 4. **Fiber Optic Internet Service**  
-   Fiber customers show elevated churn, particularly when support services are absent.
+   Higher churn, especially when support services are absent  
 
-5. **Technical Support**  
-   Lack of TechSupport strongly correlates with churn, highlighting the importance of post-sale service quality.
-
-6. **Online Security Services**  
-   Customers without OnlineSecurity are more likely to churn, suggesting unmet expectations around reliability and protection.
+5. **Technical Support & Online Security**  
+   Lack of post-sale support strongly correlates with churn  
 
 ---
 
 ### Recommended Business Actions
 
-Based on these insights, the following actions are recommended:
+Actions are grouped by **business lever** to support ownership and execution:
 
-- Proactively target high-risk customers flagged by the model before churn occurs  
-- Incentivise contract upgrades for month-to-month customers through discounts or bundles  
-- Strengthen onboarding and engagement for low-tenure customers  
-- Bundle support and security services for fiber customers to improve perceived value  
-- Prioritise retention spend based on predicted churn risk and customer value  
-- Monitor recall–precision trade-offs to balance campaign cost and ROI  
-- Retrain the model periodically to adapt to evolving customer behaviour  
+#### Contract & Pricing Strategy
+- Incentivise contract upgrades for month-to-month customers  
+- Offer targeted discounts to high-risk, high-value customers  
+
+#### Customer Onboarding & Early Engagement
+- Prioritise outreach for low-tenure customers  
+- Strengthen onboarding to reduce early dissatisfaction  
+
+#### Service & Support Optimisation
+- Bundle TechSupport and OnlineSecurity with fiber plans  
+- Proactively engage fiber customers lacking support services  
+
+#### Retention Campaign Execution
+- Allocate retention spend based on predicted churn risk  
+- Monitor recall–precision trade-offs against campaign ROI  
+
+#### Model Operations
+- Retrain the model periodically with updated customer data  
+- Track performance to ensure sustained business impact  
 
 ---
 
 ### Business Value Delivered
 
-By aligning model optimisation with business costs, the solution:
+By aligning model optimisation with real business costs, the solution:
 - Reduces missed churners and associated revenue leakage  
-- Enables more efficient allocation of retention resources  
-- Supports data-driven decision-making across marketing and customer success teams  
+- Enables more efficient retention spend  
+- Supports data-driven decisions across marketing and customer success  
 - Provides a scalable framework for ongoing churn management  
 
 ---
 
-## 7. Future Enhancements
+## 8. Future Enhancements
 
-- **Address class imbalance** by exploring advanced sampling techniques (e.g., SMOTE) to further improve churn detection and recall  
-- **Enhance feature engineering** through interaction or aggregate features to capture more complex customer behavior patterns  
-- **Improve explainability** using SHAP or LIME to provide actionable, customer-level insights and increase stakeholder trust 
-- **Calibrate prediction probabilities** to support cost-based decision thresholds and retention decision-making  
-- **Evaluate retention strategies** by A/B testing model-driven interventions and measuring business uplift
+- Explore advanced techniques to further address class imbalance  
+- Enhance feature engineering to capture complex customer behavior  
+- Improve explainability using SHAP or LIME  
+- Calibrate probabilities for cost-based decision thresholds  
+- Evaluate retention strategies via A/B testing and uplift measurement  
 
 ---
 
 ## Conclusion
 
-This project demonstrates a **business-aligned churn prediction system** that combines:
-- Insight-driven EDA
-- Cost-sensitive modeling
-- Rigorous benchmarking
-- Metric-driven decision-making
+This project demonstrates a **business-aligned churn prediction system** combining:
+- Insight-driven EDA  
+- Cost-sensitive modeling  
+- Rigorous benchmarking  
+- Metric-driven decision-making  
 
 By prioritising recall over raw accuracy, the final solution aligns predictive performance with **real financial impact**.
 
@@ -205,7 +218,7 @@ Deploy **Tuned XGBoost** to maximise churn detection and support proactive, cost
 
 ## Technology Stack
 - **Language:** Python 3.12  
-- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
 
 ---
 
@@ -216,4 +229,4 @@ Deploy **Tuned XGBoost** to maximise churn detection and support proactive, cost
 
 ## Contact
 - **Email:** mithileshgungah@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/mithilesh-gungah-331133215/
+- **LinkedIn:** https://www.linkedin.com/in/mithilesh-gungah-331133215
