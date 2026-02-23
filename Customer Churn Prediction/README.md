@@ -193,7 +193,7 @@ By aligning model optimisation with real business costs, the solution:
 
 ## 8. Future Enhancements
 
-- Explore advanced techniques to further address class imbalance  
+- Explore advanced techniques (e.g., SMOTE) to further address class imbalance and improve churn detection 
 - Enhance feature engineering to capture complex customer behavior  
 - Improve explainability using SHAP or LIME  
 - Calibrate probabilities for cost-based decision thresholds  
