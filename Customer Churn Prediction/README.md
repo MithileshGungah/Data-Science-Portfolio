@@ -94,7 +94,7 @@ All models were trained and evaluated using a **consistent evaluation framework*
 
 ---
 
-## 6. Final Model Selection
+## Final Model Selection
 
 ### Selected Model: **Tuned XGBoost**
 
@@ -105,16 +105,28 @@ All models were trained and evaluated using a **consistent evaluation framework*
 - Reduces false negatives by approximately **42%**
 - Accepts lower precision as a deliberate trade-off to minimise business risk
 
-### Confusion Matrix (Tuned XGBoost)
+### Confusion Matrix Comparison
+
+#### Baseline XGBoost
+
+| Actual \ Predicted | No Churn | Churn |
+|------------------|----------|-------|
+| No Churn         | 787      | 246   |
+| Churn            | 116      | 258   |
+
+#### Tuned XGBoost (Recall-Focused)
 
 | Actual \ Predicted | No Churn | Churn |
 |------------------|----------|-------|
 | No Churn         | 720      | 313   |
 | Churn            | 68       | 306   |
 
+**Key Difference:**  
+Hyperparameter tuning significantly reduces **false negatives** (from **116 → 68**, ~42% reduction), at the cost of increased false positives — a deliberate and appropriate trade-off for churn prediction.
+
 ---
 
-## 7. Business Impact
+## 6. Business Impact
 
 The churn prediction model enables a shift from **reactive churn response** to **proactive, data-driven retention**, allowing the business to intervene before revenue is lost.
 
@@ -166,7 +178,7 @@ By aligning model optimisation with business costs, the solution:
 
 ---
 
-## 8. Future Enhancements
+## 7. Future Enhancements
 
 ### Modeling Improvements
 - Bayesian hyperparameter optimisation
