@@ -180,24 +180,11 @@ By aligning model optimisation with business costs, the solution:
 
 ## 7. Future Enhancements
 
-### Modeling Improvements
-- Bayesian hyperparameter optimisation
-- Probability calibration for cost-based thresholding
-- Explicit cost-sensitive loss functions
-
-### Explainability & Trust
-- SHAP-based feature attribution for stakeholder transparency
-- Customer-level explanations to support targeted interventions
-
-### Production & Monitoring
-- Deploy as batch or real-time scoring service
-- Monitor data drift and performance decay
-- Automate periodic retraining pipelines
-
-### Business Integration
-- A/B test retention strategies driven by predictions
-- Measure uplift and campaign effectiveness
-- Integrate with CRM and marketing automation platforms
+- **Address class imbalance** by exploring advanced sampling techniques (e.g., SMOTE) to further improve churn detection and recall  
+- **Enhance feature engineering** through interaction or aggregate features to capture more complex customer behavior patterns  
+- **Improve explainability** using SHAP or LIME to provide actionable, customer-level insights and increase stakeholder trust 
+- **Calibrate prediction probabilities** to support cost-based decision thresholds and retention decision-making  
+- **Evaluate retention strategies** by A/B testing model-driven interventions and measuring business uplift
 
 ---
 
