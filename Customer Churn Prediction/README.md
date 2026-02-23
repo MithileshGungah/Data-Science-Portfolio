@@ -25,7 +25,7 @@ Because the cost of missing a churner is significantly higher than the cost of c
 The primary objective is therefore to build a **high-recall churn prediction model** that:
 - Proactively flags at-risk customers before churn occurs  
 - **Minimises false negatives**, which represent irreversible revenue loss  
-- Accepts a controlled increase in false positives as a deliberate trade-off  
+- Accepts a controlled increase in false positives as a deliberate and cost-effective trade-off 
 - Aligns evaluation metrics with real business costs rather than raw accuracy  
 - Produces insights actionable by retention and marketing teams
 
@@ -95,6 +95,8 @@ All models were trained and evaluated using a **consistent evaluation framework*
 | Precision (Churn) | 0.64 | 0.64 | 0.48 | **0.66** | 0.62 | 0.65 | 0.51 | 0.49 |
 | Recall (Churn) | 0.54 | 0.51 | 0.49 | 0.40 | 0.49 | 0.50 | 0.69 | **0.82** |
 | F1-score (Churn) | 0.58 | 0.57 | 0.48 | 0.50 | 0.55 | 0.56 | 0.59 | **0.62** |
+
+**Primary metric:** Recall (Churn), reflecting the higher cost of false negatives in churn prevention.
 
 ---
 
