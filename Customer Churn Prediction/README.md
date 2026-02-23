@@ -94,7 +94,7 @@ All models were trained and evaluated using a **consistent evaluation framework*
 
 ---
 
-## 6. Final Model Selection
+## Final Model Selection
 
 ### Selected Model: **Tuned XGBoost**
 
@@ -126,7 +126,7 @@ Hyperparameter tuning reduces **false negatives from 116 to 68 (~42%)**, at the 
 
 ---
 
-## 7. Business Impact
+## 6. Business Impact
 
 The churn prediction model enables a shift from **reactive churn response** to **proactive, data-driven retention**, allowing the business to intervene **before revenue is lost**.
 
@@ -191,7 +191,7 @@ By aligning model optimisation with real business costs, the solution:
 
 ---
 
-## 8. Future Enhancements
+## 7. Future Enhancements
 
 - Explore advanced techniques (e.g., SMOTE) to further address class imbalance and improve churn detection 
 - Enhance feature engineering to capture complex customer behavior  
@@ -223,10 +223,12 @@ Deploy **Tuned XGBoost** to maximise churn detection and support proactive, cost
 ---
 
 ## Code
-[View Notebook](./Telco_Customer_Churn_Prediction.ipynb)
+
+[![View Code](https://img.shields.io/badge/View%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
 
 ---
 
 ## Contact
-- **Email:** mithileshgungah@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/mithilesh-gungah-331133215
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
