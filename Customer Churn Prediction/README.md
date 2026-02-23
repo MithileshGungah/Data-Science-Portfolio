@@ -122,7 +122,7 @@ All models were trained and evaluated using a **consistent evaluation framework*
 | Churn            | 68       | 306   |
 
 **Key Difference:**  
-Hyperparameter tuning significantly reduces **false negatives** (from **116 → 68**, ~42% reduction), at the cost of increased false positives — a deliberate and appropriate trade-off for churn prediction.
+Hyperparameter tuning significantly reduces **false negatives** (from **116 → 68**, ~42% reduction), at the cost of increased false positives - a deliberate and appropriate trade-off for churn prediction.
 
 ---
 
