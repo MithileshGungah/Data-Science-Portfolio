@@ -1,54 +1,46 @@
 <h1 align="center">Mithilesh Gungah</h1>
 <h3 align="center">Data Science Portfolio</h3>
 
-Welcome to my Data Science Portfolio - a showcase of projects where **data meets actionable insight**.
+I build machine learning systems that focus not just on predictive performance, but on **how models shape decisions, visibility, and real-world outcomes**.
 
-Each project demonstrates my ability to:
-
-- **Solve complex problems** by framing them clearly and strategically  
-- **Dive deep into data**: clean, explore, and preprocess diverse datasets  
-- **Engineer meaningful features** and build robust machine learning models  
-- **Interpret and communicate results** to inform decisions and drive impact  
-- **Deliver measurable outcomes** that turn analysis into action  
-
-Every project follows a structured approach:  
-
-**Problem → Data → Method → Modeling → Results → Impact → Future work**
-
-> “I transform raw data into insights that inform strategy, optimize processes, and solve real-world problems.”
+My work emphasises:
+- evaluation design aligned with real-world consequences  
+- analysis of model behaviour, bias, and representation  
+- reproducible, transparent machine learning workflows  
 
 ---
 
 ## Selected Projects
 
-### Customer Churn Prediction
-**Goal:** Identify customers likely to churn.
+### Cognitive Maps of London in Generative AI  
+**How multimodal large language models perceive, prioritise, and distort urban space**
 
-- Feature engineering from usage patterns  
-- Logistic Regression, Random Forest, XGBoost with cross-validation  
+Large language models are increasingly acting as spatial gatekeepers for mapping, search, and local discovery.  
+This project audits how multimodal LLMs internally represent cities, using London as a controlled case study.
 
-**Impact:** Improved recall vs baseline; identified key retention drivers.  
-[View Project](#)
+Key highlights:
+- Adapted urban cognition experiments to deployed multimodal LLMs  
+- Measured recognisability versus visibility across London boroughs  
+- Reconstructed AI-generated cognitive maps from confusion structure  
+- Identified amplified central bias and peripheral suppression  
+- Linked spatial misrepresentation to socio-economic inequality  
 
----
-
-### End-to-End ML Pipeline
-**Goal:** Build a reusable ML workflow from ingestion to evaluation.
-
-- Modular preprocessing, automated checks, structured training  
-
-**Impact:** Reproducible pipeline template; reduced manual effort.  
-[View Project](#)
+[Read the full project](#)
 
 ---
 
-### NLP Sentiment Analysis
-**Goal:** Classify customer feedback sentiment.
+### Customer Churn Prediction Engine  
+**A cost-sensitive machine learning system for proactive retention**
 
-- Text cleaning, TF-IDF & embedding comparison, model benchmarking  
+This project reframes churn prediction as a business optimisation problem, where the cost of missing a churner outweighs the cost of contacting a loyal customer.
 
-**Impact:** High accuracy; insights into sentiment drivers; transparent evaluation.  
-[View Project](#)
+Key highlights:
+- Recall-driven evaluation aligned with real churn costs  
+- Benchmarked Logistic Regression, Random Forest, and XGBoost  
+- Improved churn recall from 69% to 82%  
+- Reduced missed churners by approximately 42%  
+
+[View the notebook](#)
 
 ---
 
