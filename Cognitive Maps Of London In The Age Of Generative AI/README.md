@@ -162,6 +162,8 @@ This project applies the same logic to **multimodal LLMs**, enabling direct **hu
 
 ## 3. Method — Multimodal Recognition Tasks
 
+All model queries were executed via **official, provider-maintained APIs** (OpenAI, Google Gemini, Anthropic), with fixed prompts and deterministic generation settings to ensure reproducibility and comparability across models, tasks, and boroughs.
+
 Two complementary recognition tasks were designed.
 
 ### Image-Based Recognition
