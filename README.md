@@ -15,7 +15,7 @@ My work emphasises:
 ### Cognitive Maps of London in Generative AI  
 **How multimodal large language models perceive, prioritise, and distort urban space**
 
-<p align="center">
+<p align="left">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
 
@@ -36,7 +36,7 @@ Key highlights:
 ### Customer Churn Prediction Engine  
 **A cost-sensitive machine learning system for proactive retention**
 
-<p align="center">
+<p align="left">
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
 </p>
 
