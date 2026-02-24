@@ -55,19 +55,19 @@ Key contributions:
 ## Skills & Tools
 
 ### Programming & Scripting  
-Python, SQL  
+`Python`, `SQL`
 
 ### Machine Learning & AI  
-Scikit-learn, XGBoost, Large Language Models  
+`Scikit-learn`, `XGBoost`, `Large Language Models`
 
 ### Data Analysis & Visualisation  
-Pandas, NumPy, Matplotlib, Seaborn, Plotly  
+`Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `Plotly`
 
 ### Version Control & Collaboration  
-Git, GitHub  
+`Git`, `GitHub`
 
 ### Tools & Environments  
-Jupyter Notebook  
+`Jupyter Notebook`
 
 ---
 
