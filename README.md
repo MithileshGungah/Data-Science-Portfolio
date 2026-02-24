@@ -15,6 +15,10 @@ My work emphasises:
 ### Cognitive Maps of London in Generative AI  
 **How multimodal large language models perceive, prioritise, and distort urban space**
 
+<p align="center">
+  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="500">
+</p>
+
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and local discovery.  
 This project audits how multimodal LLMs internally represent cities, using London as a controlled case study.
 
@@ -31,6 +35,10 @@ Key highlights:
 
 ### Customer Churn Prediction Engine  
 **A cost-sensitive machine learning system for proactive retention**
+
+<p align="center">
+  <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
+</p>
 
 This project reframes churn prediction as a business optimisation problem, where the cost of missing a churner outweighs the cost of contacting a loyal customer.
 
