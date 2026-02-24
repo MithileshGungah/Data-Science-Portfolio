@@ -164,7 +164,7 @@ This project applies the same logic to **multimodal LLMs**, enabling direct **hu
 
 All model queries were executed via **official, provider-maintained APIs** (OpenAI, Google Gemini, Anthropic), with fixed prompts and deterministic generation settings to ensure reproducibility and comparability across models, tasks, and boroughs.
 
-Two complementary recognition tasks were designed.
+Two complementary recognition tasks were designed:
 
 ### Image-Based Recognition
 - **Input:** Street-level image  
@@ -399,7 +399,7 @@ This has direct implications for:
 - **Analysis:** Pandas, NumPy, SciPy  
 - **Evaluation:** Confusion matrices, PCA, rank correlation  
 - **Visualisation:** Matplotlib, Seaborn, Plotly 
-- **Inference & Data Collection:** API-based model querying, Google Street View API  
+- **Inference & Data Collection:** Official LLM APIs (OpenAI, Gemini, Anthropic), Google Street View API 
 - **External Data:** UK Census, IMD, Google Maps APIs
 
 ---
