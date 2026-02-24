@@ -23,11 +23,11 @@ Large language models are increasingly acting as spatial gatekeepers for mapping
 This project audits how multimodal LLMs internally represent cities, using London as a controlled, policy-relevant case study.
 
 Key contributions:
-- Adapted classic urban cognition experiments to deployed multimodal LLMs  
-- Quantified recognisability across all London boroughs  
-- Reconstructed AI-generated cognitive maps from structured confusion patterns  
-- Demonstrated amplified central bias and systematic peripheral suppression  
-- Linked spatial misrepresentation to socio-economic inequality  
+- Adapted classic urban cognition experiments into a reproducible multimodal ML evaluation framework  
+- Designed and computed borough-level recognition metrics from large-scale confusion matrices  
+- Reconstructed AI-generated cognitive maps using systematic misclassification structure and dimensionality reduction  
+- Identified amplified central bias and peripheral suppression through comparative metric analysis  
+- Quantified relationships between model behaviour and socio-economic indicators using correlation analysis  
 
 [Read the full project](#)
 
