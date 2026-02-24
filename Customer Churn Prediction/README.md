@@ -7,6 +7,30 @@
 
 ---
 
+## Executive Summary
+
+This project builds a cost-sensitive customer churn prediction engine designed to support proactive, revenue-preserving retention strategies in subscription-based businesses.
+
+Using a telecom dataset of 7,043 customers with a 26.5% churn rate, the system reframes churn prediction as a business optimisation problem, where the cost of missing a churner (false negative) far outweighs the cost of contacting a loyal customer. Model evaluation and selection are therefore driven by recall, not raw accuracy.
+
+A structured, production-style machine learning workflow was implemented, benchmarking four model families (Logistic Regression, Decision Tree, Random Forest, XGBoost) under consistent cross-validated evaluation. Through recall-focused hyperparameter tuning, a Tuned XGBoost model was selected as the final solution.
+
+### Key outcomes
+- Churn recall improved from 69% to 82 percent
+- False negatives reduced by approximately 42 percent
+- Precision was deliberately traded for recall to align predictions with real business costs
+- Model outputs translate directly into actionable retention strategies
+
+### Business value
+The system enables a shift from reactive churn response to targeted, data-driven retention, allowing organisations to:
+- intervene earlier in the customer lifecycle
+- allocate retention spend more efficiently
+- reduce recurring revenue leakage at scale
+
+This project demonstrates how metric choice, model selection, and evaluation design can materially affect business outcomes, and why churn prediction must be treated as a cost-sensitive decision system rather than a leaderboard optimisation task.
+
+---
+
 ## 1. Problem Statement
 
 Customer churn represents a **direct and recurring revenue risk** for subscription-based businesses. Retaining an existing customer is typically far less costly than acquiring a new one, making early churn detection a critical business capability.
