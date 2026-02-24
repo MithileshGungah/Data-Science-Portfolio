@@ -7,7 +7,7 @@
 
 ---
 
-## Executive Summary
+## Executive Summary (For Recruiters & Hiring Managers)
 
 This project builds a cost-sensitive customer churn prediction engine designed to support proactive, revenue-preserving retention strategies in subscription-based businesses.
 
