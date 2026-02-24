@@ -1,11 +1,11 @@
 <h1 align="center">Mithilesh Gungah</h1>
 <h3 align="center">Data Science Portfolio</h3>
 
-I build machine learning systems that focus not just on predictive performance, but on **how models shape decisions, visibility, and real-world outcomes**.
+I design and evaluate machine learning systems with a focus beyond predictive performance — examining how models influence decisions and produce real-world consequences.
 
-My work emphasises:
-- evaluation design aligned with real-world consequences  
-- analysis of model behaviour, bias, and representation  
+My work centres on:
+- evaluation frameworks aligned with real-world costs, risks, and outcomes  
+- systematic analysis of model behaviour, bias, and representation  
 - reproducible, transparent machine learning workflows  
 
 ---
@@ -20,13 +20,13 @@ My work emphasises:
 </p>
 
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and local discovery.  
-This project audits how multimodal LLMs internally represent cities, using London as a controlled case study.
+This project audits how multimodal LLMs internally represent cities, using London as a controlled, policy-relevant case study.
 
-Key highlights:
-- Adapted urban cognition experiments to deployed multimodal LLMs  
-- Measured recognisability versus visibility across London boroughs  
-- Reconstructed AI-generated cognitive maps from confusion structure  
-- Identified amplified central bias and peripheral suppression  
+Key contributions:
+- Adapted classic urban cognition experiments to deployed multimodal LLMs  
+- Quantified recognisability across all London boroughs  
+- Reconstructed AI-generated cognitive maps from structured confusion patterns  
+- Demonstrated amplified central bias and systematic peripheral suppression  
 - Linked spatial misrepresentation to socio-economic inequality  
 
 [Read the full project](#)
@@ -40,13 +40,13 @@ Key highlights:
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
 </p>
 
-This project reframes churn prediction as a business optimisation problem, where the cost of missing a churner outweighs the cost of contacting a loyal customer.
+This project reframes churn prediction as a decision problem, where the cost of missing a churner far exceeds the cost of contacting a loyal customer.
 
-Key highlights:
-- Recall-driven evaluation aligned with real churn costs  
-- Benchmarked Logistic Regression, Random Forest, and XGBoost  
+Key contributions:
+- Designed a recall-focused evaluation strategy aligned with real churn economics  
+- Benchmarked Logistic Regression, Random Forest, and XGBoost under consistent validation  
 - Improved churn recall from 69% to 82%  
-- Reduced missed churners by approximately 42%  
+- Reduced missed churners by approximately 42 percent  
 
 [View the notebook](#)
 
@@ -54,23 +54,20 @@ Key highlights:
 
 ## Skills & Tools
 
-### Programming & Scripting
-`Python`, `SQL`
+### Programming & Scripting  
+Python, SQL  
 
-### Machine Learning & AI
-`Scikit-learn`, `XGBoost`, `TensorFlow`, `PyTorch`
+### Machine Learning & AI  
+Scikit-learn, XGBoost, Large Language Models  
 
-### Data Engineering & Pipelines
-`ETL`, `Apache Spark`
+### Data Analysis & Visualisation  
+Pandas, NumPy, Matplotlib, Seaborn, Plotly  
 
-### Data Analysis & Visualization
-`Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `Plotly`
+### Version Control & Collaboration  
+Git, GitHub  
 
-### Version Control & Collaboration
-`Git`, `GitHub`
-
-### Tools & Environments
-`Jupyter Notebook`, `Azure`, `AWS`, `GCP`
+### Tools & Environments  
+Jupyter Notebook  
 
 ---
 
