@@ -13,7 +13,7 @@ My work centres on:
 ## Selected Projects
 
 <h3 align="center">Cognitive Maps of London in Generative AI</h3>
-<h4 align="center">How multimodal large language models perceive, prioritise, and distort urban space?</h4>
+<h4 align="center"><em>How multimodal large language models perceive, prioritise, and distort urban space?</em></h4>
 
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
