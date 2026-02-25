@@ -29,9 +29,11 @@ Key contributions:
 - Identified amplified central bias and peripheral suppression through comparative metric analysis  
 - Quantified relationships between model behaviour and socio-economic indicators using correlation analysis  
 
-[![View Project](https://img.shields.io/badge/View-Project-blue?style=for-the-badge)](
-https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md
-)
+<a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md"
+   target="_blank"
+   rel="noopener noreferrer">
+  <button>View Project</button>
+</a>
 
 ---
 
