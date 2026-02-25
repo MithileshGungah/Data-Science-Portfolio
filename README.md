@@ -29,7 +29,7 @@ Key contributions:
 - Identified amplified central bias and peripheral suppression through comparative metric analysis  
 - Quantified relationships between model behaviour and socio-economic indicators using correlation analysis  
 
-[Read the full project](#)
+[View Project](#)
 
 ---
 
@@ -48,7 +48,7 @@ Key contributions:
 - Improved churn recall from 69% to 82%  
 - Reduced missed churners by approximately 42 percent  
 
-[View the notebook](#)
+[View Project](#)
 
 ---
 
