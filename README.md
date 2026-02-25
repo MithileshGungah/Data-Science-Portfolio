@@ -52,7 +52,23 @@ Key contributions:
 - Improved churn recall from 69% to 82%  
 - Reduced missed churners by approximately 42 percent  
 
-[View Project](#)
+<a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Customer%20Churn%20Prediction/README.md"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="text-decoration:none;">
+  <button
+    type="button"
+    style="
+      padding: 10px 18px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1f6feb;
+      color: white;
+      cursor: pointer;">
+    View Project
+  </button>
+</a>
 
 ---
 
