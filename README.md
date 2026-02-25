@@ -34,7 +34,7 @@ Key contributions:
 ---
 
 <h3 align="center">Customer Churn Prediction Engine</h3>
-<h4 align="center">A cost-sensitive machine learning system for proactive retention</h4>
+<h4 align="center"><em>A cost-sensitive machine learning system for proactive retention</em></h4>
 
 <p align="center">
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
