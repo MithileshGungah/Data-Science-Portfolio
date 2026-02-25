@@ -2,6 +2,10 @@
 ## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space  
 ### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models  
 
+<p align="center">
+  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
+</p>
+
 ---
 
 ## Executive Summary (For Recruiters & Hiring Managers)
