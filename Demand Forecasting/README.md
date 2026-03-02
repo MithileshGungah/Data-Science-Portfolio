@@ -161,6 +161,11 @@ For short-term daily sales forecasting under volatile demand, **feature-based gr
 
 ---
 
+## Conclusion
+This project demonstrates that, in volatile and spike-driven demand environments, reliable short-term forecasting is best achieved through models that combine calendar awareness with recent demand dynamics. Feature-based gradient boosting proved most effective at balancing accuracy, robustness, and interpretability, delivering meaningful error reductions while maintaining stable forecast behavior. By grounding predictions in adaptive temporal structure rather than rigid seasonal assumptions, the final approach supports practical, risk-aware operational planning in real-world retail settings.
+
+---
+
 ## Technology Stack
 - **Language:** Python 3.12  
 - **Libraries:** Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Prophet, SHAP, Matplotlib, Plotly, Seaborn, TensorFlow  
