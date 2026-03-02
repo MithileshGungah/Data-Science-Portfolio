@@ -1,5 +1,9 @@
 # Daily Sales Forecasting Under Volatile Demand
 
+<p align="center">
+  <img src="demand_forecasting.png" alt="Demand Forecasting" width="500">
+</p>
+
 ## At a Glance
 - **Forecast horizon:** 7 days  
 - **Best model:** XGBoost (feature-based, recursive multi-step)  
