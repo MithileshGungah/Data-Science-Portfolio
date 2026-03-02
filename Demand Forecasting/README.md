@@ -12,6 +12,7 @@
 Accurate short-term demand forecasting is critical for retail operations. Over-forecasting leads to excess inventory, higher holding costs, and waste, while under-forecasting results in stockouts, lost revenue, and poor customer experience. These risks are amplified in environments with high volatility, irregular demand spikes, and strong calendar effects.
 
 This project develops and evaluates forecasting models designed to deliver reliable **7-day sales forecasts** that materially outperform simple baselines under realistic operational conditions.  
+
 The final model achieves an approximate **25–31 percent reduction in RMSE** relative to naive benchmarks under rolling-origin evaluation.
 
 ---
