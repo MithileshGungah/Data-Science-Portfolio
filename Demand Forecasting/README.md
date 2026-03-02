@@ -151,13 +151,13 @@ For short-term daily sales forecasting under volatile demand, feature-based grad
 
 ## Technology Stack
 - **Language:** Python 3.12  
-- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
+- **Libraries:** Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Prophet, SHAP, Matplotlib, Plotly, TensorFlow
 
 ---
 
 ## Code
 
-[![View Code](https://img.shields.io/badge/View%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
+[![View Code]()
 
 ---
 
