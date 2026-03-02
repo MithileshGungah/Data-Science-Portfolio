@@ -16,7 +16,7 @@ My work centres on:
 <h4 align="center"><em>How multimodal large language models perceive, prioritise, and distort urban space</em></h4>
 
 <p align="center">
-  <img src="../LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
+  <img src="../Cognitive Maps Of London In The Age Of Generative AI/LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
 
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and local discovery.  
