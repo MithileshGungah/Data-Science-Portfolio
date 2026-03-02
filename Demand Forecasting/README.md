@@ -148,6 +148,7 @@ By prioritizing stability and interpretability, the approach reflects how foreca
 
 ## Limitations and Future Work
 - Incorporate explicit holiday and promotion indicators to better capture event-driven demand spikes.  
+- Conduct more systematic hyperparameter tuning for top-performing models to further improve forecast accuracy and stability.  
 - Produce prediction intervals to support uncertainty-aware planning and risk management.  
 - Explore direct multi-step forecasting approaches to reduce recursive error accumulation.  
 - Extend the framework to hierarchical forecasting across regions, categories, or customer segments.  
