@@ -160,13 +160,8 @@ By prioritizing stability and interpretability, the approach reflects how foreca
 
 ---
 
-## Takeaway
-For short-term daily sales forecasting under volatile demand, **feature-based gradient boosting provides the strongest balance of robustness, adaptability, and interpretability**. Classical seasonal models remain effective benchmarks, while increased model complexity alone does not guarantee improved forecasting performance.
-
----
-
-## Conclusion
-This project demonstrates that, in volatile and spike-driven demand environments, reliable short-term forecasting is best achieved through models that combine calendar awareness with recent demand dynamics. Feature-based gradient boosting proved most effective at balancing accuracy, robustness, and interpretability, delivering meaningful error reductions while maintaining stable forecast behavior. By grounding predictions in adaptive temporal structure rather than rigid seasonal assumptions, the final approach supports practical, risk-aware operational planning in real-world retail settings.
+## Conclusion and Key Takeaways
+This project shows that in volatile, spike-driven demand environments, reliable short-term forecasting is best achieved by models that combine calendar awareness with recent demand dynamics. Feature-based gradient boosting provides the strongest balance of robustness, adaptability, and interpretability, delivering meaningful error reductions while maintaining stable forecast behavior. Classical seasonal models remain effective benchmarks, but increased model complexity alone does not guarantee improved performance. Grounding forecasts in adaptive temporal structure rather than rigid seasonal assumptions enables more practical, risk-aware operational planning in real-world retail settings.
 
 ---
 
