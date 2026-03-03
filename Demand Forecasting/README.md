@@ -1,182 +1,92 @@
-# Daily Sales Forecasting Under Volatile Demand
+# Short-Term Sales Forecasting Under Volatile Demand
 
-<p align="center">
-  <img src="demand_forecasting.png" alt="Demand Forecasting" width="500">
-</p>
+## Overview
 
-## At a Glance
-- **Forecast horizon:** 7 days  
-- **Best model:** XGBoost (feature-based, recursive multi-step)  
-- **Performance:** ~25–31% RMSE reduction vs naive baselines (rolling-origin backtesting)  
-- **Focus:** Robust, interpretable short-term forecasting under volatile demand  
+This project builds a production-aware short-term sales forecasting framework for a highly volatile daily retail demand series. Using approximately four years of historical transaction data aggregated into a continuous daily time series, multiple statistical, machine learning, and deep learning models were benchmarked under strict rolling-origin backtesting with a fixed 7-day forecast horizon.
+
+The objective was not to maximise complexity, but to identify a model that delivers stable, operationally reliable forecasts under spike-driven demand conditions.
 
 ---
 
-## Business Problem
-Accurate short-term demand forecasting is critical for retail operations. Over-forecasting leads to excess inventory, higher holding costs, and waste, while under-forecasting results in stockouts, lost revenue, and poor customer experience. These risks are amplified in environments with high volatility, irregular demand spikes, and strong calendar effects.
+## Key Result
 
-This project develops and evaluates forecasting models designed to deliver reliable **7-day sales forecasts** that materially outperform simple baselines under realistic operational conditions.  
+**XGBoost delivered the strongest overall performance**, achieving approximately **25 to 31 percent reduction in RMSE relative to naive baselines**.
 
-The final model achieves an approximate **25–31 percent reduction in RMSE** relative to naive benchmarks under rolling-origin evaluation.
-
----
-
-## Objective
-The primary objective is to identify forecasting approaches that balance:
-- short-term accuracy  
-- robustness to volatility and demand spikes  
-- interpretability for operational decision-making  
-
-Rather than optimizing for perfect prediction of rare extremes, the focus is on stable and dependable forecasts suitable for inventory planning, staffing, and near-term operational execution.
+This improvement directly enhances short-term planning reliability in volatile demand environments where large forecast misses drive disproportionate operational cost.
 
 ---
 
-## Forecast Horizon
-A 7-day forecast horizon is used throughout the project, aligning with common business planning cycles such as:
-- weekly inventory replenishment  
-- workforce scheduling  
-- short-term budgeting and performance tracking  
-- promotion monitoring  
+## Why This Matters
+
+Daily retail demand in this dataset exhibits:
+
+- Strong monthly and weekly seasonality  
+- Heavy-tailed, spike-driven fluctuations  
+- Nonlinear demand dynamics  
+- Irregular high-impact transactions  
+
+In such settings, forecast robustness and sensitivity to extreme deviations matter more than purely average error reduction.
 
 ---
 
-## Data Overview
-- **Granularity:** daily aggregated sales  
-- **Coverage:** approximately four years  
-- **Characteristics:**
-  - strong calendar-driven seasonality  
-  - frequent irregular demand spikes  
-  - end-of-year and holiday-related effects  
-  - high variance dominating absolute error metrics  
+## Methodology Highlights
 
-Missing dates were explicitly handled to construct a **continuous daily time series**, ensuring valid time-series modeling and leakage-free evaluation.
+- Continuous daily time series construction with strict temporal integrity  
+- Leakage-free feature engineering using lagged and rolling statistics  
+- Rolling-origin cross-validation with fixed 7-day recursive forecasting  
+- Unified evaluation across all models  
+- Metrics aligned with operational risk: MAE, RMSE, and WMAPE  
+- Explicit trade-off analysis between interpretability and predictive performance  
 
 ---
 
-## Exploratory Data Analysis
-Exploratory analysis revealed several consistent patterns:
-- a clear long-term upward growth trend  
-- pronounced monthly seasonality, with early-year dips and late-year peaks  
-- recurring intra-year transitions, including post-winter rebounds and late-year surges  
-- demand persistence across adjacent periods rather than isolated, random spikes  
+## Models Benchmarked
 
-In addition to time-series analysis, supplementary business EDA was performed across **regions, product categories, sub-categories, and customer segments** to contextualise demand drivers. Forecasting was subsequently conducted on the aggregated daily sales series to support operational planning.
-
-Weekly aggregation was evaluated but excluded from final reporting, as it did not reveal stable calendar-aligned patterns beyond what was already captured by daily and monthly views.
-
----
-
-## Forecasting Models Evaluated
-
-### Baselines
-- Naive  
-- Seasonal Naive (7-day)  
-
-### Statistical Models
-- ARIMA  
-- SARIMA  
-
-### Decomposition-Based
+- Naive and seasonal naive baselines  
+- ARIMA and SARIMA  
 - Prophet  
-
-### Feature-Based Machine Learning
 - Random Forest  
 - XGBoost  
+- LSTM  
 
-### Deep Learning
-- LSTM (benchmarking only)  
-
-All models were trained and evaluated using identical data splits, feature construction, and forecast horizons to ensure fair comparison.
+Classical seasonal models performed strongly but were less adaptive to irregular spikes. Deep sequence modelling did not outperform tree-based boosting under recursive multi-step evaluation and moderate data volume.
 
 ---
 
-## Feature Engineering
-For supervised models, features were constructed using **historical information only** to prevent leakage:
-- lagged demand features (`lag_1`, `lag_7`, `lag_14`)  
-- rolling statistics capturing recent demand level and volatility  
-- calendar features (month, day of week)  
+## Interpretability and Governance
 
----
+To ensure transparent model selection:
 
-## Evaluation Methodology
-Models were evaluated using **rolling-origin backtesting** with strict time-based splits and a fixed 7-day forecast horizon.
+- SHAP was applied to the final XGBoost model  
+- Month-level seasonality and weekly lag effects emerged as dominant drivers  
+- Rolling demand statistics stabilised predictions under volatility  
 
-Evaluation metrics included:
-- **MAE** for average error magnitude  
-- **RMSE** to emphasize large forecast errors  
-- **WMAPE** for volume-weighted relative performance  
-
-RMSE was used as the primary ranking metric due to its sensitivity to large forecast misses, which are most costly in volatile demand environments.
-
----
-
-## Key Results
-- **XGBoost consistently achieved the strongest performance**, delivering the lowest MAE, RMSE, and WMAPE across rolling evaluation windows.  
-- RMSE was reduced by approximately **25–31 percent** relative to naive and seasonal naive baselines.  
-- **Prophet and SARIMA** formed a strong second tier, confirming the value of explicit trend and seasonality modeling.  
-- **Naive baselines and LSTM** underperformed, highlighting the limitations of rigid repetition assumptions and sequence-based deep learning in spike-driven daily data.  
-- Absolute errors remained elevated across all models due to rare but extreme demand spikes, making **relative performance improvements** the most meaningful indicator of model quality.
-
----
-
-## Forecast Behavior and Interpretability
-Final-fold diagnostics and a 7-day forward forecast demonstrate:
-- stable short-term predictions with controlled variability  
-- limited overreaction to isolated spikes  
-- behavior consistent with known calendar effects, including end-of-year uplift, early-year slowdowns, and post-holiday normalization  
-
-This balance supports operational reliability rather than aggressive extrapolation of rare extremes.
-
----
-
-## Model Explainability
-SHAP analysis was used to interpret the final XGBoost model. Key findings include:
-- **calendar month** as the dominant driver, confirming strong monthly seasonality observed in EDA  
-- strong influence of **weekly and bi-weekly lag features**, capturing short-term momentum  
-- meaningful contribution from rolling demand statistics  
-- comparatively weak **day-of-week effects**, explaining the limited value of rigid weekly seasonal assumptions  
-
-The alignment between EDA insights and SHAP attribution confirms that the model learned meaningful and interpretable demand structure.
+This confirms that predictive strength was driven by meaningful temporal structure rather than noise.
 
 ---
 
 ## Business Impact
-This analysis demonstrates that feature-based gradient boosting models can **materially reduce large forecast errors** under volatile demand conditions. The resulting forecasts support:
-- improved inventory allocation  
-- more reliable staffing decisions  
-- risk-aware short-term operational planning  
 
-By prioritizing stability and interpretability, the approach reflects how forecasting models are evaluated and deployed in real business environments.
+A 25 to 31 percent reduction in RMSE translates into:
 
----
+- Lower stockout risk during demand surges  
+- Reduced overstock exposure during pullbacks  
+- Improved short-term inventory alignment  
+- Greater operational stability under volatility  
 
-## Limitations and Future Work
-- Incorporate explicit holiday and promotion indicators to better capture event-driven demand spikes.  
-- Conduct more systematic hyperparameter tuning for top-performing models to further improve forecast accuracy and stability.  
-- Produce prediction intervals to support uncertainty-aware planning and risk management.  
-- Explore direct multi-step forecasting approaches to reduce recursive error accumulation.  
-- Extend the framework to hierarchical forecasting across regions, categories, or customer segments.  
-- Deploy the solution as a scheduled forecasting pipeline or lightweight API for operational use.
+Forecast improvements are most valuable during high-variance periods where large misses are costly.
 
 ---
 
-## Conclusion and Key Takeaways
-This project shows that in volatile, spike-driven demand environments, reliable short-term forecasting is best achieved by models that combine calendar awareness with recent demand dynamics. Feature-based gradient boosting provides the strongest balance of robustness, adaptability, and interpretability, delivering meaningful error reductions while maintaining stable forecast behavior. Classical seasonal models remain effective benchmarks, but increased model complexity alone does not guarantee improved performance. Grounding forecasts in adaptive temporal structure rather than rigid seasonal assumptions enables more practical, risk-aware operational planning in real-world retail settings.
+## Core Takeaways
+
+- Model effectiveness depends on alignment with demand structure, not complexity alone  
+- Boosted tree ensembles can outperform deep sequence models in moderate-sized retail datasets  
+- Rolling-origin validation is essential for realistic deployment simulation  
+- Interpretability tools such as SHAP enable high-capacity models to meet governance standards  
 
 ---
 
-## Technology Stack
-- **Language:** Python 3.12  
-- **Libraries:** Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Prophet, SHAP, Matplotlib, Plotly, Seaborn, TensorFlow  
+## Technologies
 
----
-
-## Code
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./FINAL_Sales_Forecasting.ipynb)
-
----
-
-## Contact
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)
-&nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
+Python, pandas, scikit-learn, statsmodels, Prophet, XGBoost, TensorFlow, SHAP
