@@ -87,6 +87,19 @@ Forecast improvements are most valuable during high-variance periods where large
 
 ---
 
-## Technologies
+## Technology Stack
+- **Language:** Python 3.12  
+- **Libraries:** Pandas, NumPy, Scikit-learn, Statsmodels, Prophet, XGBoost, TensorFlow, SHAP, Matplotlib, Seaborn
 
-Python, pandas, scikit-learn, statsmodels, Prophet, XGBoost, TensorFlow, SHAP
+---
+
+## Code
+
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
+
+---
+
+## Contact
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
