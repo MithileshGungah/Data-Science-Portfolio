@@ -152,7 +152,7 @@ All models were trained and evaluated using a **consistent evaluation framework*
 | Churn            | 68       | 306   |
 
 **Key Difference:**  
-Hyperparameter tuning reduces **false negatives from 116 to 68 (~42%)**, at the cost of increased false positives — an appropriate trade-off for churn prevention.
+Hyperparameter tuning reduces **false negatives from 116 to 68 (~42%)**, at the cost of increased false positives - an appropriate trade-off for churn prevention.
 
 ---
 
@@ -203,7 +203,7 @@ Actions are grouped by **business lever** to support ownership and execution:
 
 #### Retention Campaign Execution
 - Allocate retention spend based on predicted churn risk  
-- Monitor recall–precision trade-offs against campaign ROI  
+- Monitor recall-precision trade-offs against campaign ROI  
 
 #### Model Operations
 - Retrain the model periodically with updated customer data  
