@@ -17,7 +17,7 @@ Rather than training a new model, this project treats deployed foundation models
 
 **Why it matters**  
 **LLMs are becoming spatial gatekeepers.**  
-They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. When their internal “mental maps” are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible - reinforcing spatial inequality at scale.
+They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. When their internal "mental maps" are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible - reinforcing spatial inequality at scale.
 
 This project asks a simple but critical question:  
 > *Do AI systems perceive cities the way humans do - or do they distort urban space even further?*
@@ -41,7 +41,7 @@ This project asks a simple but critical question:
 - **Outer boroughs are consistently under-recognised**, with several frequently misclassified or effectively absent from model predictions
 - **A small set of boroughs function as cognitive defaults**, absorbing misclassifications from multiple, geographically distinct areas rather than errors being randomly distributed
 - Image and text modalities rely on **different reasoning signals**, resulting in modality-dependent spatial understanding and structurally different cognitive maps
-- Recognition is driven primarily by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, “vibe”) rather than physical urban form alone 
+- Recognition is driven primarily by **symbolic, cultural, and experiential cues** (e.g. transport, regeneration, "vibe") rather than physical urban form alone 
 - **Socio-economic advantage strongly shapes model behaviour**: less deprived boroughs are both more visible and more accurately recognised, while higher-deprivation areas experience compounded suppression in both frequency and accuracy  
 
 **Skills demonstrated**
@@ -73,7 +73,7 @@ As LLMs increasingly mediate:
 
 a critical question emerges:
 
-> **How do AI systems “see” cities - and whose places become visible or invisible as a result?**
+> **How do AI systems "see" cities - and whose places become visible or invisible as a result?**
 
 This project investigates whether multimodal LLMs:
 - replicate known human spatial biases,
@@ -271,7 +271,7 @@ How often a borough dominates model predictions, regardless of correctness.
 ### Structural Analysis
 - Borough- and region-level confusion matrices  
 - **Principal Component Analysis (PCA)**  
-  - Used to identify boroughs that occupy similar positions in the model's “mental space”  
+  - Used to identify boroughs that occupy similar positions in the model's "mental space"  
   - Boroughs that cluster closely are treated as cognitively interchangeable by the model  
 - Co-confusion analysis (systematic default predictions)  
 - Spearman rank correlation (human-AI alignment)  
@@ -328,7 +328,7 @@ To understand **how the model reasons** about place and **why recognition patter
 - Green space and openness  
 
 **Text-based reasoning**
-- Atmosphere and “vibe”  
+- Atmosphere and "vibe"  
 - Culture and nightlife  
 - Transport and connectivity  
 - Land use and regeneration  
