@@ -57,7 +57,7 @@ In such settings, forecast robustness and sensitivity to extreme deviations matt
 
 Classical seasonal models performed strongly but were less adaptive to irregular spikes, while deep sequence modelling did not outperform tree-based boosting under recursive multi-step evaluation and moderate data volume. 
 
-A comparative analysis was conducted to justify model selection, examine the interpretability–accuracy trade-off, and highlight the limitations of each modelling approach.
+A comparative analysis was conducted to justify model selection, examine the interpretability-accuracy trade-off, and highlight the limitations of each modelling approach.
 
 ---
 
