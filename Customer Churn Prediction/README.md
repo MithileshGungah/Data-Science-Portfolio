@@ -11,7 +11,7 @@
 
 This project develops a cost-sensitive customer churn prediction system designed to support proactive, revenue-preserving retention strategies in subscription-based businesses.
 
-Using the IBM Telco dataset (7,043 customers; 26.6% churn rate), churn prediction is reframed as a **business optimisation problem** — where the cost of missing a churner (false negative) materially exceeds the cost of contacting a retained customer. Model evaluation is therefore driven by **recall**, not raw accuracy.
+Using the IBM Telco dataset (7,043 customers; 26.6% churn rate), churn prediction is reframed as a **business optimisation problem** - where the cost of missing a churner (false negative) materially exceeds the cost of contacting a retained customer. Model evaluation is therefore driven by **recall**, not raw accuracy.
 
 A structured, production-style workflow was implemented, benchmarking Logistic Regression, Decision Tree, Random Forest, and XGBoost under consistent cross-validated evaluation. Through recall-focused hyperparameter tuning, **Tuned XGBoost** was selected as the final model.
 
@@ -35,7 +35,7 @@ This project demonstrates how metric selection, model tuning, and evaluation des
 
 Customer churn represents a direct and recurring revenue risk in subscription-based businesses. Retaining existing customers is typically more cost-effective than acquisition, making early churn detection strategically critical.
 
-This project focuses on identifying at-risk customers early enough to enable targeted, cost-effective intervention — reframing churn detection as a cost-sensitive decision system rather than a pure classification task.
+This project focuses on identifying at-risk customers early enough to enable targeted, cost-effective intervention - reframing churn detection as a cost-sensitive decision system rather than a pure classification task.
 
 ### Business Context
 - Churn rate: **26.6%**
@@ -169,7 +169,7 @@ These projections use transparent, conservative assumptions and represent scalab
 
 ---
 
-By prioritising recall, the model shifts retention strategy from reactive to proactive — reducing revenue-critical missed churners while accepting manageable outreach cost increases.
+By prioritising recall, the model shifts retention strategy from reactive to proactive - reducing revenue-critical missed churners while accepting manageable outreach cost increases.
 
 ---
 
