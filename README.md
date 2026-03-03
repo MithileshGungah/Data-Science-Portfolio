@@ -1,12 +1,14 @@
 <h1 align="center">Mithilesh Gungah</h1>
 <h3 align="center">Data Science Portfolio</h3>
 
-I design and evaluate machine learning systems with a focus beyond predictive performance, examining how models influence decisions and produce real-world consequences.
+I design and evaluate machine learning systems with a focus beyond predictive accuracy. My work examines how models shape decisions, influence behaviour, and create measurable real-world impact.
 
-My work centres on:
-- evaluation frameworks aligned with real-world costs, risks, and outcomes  
-- systematic analysis of model behaviour, bias, and representation  
-- reproducible, transparent machine learning workflows  
+I prioritise:
+
+- Evaluation frameworks aligned with operational costs, risk exposure, and decision consequences  
+- Rigorous analysis of model behaviour, bias, and structural assumptions  
+- Transparent, reproducible workflows that support reliable and defensible results  
+- Clear translation of technical findings into business-relevant insight  
 
 ---
 
