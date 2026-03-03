@@ -20,6 +20,7 @@ A structured, production-style machine learning workflow was implemented, benchm
 - False negatives reduced by approximately 42 percent
 - Precision was deliberately traded for recall to align predictions with real business costs
 - Model outputs translate directly into actionable retention strategies
+- Equivalent to ~£150k in recoverable lifetime value per 10,000 customers under conservative retention assumptions
 
 ### Business value
 The system enables a shift from reactive churn response to targeted, data-driven retention, allowing organisations to:
@@ -157,6 +158,19 @@ Hyperparameter tuning reduces **false negatives from 116 to 68 (~42%)**, at the 
 ---
 
 ## 6. Business Impact
+
+### Quantified Financial Impact (Scaled Projection)
+
+To translate recall uplift into projected financial exposure, results were scaled to a cohort of 10,000 customers:
+
+- 10,000 × 26.6% churn × 12.8pp recall improvement ≈ **341 additional churners identified**
+- Estimated forward-looking revenue per churner ≈ **£1,464** (derived from tenure differential × average monthly revenue)
+- Total revenue exposure identified ≈ **£500k per 10,000 customers**
+- Assuming 30% retention effectiveness → **~£150k realistically recoverable revenue**
+
+These projections are based on transparent and conservative assumptions and represent scalable financial exposure rather than guaranteed realised revenue.
+
+---
 
 The churn prediction model enables a shift from **reactive churn response** to **proactive, data-driven retention**, allowing the business to intervene **before revenue is lost**.
 
