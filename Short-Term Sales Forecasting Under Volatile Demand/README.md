@@ -8,6 +8,8 @@
 
 This project builds a production-aware short-term sales forecasting framework for a highly volatile daily retail demand series. Using approximately four years of historical transaction data aggregated into a continuous daily time series, multiple statistical, machine learning, and deep learning models were benchmarked under strict rolling-origin backtesting with a fixed 7-day forecast horizon.
 
+A 7-day horizon was selected to align with weekly replenishment, staffing, and promotional planning cycles, which are both common and operationally important in real-world retail environments. This window captures a complete weekly seasonality pattern while balancing responsiveness with sufficient forward visibility under volatile demand conditions.
+
 The objective was not to maximise complexity, but to identify a model that delivers stable, operationally reliable forecasts under spike-driven demand conditions.
 
 ---
@@ -71,7 +73,7 @@ This confirms that predictive strength was driven by meaningful temporal structu
 
 ## Business Impact
 
-A 25 to 31 percent reduction in RMSE translates into:
+A 25 to 31 percent reduction in RMSE, combined with a 46 to 47 percent reduction in systematic under-forecast bias, translates into:
 
 - Lower stockout risk during demand surges  
 - Reduced overstock exposure during pullbacks  
