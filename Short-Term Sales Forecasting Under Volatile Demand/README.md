@@ -14,9 +14,9 @@ The objective was not to maximise complexity, but to identify a model that deliv
 
 ## Key Result
 
-**XGBoost delivered the strongest overall performance**, achieving approximately **25 to 31 percent reduction in RMSE relative to naive baselines**.
+**XGBoost delivered the strongest overall performance**, achieving approximately **25 to 31 percent reduction in RMSE relative to naive baselines**, alongside a **46 to 47 percent reduction in systematic under-forecast bias** under rolling-origin evaluation.
 
-This improvement directly enhances short-term planning reliability in volatile demand environments where large forecast misses drive disproportionate operational cost.
+These improvements enhance short-term planning reliability and strengthen demand calibration in volatile, spike-driven retail environments where large forecast misses drive disproportionate operational cost.
 
 ---
 
