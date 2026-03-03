@@ -17,17 +17,17 @@ Rather than training a new model, this project treats deployed foundation models
 
 **Why it matters**  
 **LLMs are becoming spatial gatekeepers.**  
-They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. When their internal “mental maps” are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible — reinforcing spatial inequality at scale.
+They increasingly shape mapping, navigation, travel discovery, local search, and urban analytics. When their internal “mental maps” are uneven, they can systematically amplify already-visible places while rendering peripheral communities digitally invisible - reinforcing spatial inequality at scale.
 
 This project asks a simple but critical question:  
-> *Do AI systems perceive cities the way humans do — or do they distort urban space even further?*
+> *Do AI systems perceive cities the way humans do - or do they distort urban space even further?*
 
 **What I built**
-- Adapted **Stanley Milgram’s urban recognisability experiments** from human cognition to multimodal LLMs.  
+- Adapted **Stanley Milgram's urban recognisability experiments** from human cognition to multimodal LLMs.  
 - Designed a **spatial auditing framework** to measure *what models predict*, *how often they do so*, *what they systematically confuse*, and *which signals they rely on*.  
 - Introduced two complementary evaluation metrics:
-  - **Recognisability** — how accurately places are identified.  
-  - **Visibility** — how strongly places dominate model predictions.  
+  - **Recognisability** - how accurately places are identified.  
+  - **Visibility** - how strongly places dominate model predictions.  
 - Evaluated borough-level recognition and **structured misclassification patterns** across **image and text modalities**.  
 - Analysed **model reasoning and descriptions** using NLP:
   - image-task **justifications**, and  
@@ -61,7 +61,7 @@ This project asks a simple but critical question:
 
 ## Detailed Breakdown
 
-## 1. Problem — Spatial Bias in AI City Perception
+## 1. Problem - Spatial Bias in AI City Perception
 
 Cities are not perceived uniformly.  
 Decades of urban psychology research show that **central, affluent, and symbolically salient areas dominate mental maps**, while peripheral and residential districts fade from awareness.
@@ -73,7 +73,7 @@ As LLMs increasingly mediate:
 
 a critical question emerges:
 
-> **How do AI systems “see” cities — and whose places become visible or invisible as a result?**
+> **How do AI systems “see” cities - and whose places become visible or invisible as a result?**
 
 This project investigates whether multimodal LLMs:
 - replicate known human spatial biases,
@@ -100,9 +100,9 @@ Develop a **replicable spatial auditing framework** that:
 
 ---
 
-## Human Baseline — Urban Cognitive Maps
+## Human Baseline - Urban Cognitive Maps
 
-### Stanley Milgram’s Urban Recognisability Experiments
+### Stanley Milgram's Urban Recognisability Experiments
 
 In the 1970s, social psychologist **Stanley Milgram** studied how people form mental representations of cities.
 
@@ -115,13 +115,13 @@ Findings across cities consistently show:
 - peripheral districts are overlooked,  
 - recognisability correlates with **exposure, centrality, and cultural salience**, not geographic size.
 
-These asymmetries form **cognitive maps** — mental representations shaped by salience rather than spatial accuracy.
+These asymmetries form **cognitive maps** - mental representations shaped by salience rather than spatial accuracy.
 
-This project applies the same logic to **multimodal LLMs**, enabling direct **human–AI comparison**.
+This project applies the same logic to **multimodal LLMs**, enabling direct **human-AI comparison**.
 
 ---
 
-## 2. Data — Multimodal Urban Inputs
+## 2. Data - Multimodal Urban Inputs
 
 ### Urban Coverage
 - **Geography:** All 33 boroughs of Greater London  
@@ -164,7 +164,7 @@ This project applies the same logic to **multimodal LLMs**, enabling direct **hu
 
 ---
 
-## 3. Method — Multimodal Recognition Tasks
+## 3. Method - Multimodal Recognition Tasks
 
 All model queries were executed via **official, provider-maintained APIs** (OpenAI, Google Gemini, Anthropic), with fixed prompts and deterministic generation settings to ensure reproducibility and comparability across models, tasks, and boroughs.
 
@@ -204,7 +204,7 @@ All tasks used **fixed, task-specific prompt templates** to ensure consistent fr
 ### Image-Based Recognition Prompt
 
 ~~~
-You are an expert in London’s urban geography.
+You are an expert in London's urban geography.
 
 The image provided was taken somewhere in Greater London.
 Your task is to identify the single most likely borough, from the 33 official London boroughs, where this location belongs, based solely on the visual information available in the image.
@@ -224,10 +224,10 @@ Do not include any additional commentary, explanation, or text outside the exact
 ### Text-Based Description Prompt
 
 ~~~
-Imagine you’re taking a slow walk through [borough], a borough in London.
+Imagine you're taking a slow walk through [borough], a borough in London.
 Describe everything you see, hear, and smell on a typical weekday afternoon.
 Include details about the shops, the people, the architecture, and the general atmosphere.
-Write it as if you’re observing it moment by moment, using vivid, sensory language.
+Write it as if you're observing it moment by moment, using vivid, sensory language.
 
 Please do not mention or explicitly infer the borough name in the description.
 ~~~
@@ -251,7 +251,7 @@ Respond with the borough name only.
 
 ---
 
-## 4. Modeling — Spatial Auditing Framework
+## 4. Modeling - Spatial Auditing Framework
 
 LLMs do not expose explicit spatial representations.  
 Urban cognition is therefore inferred **indirectly** from structured prediction behaviour.
@@ -271,22 +271,22 @@ How often a borough dominates model predictions, regardless of correctness.
 ### Structural Analysis
 - Borough- and region-level confusion matrices  
 - **Principal Component Analysis (PCA)**  
-  - Used to identify boroughs that occupy similar positions in the model’s “mental space”  
+  - Used to identify boroughs that occupy similar positions in the model's “mental space”  
   - Boroughs that cluster closely are treated as cognitively interchangeable by the model  
 - Co-confusion analysis (systematic default predictions)  
-- Spearman rank correlation (human–AI alignment)  
+- Spearman rank correlation (human-AI alignment)  
 - Frobenius norm (cross-modality divergence)
 
 ---
 
 ## 4.1 Representation Analysis & Dimensionality Reduction
 
-To analyse the structure of the model’s spatial behaviour, borough-level performance metrics were treated as numerical features in a shared analytical space.
+To analyse the structure of the model's spatial behaviour, borough-level performance metrics were treated as numerical features in a shared analytical space.
 
 ### Representation Space
 For each borough, **recognisability** and **visibility** scores were computed from the confusion matrices. These metrics form a low-dimensional feature representation capturing how frequently and how accurately each borough is identified by the model.
 
-This representation serves as a behavioural proxy for the model’s spatial priorities and biases, rather than a direct analysis of internal model activations.
+This representation serves as a behavioural proxy for the model's spatial priorities and biases, rather than a direct analysis of internal model activations.
 
 ### Dimensionality Reduction
 **Principal Component Analysis (PCA)** was applied to the borough-level metric space to identify dominant patterns of variation across boroughs. PCA enables visualisation of similarities and differences in how boroughs are treated by the model, revealing groups of boroughs with comparable recognition and visibility profiles.
@@ -339,7 +339,7 @@ Text-based descriptions encode these signals more explicitly than images, helpin
 
 ---
 
-## 5. Results — Human–AI Cognitive Maps
+## 5. Results - Human-AI Cognitive Maps
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
@@ -357,15 +357,15 @@ Text-based recognition substantially outperforms image-based recognition, but bo
 - **Image-based and text-based models produce structurally different cognitive maps**, indicating modality-dependent spatial reasoning rather than a single unified representation.  
 - **Socio-economic status strongly predicts model behaviour**: less deprived boroughs are both more visible and more accurately recognised, while higher-deprivation areas experience compounded suppression in both frequency and accuracy.
 
-### Human–AI Comparison
+### Human-AI Comparison
 - AI systems reproduce well-documented **human centrality bias** observed in classic urban cognition studies.  
 - Crucially, they **amplify this bias**, exhibiting stronger central dominance and deeper peripheral neglect than has been measured in human experiments.
 
-LLMs do not simply reflect human cognitive maps — they **reconstruct and intensify them**, reshaping how urban space is prioritised and perceived in AI-mediated systems.
+LLMs do not simply reflect human cognitive maps - they **reconstruct and intensify them**, reshaping how urban space is prioritised and perceived in AI-mediated systems.
 
 ---
 
-## 6. Impact — Why This Matters Beyond London
+## 6. Impact - Why This Matters Beyond London
 
 When LLMs act as spatial gatekeepers:
 - some places become hyper-visible,  
