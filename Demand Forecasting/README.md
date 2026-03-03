@@ -95,7 +95,7 @@ Forecast improvements are most valuable during high-variance periods where large
 
 ## Code
 
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)]()
 
 ---
 
