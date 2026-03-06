@@ -23,7 +23,7 @@ Multiple machine learning models were benchmarked under a consistent evaluation 
 
 The final Tuned XGBoost model was deployed as an interactive Streamlit web application that enables on-demand and batch churn predictions, along with an estimated revenue impact for retention decisions.
 
-[![Open Streamlit App](https://img.shields.io/badge/Live%20Application-Streamlit-blue)](https://mg-churn.streamlit.app)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-ff4b4b)](https://mg-churn.streamlit.app)
 
 ---
 
