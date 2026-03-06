@@ -155,7 +155,7 @@ Models were tuned using **cross-validation**, with adjustments to:
 
 ### Selected Model: Tuned XGBoost
 
-Although Logistic Regression achieved slightly higher **Average Precision (0.68)** in the Precision–Recall analysis, the **tuned XGBoost model** was selected because the primary objective is to **maximise recall**.
+Although **Logistic Regression** achieved a slightly higher Average Precision (**0.68**) in the Precision-Recall analysis, the **tuned XGBoost model** was selected because the primary objective of this project is to **maximise recall** and identify as many churners as possible.
 
 With **recall = 0.87**, the model identifies the largest proportion of customers likely to churn.
 
