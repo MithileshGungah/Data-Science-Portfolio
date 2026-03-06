@@ -17,9 +17,11 @@ For this reason, model evaluation prioritises **recall**, rather than overall ac
 
 Multiple machine learning models were benchmarked under a consistent evaluation framework. After recall-focused hyperparameter tuning, **Tuned XGBoost** was selected as the final model.
 
+### Model Deployment
+
 The final Tuned XGBoost model was deployed as an interactive Streamlit web application that enables on-demand and batch churn predictions, along with an estimated revenue impact for retention decisions.
 
-Application link: https://mg-churn.streamlit.app
+[![Open Streamlit App](https://img.shields.io/badge/Live%20Application-Streamlit-blue)](https://mg-churn.streamlit.app)
 
 ---
 
