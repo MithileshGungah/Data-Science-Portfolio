@@ -7,239 +7,260 @@
 
 ---
 
-## Executive Summary
+# Executive Summary
 
-This project develops a cost-sensitive customer churn prediction system designed to support proactive, revenue-preserving retention strategies in subscription-based businesses.
+This project develops a **customer churn prediction system** designed to support proactive retention strategies in subscription-based businesses.
 
-Using the IBM Telco dataset (7,043 customers; 26.6% churn rate), churn prediction is reframed as a **business optimisation problem** - where the cost of missing a churner (false negative) materially exceeds the cost of contacting a retained customer. Model evaluation is therefore driven by **recall**, not raw accuracy.
+Using the **IBM Telco Customer Churn dataset (7,032 customers after cleaning; 26.6% churn rate)**, churn prediction is reframed as a **business optimisation problem**, where the cost of missing a churner (false negative) is significantly higher than contacting a customer who would not churn.
 
-A structured, production-style workflow was implemented, benchmarking Logistic Regression, Decision Tree, Random Forest, and XGBoost under consistent cross-validated evaluation. Through recall-focused hyperparameter tuning, **Tuned XGBoost** was selected as the final model.
+For this reason, model evaluation prioritises **recall**, rather than overall accuracy.
 
-### Key Outcomes
-- Recall improved from **69% → 82%** (+12.8pp)
-- False negatives reduced by **~42%**
-- Precision deliberately traded for recall to align with asymmetric business costs
-- Equivalent to **~£150k recoverable lifetime value per 10,000 customers** (conservative retention assumptions)
-
-### Business Value
-The system enables a shift from reactive churn response to proactive, targeted retention, allowing organisations to:
-- Intervene before revenue is lost  
-- Allocate retention spend more efficiently  
-- Reduce recurring revenue leakage at scale  
-
-This project demonstrates how metric selection, model tuning, and evaluation design directly influence financial outcomes.
+Multiple machine learning models were benchmarked under a consistent evaluation framework. After recall-focused hyperparameter tuning, **Tuned XGBoost** was selected as the final model.
 
 ---
 
-## 1. Problem Statement
+## Key Outcomes
 
-Customer churn represents a direct and recurring revenue risk in subscription-based businesses. Retaining existing customers is typically more cost-effective than acquisition, making early churn detection strategically critical.
+- **Recall improved from 0.54 → 0.87**
+- **False negatives reduced from 172 → 49**
+- High recall achieved while maintaining competitive overall model performance
+- Financial projection estimates **~£381k recoverable revenue per 10,000 customers**
 
-This project focuses on identifying at-risk customers early enough to enable targeted, cost-effective intervention - reframing churn detection as a cost-sensitive decision system rather than a pure classification task.
+---
 
-### Business Context
-- Churn rate: **26.6%**
-- Retention efforts are broad and inefficient
-- Missing a churner leads to irreversible revenue loss
+## Business Value
+
+The system enables organisations to shift from **reactive churn management** to **proactive customer retention**, allowing them to:
+
+- Detect churn risk earlier
+- Intervene before revenue is lost
+- Target retention campaigns more efficiently
+- Reduce recurring revenue leakage
+
+The project demonstrates how **metric selection, model tuning, and evaluation design directly influence financial outcomes**.
+
+---
+
+# 1. Problem Statement
+
+Customer churn represents a major revenue risk in subscription-based businesses. Retaining existing customers is typically more cost-effective than acquiring new ones, making early churn detection strategically critical.
+
+This project frames churn prediction as a **cost-sensitive decision problem**, where:
+
+- Missing a churner leads to revenue loss
 - Contacting a non-churner incurs relatively low cost
 
 ### Objective
 
-Build a high-recall churn prediction model that:
+Develop a machine learning model that:
 
-- Minimises false negatives (revenue-critical errors)
+- **Maximises recall** to detect as many churners as possible
+- Minimises **false negatives** (missed churners)
 - Accepts controlled increases in false positives
-- Aligns evaluation metrics with business cost asymmetry
-- Produces insights actionable by retention teams
+- Produces insights actionable for retention strategies
 
 ---
 
-## 2. Data Overview
+# 2. Data Overview
 
 ### Dataset
+
 - **Source:** IBM Telco Customer Churn Dataset  
-- **Records:** 7,043 customers  
-- **Features:** 21 demographic, service, contract, and billing variables  
+- **Records:** 7,043 customers (7,032 after cleaning)  
+- **Features:** 21 demographic, contract, service, and billing attributes  
 
 | Aspect | Details |
-|--------|--------|
-| Target | `Churn` |
+|------|------|
+| Target Variable | `Churn` |
 | Churn Rate | 26.6% |
-| Feature Types | Categorical + Numerical |
-| Primary Challenge | Class imbalance |
+| Feature Types | Numerical + Categorical |
+| Key Challenge | Class imbalance |
 
-### Data Considerations
-- `TotalCharges` required numeric conversion and missing value handling
-- Class imbalance required recall-aware evaluation
-- Dataset size supports both interpretable and ensemble models
+### Data Preparation
+
+Key preprocessing steps included:
+
+- Converting **TotalCharges** to numeric format
+- Handling missing values
+- Feature engineering (e.g., `AvgMonthlySpend`, tenure indicators)
+- Encoding categorical variables
+- Train/test split with **stratified sampling**
 
 ---
 
-## 3. Methodology
+# 3. Methodology
 
-A structured workflow ensured technical rigor and business alignment:
+The project follows a structured machine learning workflow:
 
 1. Data validation and preprocessing  
-2. Exploratory Data Analysis  
+2. Exploratory data analysis  
 3. Feature engineering  
-4. Baseline modeling  
-5. Cross-validated hyperparameter tuning  
+4. Baseline model training  
+5. Hyperparameter tuning  
 6. Model benchmarking  
 7. Business-driven model selection  
 
-Because churn prevention involves asymmetric cost risk, model evaluation prioritised **recall, precision, and F1-score**, rather than accuracy.
+Because churn prevention involves **asymmetric cost risk**, model evaluation prioritised:
+
+- **Recall**
+- Precision
+- F1-score
+
+rather than raw accuracy.
 
 ---
 
-## 4. Modeling Strategy
+# 4. Modeling Strategy
 
-All models were evaluated on a fixed **20% hold-out test set** under consistent metrics.
+Models were evaluated using a **20% hold-out test set**.
 
 ### Models Evaluated
+
 - Logistic Regression (baseline & tuned)
 - Decision Tree (baseline & tuned)
 - Random Forest (baseline & tuned)
 - XGBoost (baseline & tuned)
 
-### Tuning Strategy
-- Cross-validated hyperparameter optimisation
-- Recall explicitly prioritised
-- Class imbalance handled via weighting
-- Trade-offs evaluated via confusion matrix comparison
+### Hyperparameter Tuning
+
+Models were tuned using **cross-validation**, with adjustments to:
+
+- model complexity
+- learning rates
+- sampling parameters
+- class imbalance handling
 
 ---
 
-## 5. Model Performance
+# 5. Model Performance
 
-### Benchmark Comparison
+## Benchmark Comparison
 
-| Metric | LR | Tuned LR | DT | Tuned DT | RF | Tuned RF | XGBoost | **Tuned XGBoost** |
-|--------|----|----------|----|----------|----|----------|---------|------------------|
-| Accuracy | 0.80 | 0.79 | 0.72 | 0.78 | 0.78 | 0.79 | 0.74 | 0.73 |
-| Precision (Churn) | 0.64 | 0.64 | 0.48 | **0.66** | 0.62 | 0.65 | 0.51 | 0.49 |
-| Recall (Churn) | 0.54 | 0.51 | 0.49 | 0.40 | 0.49 | 0.50 | 0.69 | **0.82** |
-| F1-score (Churn) | 0.58 | 0.57 | 0.48 | 0.50 | 0.55 | 0.56 | 0.59 | **0.62** |
+| Model | Accuracy | Precision | Recall | F1 |
+|------|------|------|------|------|
+| LR Baseline | 0.80 | 0.64 | 0.54 | 0.58 |
+| LR Tuned | 0.77 | 0.55 | 0.82 | 0.66 |
+| DT Baseline | 0.72 | 0.48 | 0.49 | 0.48 |
+| DT Tuned | 0.75 | 0.52 | 0.80 | 0.63 |
+| RF Baseline | 0.78 | 0.62 | 0.49 | 0.55 |
+| RF Tuned | 0.78 | 0.57 | 0.78 | 0.66 |
+| XGB Baseline | 0.81 | 0.68 | 0.54 | 0.60 |
+| **XGB Tuned** | **0.73** | **0.49** | **0.87** | **0.63** |
 
-**Primary metric:** Recall (Churn)
+**Primary evaluation metric:** Recall
 
 ---
 
-## Final Model Selection
+# 6. Final Model Selection
 
 ### Selected Model: Tuned XGBoost
 
-**Rationale**
-- Highest churn recall (**82%**)
-- +12.8pp absolute recall improvement
-- ~42% reduction in false negatives
-- Precision trade-off accepted to minimise revenue risk
+Although Logistic Regression achieved slightly higher **Average Precision (0.68)** in the Precision–Recall analysis, the **tuned XGBoost model** was selected because the primary objective is to **maximise recall**.
 
-### Confusion Matrix Comparison
+With **recall = 0.87**, the model identifies the largest proportion of customers likely to churn.
 
-**Baseline XGBoost**
+---
+
+## Confusion Matrix (Tuned XGBoost)
 
 | Actual \ Predicted | No Churn | Churn |
 |-------------------|----------|-------|
-| No Churn          | 787      | 246   |
-| Churn             | 116      | 258   |
+| No Churn | 696 | 337 |
+| Churn | 49 | 325 |
 
-**Tuned XGBoost**
+Key interpretation:
 
-| Actual \ Predicted | No Churn | Churn |
-|-------------------|----------|-------|
-| No Churn          | 720      | 313   |
-| Churn             | 68       | 306   |
+- **325 churners correctly detected**
+- Only **49 churners missed**
+- Higher false positives accepted to minimise missed churners
 
-False negatives reduced from 116 → 68.
-
----
-
-## 6. Business Impact
-
-### Quantified Financial Impact (Scaled Projection)
-
-Scaling recall uplift to a cohort of 10,000 customers:
-
-- 10,000 × 26.6% churn × 12.8pp recall uplift ≈ **341 additional churners identified**
-- Forward-looking revenue per churner ≈ **£1,464** (tenure differential × monthly revenue)
-- Revenue exposure identified ≈ **~£500k per 10,000 customers**
-- Assuming 30% retention success → **~£150k recoverable revenue**
-
-These projections use transparent, conservative assumptions and represent scalable financial exposure rather than guaranteed realised revenue.
+In churn prediction, **missing a churner typically carries greater business cost** than contacting a customer who may not churn.
 
 ---
 
-By prioritising recall, the model shifts retention strategy from reactive to proactive - reducing revenue-critical missed churners while accepting manageable outreach cost increases.
+# 7. Financial Impact
+
+### Revenue Impact Projection
+
+Scaling model performance to **10,000 customers**:
+
+- Additional churners identified: **~867**
+- Estimated future revenue per churner: **~£1,464**
+- Revenue exposure identified: **~£1.27M**
+- Assuming **30% retention success** → **~£381k recoverable revenue**
+
+These projections use simplified assumptions and represent **potential revenue exposure**, not guaranteed realised revenue.
 
 ---
 
-### Key Drivers of Churn
+# 8. Key Drivers of Churn
+
+SHAP analysis highlights the main factors influencing churn risk:
+
 - Month-to-month contracts
-- Low tenure
+- Short customer tenure
 - Higher monthly charges
-- Fiber plans without support services
-- Lack of technical support or online security
+- Fiber optic internet plans
+- Electronic check payment method
+- Lack of add-on services (TechSupport, OnlineSecurity)
+
+These insights support targeted retention strategies.
 
 ---
 
-### Recommended Business Actions
+# 9. Limitations
 
-**Contract & Pricing**
-- Incentivise contract upgrades
-- Target high-value churn-risk customers
+Several limitations should be acknowledged:
 
-**Onboarding & Engagement**
-- Prioritise low-tenure outreach
-- Improve early lifecycle engagement
+- Dataset size is relatively small (~7k customers)
+- Behavioural usage data is not included
+- Financial projections rely on simplified assumptions
+- Default classification threshold (0.5) was used
 
-**Service Optimisation**
-- Bundle support services with fiber plans
-- Proactively engage support-lacking customers
-
-**Operational Monitoring**
-- Track campaign ROI
-- Retrain model periodically
-- Monitor recall–precision balance
+In practice, organisations would optimise thresholds based on **retention campaign cost and customer lifetime value**.
 
 ---
 
-## 7. Future Enhancements
-- Threshold optimisation using cost curves
-- Probability calibration
-- SHAP-based explainability
-- A/B testing of retention interventions
-- Uplift modelling for targeted ROI optimisation
+# 10. Future Work
+
+Potential extensions include:
+
+- Threshold optimisation for cost-sensitive deployment
+- Advanced imbalance handling (e.g., SMOTE)
+- Time-series customer behaviour modelling
+- Customer-level explainability with SHAP
+- Model deployment with monitoring and retraining pipelines
 
 ---
 
-## Conclusion
+# Conclusion
 
-This project demonstrates a business-aligned churn prediction system integrating:
+This project demonstrates how a **business-aligned machine learning workflow** can transform churn prediction into a practical decision-support tool.
 
-- Structured ML workflow
-- Cost-sensitive evaluation
-- Transparent financial translation
-- Actionable retention strategy
+By prioritising **recall**, the model identifies significantly more at-risk customers, enabling proactive retention interventions and reducing revenue loss.
 
-Optimising for recall rather than accuracy ensures alignment between predictive performance and financial impact.
-
-**Final Recommendation:** Deploy Tuned XGBoost with recall-focused thresholding to support proactive churn prevention.
+The final **Tuned XGBoost model** provides the strongest balance between predictive performance and business impact.
 
 ---
 
-## Technology Stack
-- **Language:** Python 3.12  
-- **Libraries:** XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
+# Technology Stack
+
+- Python  
+- XGBoost  
+- Scikit-learn  
+- Pandas / NumPy  
+- Matplotlib / Seaborn  
 
 ---
 
-## Code
+# Code
 
 [![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](./Telco_Customer_Churn_Prediction.ipynb)
 
 ---
 
-## Contact
+# Contact
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
