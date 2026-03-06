@@ -140,9 +140,9 @@ Models were tuned using **cross-validation**, with adjustments to:
 |------|------|------|------|------|
 | LR Baseline | 0.77 | 0.54 | 0.82 | 0.65 |
 | LR Tuned | 0.77 | 0.55 | 0.82 | 0.66 |
-| DT Baseline | 0.72 | 0.48 | 0.49 | 0.48 |
+| DT Baseline | 0.73 | 0.50 | 0.49 | 0.50 |
 | DT Tuned | 0.75 | 0.52 | 0.80 | 0.63 |
-| RF Baseline | 0.78 | 0.62 | 0.49 | 0.55 |
+| RF Baseline | 0.80 | 0.66 | 0.52 | 0.58 |
 | RF Tuned | 0.78 | 0.57 | 0.78 | 0.66 |
 | XGB Baseline | 0.81 | 0.68 | 0.54 | 0.60 |
 | **XGB Tuned** | **0.73** | **0.49** | **0.87** | **0.63** |
