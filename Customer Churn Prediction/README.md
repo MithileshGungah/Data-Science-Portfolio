@@ -138,7 +138,7 @@ Models were tuned using **cross-validation**, with adjustments to:
 
 | Model | Accuracy | Precision | Recall | F1 |
 |------|------|------|------|------|
-| LR Baseline | 0.80 | 0.64 | 0.54 | 0.58 |
+| LR Baseline | 0.77 | 0.54 | 0.82 | 0.65 |
 | LR Tuned | 0.77 | 0.55 | 0.82 | 0.66 |
 | DT Baseline | 0.72 | 0.48 | 0.49 | 0.48 |
 | DT Tuned | 0.75 | 0.52 | 0.80 | 0.63 |
