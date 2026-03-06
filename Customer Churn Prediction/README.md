@@ -22,7 +22,7 @@ Multiple machine learning models were benchmarked under a consistent evaluation 
 ## Key Outcomes
 
 - **Recall improved from 0.54 → 0.87**
-- **False negatives reduced from 172 → 49**
+- **False negatives reduced from 171 → 49**
 - High recall achieved while maintaining competitive overall model performance
 - Financial projection estimates **~£381k recoverable revenue per 10,000 customers**
 
