@@ -256,8 +256,10 @@ The final **Tuned XGBoost model** provides the strongest balance between predict
 - Python  
 - XGBoost  
 - Scikit-learn  
-- Pandas / NumPy  
-- Matplotlib / Seaborn  
+- Pandas / NumPy
+- SHAP
+- Matplotlib / Seaborn
+- Streamlit
 
 ---
 
