@@ -21,35 +21,6 @@ My portfolio highlights projects in machine learning, time series forecasting, a
 
 ---
 
-<h3 align="center">Cognitive Maps of London in Generative AI</h3>
-<h4 align="center"><em>How multimodal large language models perceive and distort urban space</em></h4>
-
-<p align="center">
-  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
-</p>
-
-Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
-This project investigates how multimodal LLMs internally represent urban space, using London as a controlled case study.
-
-Through large-scale classification experiments, the project reconstructs AI-generated cognitive maps and analyses how models prioritise or suppress different parts of the city.
-
-Key contributions:
-
-- Adapted classic urban cognition experiments into a reproducible multimodal ML evaluation framework  
-- Computed borough-level recognition metrics from large confusion matrices  
-- Reconstructed model-generated cognitive maps using dimensionality reduction  
-- Used visualisation techniques to reveal systematic spatial distortions  
-- Analysed relationships between model behaviour and socioeconomic indicators  
-
-The analysis highlights how AI systems may amplify existing spatial biases when representing complex urban environments.
-
-<a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md"
-target="_blank" rel="noopener noreferrer">
-<button>View Project</button>
-</a>
-
----
-
 <h3 align="center">Customer Churn Prediction for Proactive Customer Retention</h3>
 <h4 align="center"><em>A Business-Aligned Machine Learning System for Proactive Customer Retention</em></h4>
 
@@ -105,6 +76,35 @@ Key contributions:
 The project demonstrates how combining visual analysis with machine learning models improves understanding of demand behaviour and forecasting reliability.
 
 <a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md"
+target="_blank" rel="noopener noreferrer">
+<button>View Project</button>
+</a>
+
+---
+
+<h3 align="center">Cognitive Maps of London in Generative AI</h3>
+<h4 align="center"><em>How multimodal large language models perceive and distort urban space</em></h4>
+
+<p align="center">
+  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
+</p>
+
+Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
+This project investigates how multimodal LLMs internally represent urban space, using London as a controlled case study.
+
+Through large-scale classification experiments, the project reconstructs AI-generated cognitive maps and analyses how models prioritise or suppress different parts of the city.
+
+Key contributions:
+
+- Adapted classic urban cognition experiments into a reproducible multimodal ML evaluation framework  
+- Computed borough-level recognition metrics from large confusion matrices  
+- Reconstructed model-generated cognitive maps using dimensionality reduction  
+- Used visualisation techniques to reveal systematic spatial distortions  
+- Analysed relationships between model behaviour and socioeconomic indicators  
+
+The analysis highlights how AI systems may amplify existing spatial biases when representing complex urban environments.
+
+<a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md"
 target="_blank" rel="noopener noreferrer">
 <button>View Project</button>
 </a>
