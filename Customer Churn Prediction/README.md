@@ -115,7 +115,7 @@ Key preprocessing steps included:
 The project follows a structured end-to-end machine learning pipeline, from raw data processing to model deployment.
 
 <p align="center">
-  <img src="project_flow.png" width="70%">
+  <img src="project_flow.png" width="30%">
 </p>
 
 ---
