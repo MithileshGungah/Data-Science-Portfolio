@@ -188,7 +188,7 @@ With **recall = 0.87**, the model identifies the majority of customers likely to
 To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure feature contributions.
 
 <p align="center">
-  <img src="shap.png" width="700">
+  <img src="shap.png" width="550">
 </p>
 
 <p align="center">
