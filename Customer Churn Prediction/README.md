@@ -7,7 +7,7 @@
 
 ## Project Highlights
 
-- Built a **machine learning churn prediction system** to identify high-risk telecom customers
+- Developed a **machine learning churn prediction system** to identify high-risk telecom customers
 - Benchmarked **4 algorithms (8 configurations)** under recall-focused evaluation
 - Improved **recall from 0.54 → 0.87**, reducing missed churners by **71%**
 - Estimated **~£381k potential recoverable revenue per 10,000 customers**
