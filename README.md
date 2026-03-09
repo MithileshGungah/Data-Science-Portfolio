@@ -49,7 +49,7 @@ The analysis combines exploratory data analysis, model comparison, visualisation
 The project demonstrates how modelling, visualisation, and interpretation can be combined to better understand churn behaviour and support proactive retention strategies.
 
 🔗 **Project:**  
-[View Project →](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Customer%20Churn%20Prediction/README.md)
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Customer%20Churn%20Prediction/README.md)
 
 ---
 
@@ -77,7 +77,7 @@ The analysis integrates time series modelling, visualisation of demand dynamics,
 The project demonstrates how combining visual analysis with machine learning models improves understanding of demand behaviour and forecasting reliability.
 
 🔗 **Project:**  
-[View Project →](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md)
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md)
 
 ---
 
@@ -104,7 +104,7 @@ Through large-scale classification experiments, the project reconstructs AI-gene
 The analysis highlights how AI systems may amplify existing spatial biases when representing complex urban environments.
 
 🔗 **Project:**  
-[View Project →](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md)
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md)
 
 ---
 
