@@ -204,7 +204,7 @@ In churn prediction, **missing a churner typically carries greater financial cos
 To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure the contribution of each feature to model output.
 
 <p align="center">
-  <img src="shap.png" width="width="40%">
+  <img src="shap.png" width="40%">
 </p>
 
 <p align="center">
