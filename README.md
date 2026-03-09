@@ -7,11 +7,11 @@ My work focuses on combining data exploration, modelling, visualisation, and int
 
 Across my projects I prioritise:
 
-- Rigorous model evaluation and validation  
-- Clear data visualisation to reveal underlying patterns and trends  
-- Careful interpretation of model behaviour and analytical results  
-- Reproducible and transparent analytical workflows  
-- Translating technical findings into meaningful insights  
+- Reproducible and transparent analytical workflows to ensure analyses can be reliably replicated, audited, and extended.
+- Clear data visualisation to reveal underlying patterns and trends during exploratory analysis.
+- Rigorous model evaluation and validation using appropriate validation strategies and performance metrics.
+- Careful interpretation of model behaviour and analytical results to understand assumptions, limitations, and drivers of outcomes.
+- Translating technical findings into meaningful insights that support informed decision-making.
 
 My portfolio highlights projects in machine learning, time series forecasting, and data-driven analysis using real-world datasets.
 
