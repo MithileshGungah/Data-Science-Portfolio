@@ -74,6 +74,21 @@ Develop a machine learning system that:
 
 ---
 
+# Why Recall Matters in Churn Prediction
+
+In churn prediction, the cost of different prediction errors is not equal.
+
+- **False Negative (missed churner):** A customer leaves without intervention, resulting in lost recurring revenue.
+- **False Positive (incorrect churn prediction):** A retention offer is made to a customer who may not have churned.
+
+In most subscription-based businesses, the financial impact of a **false negative is significantly higher** than the cost of contacting a customer unnecessarily.
+
+For this reason, the model evaluation prioritises **recall**, ensuring that as many potential churners as possible are identified. While this approach may increase false positives, it substantially reduces the number of customers who leave without any retention attempt.
+
+This trade-off aligns the machine learning model with the **real business objective: preventing revenue loss through early intervention.**
+
+---
+
 # Data Overview
 
 ### Dataset
