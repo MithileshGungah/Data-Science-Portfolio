@@ -4,6 +4,16 @@
   <img src="demand_forecasting.png" alt="Short-Term Sales Forecasting Under Volatile Demand" width="500">
 </p>
 
+## Project Highlights
+
+- Developed a **short-term retail demand forecasting framework** for a volatile daily sales time series
+- Benchmarked **8 forecasting models** spanning statistical, machine learning, and deep learning approaches
+- Implemented **rolling-origin backtesting with a 7-day recursive forecasting horizon**
+- Achieved **24.9–30.9% RMSE reduction vs naive baselines**
+- Applied **SHAP analysis to interpret seasonal demand drivers and lag effects**
+
+---
+
 ## Overview
 
 This project develops a **production-oriented short-term sales forecasting framework** for a highly volatile daily retail demand series.
