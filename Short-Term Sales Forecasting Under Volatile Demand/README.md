@@ -8,7 +8,7 @@
 
 This project develops a **production-oriented short-term sales forecasting framework** for a highly volatile daily retail demand series.
 
-Approximately **four years of historical transaction data** were aggregated into a continuous daily time series and used to benchmark **eight forecasting models** spanning classical statistics, machine learning, and deep learning approaches:
+Approximately **four years of historical transaction data** were aggregated into a continuous daily time series and used to benchmark **eight forecasting models** spanning classical statistics, lagged-feature-based machine learning models, and deep learning approaches:
 
 - Naive baseline  
 - Seasonal Naive  
