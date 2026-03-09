@@ -27,7 +27,7 @@ The final Tuned XGBoost model was deployed as an **interactive Streamlit applica
 - Batch customer risk scoring
 - Estimated revenue impact calculations
 
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-2aa198)](https://mg-churn.streamlit.app)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-ff8c00)](https://mg-churn.streamlit.app)
 
 ---
 
