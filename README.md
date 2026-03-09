@@ -3,7 +3,7 @@
 
 I analyse data, build machine learning models, and use visualisation and statistical analysis to extract meaningful insights.
 
-My work focuses on combining **data exploration, modelling, visualisation, and interpretation** to understand patterns in data and explain the mechanisms behind them. I aim to produce results that are not only technically sound but also clearly interpretable and useful for decision-making.
+My work focuses on combining data exploration, modelling, visualisation, and interpretation to understand patterns in data and explain the mechanisms behind them. I aim to produce results that are technically sound, interpretable, and useful for decision-making.
 
 Across my projects I prioritise:
 
@@ -13,7 +13,7 @@ Across my projects I prioritise:
 - Reproducible and transparent analytical workflows  
 - Translating technical findings into meaningful insights  
 
-My portfolio highlights projects in **machine learning, time series forecasting, and data-driven analysis** using real-world datasets.
+My portfolio highlights projects in machine learning, time series forecasting, and data-driven analysis using real-world datasets.
 
 ---
 
@@ -31,7 +31,7 @@ My portfolio highlights projects in **machine learning, time series forecasting,
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
 This project investigates how multimodal LLMs internally represent urban space, using London as a controlled case study.
 
-Through large-scale classification experiments, the project reconstructs **AI-generated cognitive maps** and analyses how models prioritise or suppress different parts of the city.
+Through large-scale classification experiments, the project reconstructs AI-generated cognitive maps and analyses how models prioritise or suppress different parts of the city.
 
 Key contributions:
 
@@ -51,7 +51,7 @@ target="_blank" rel="noopener noreferrer">
 ---
 
 <h3 align="center">Customer Churn Prediction Engine</h3>
-<h4 align="center"><em>A machine learning approach to identifying customers at risk of leaving</em></h4>
+<h4 align="center"><em>A machine learning system for identifying customers at risk of leaving</em></h4>
 
 <p align="center">
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
@@ -60,18 +60,19 @@ target="_blank" rel="noopener noreferrer">
 Customer churn prediction is a common application of machine learning in subscription-based businesses.  
 This project builds and evaluates models designed to identify customers most likely to cancel their services.
 
-The analysis combines **exploratory data analysis, model comparison, visualisation, and interpretability techniques** to understand both predictive performance and the underlying drivers of churn.
+The analysis combines exploratory data analysis, model comparison, visualisation, and interpretability techniques to understand both predictive performance and the underlying drivers of churn.
 
 Key contributions:
 
 - Performed exploratory analysis to identify behavioural and service-related patterns linked to churn  
-- Built and compared Logistic Regression, Random Forest, and XGBoost models  
-- Designed an evaluation approach prioritising recall to capture a higher proportion of churn cases  
-- Improved churn recall from **69% to 82%**, reducing missed churners by approximately **42%**  
-- Applied **SHAP analysis** to interpret model predictions and identify key churn drivers  
-- Developed a deployable **Streamlit application** for interactive churn risk prediction  
+- Built and benchmarked Logistic Regression, Random Forest, and XGBoost models under a consistent evaluation framework  
+- Designed a recall-focused evaluation strategy to prioritise identifying at-risk customers  
+- Improved churn recall from **0.54 to 0.87**, reducing missed churners from **171 to 49**  
+- Detected **325 churners correctly in the test set** while maintaining competitive model performance  
+- Applied **SHAP analysis** to interpret predictions and identify key drivers such as contract type, tenure, and service usage  
+- Developed a deployable **Streamlit application** for interactive churn risk prediction and revenue impact estimation  
 
-The project demonstrates how modelling, visualisation, and interpretation together help explain why customers leave and how churn risk can be identified more effectively.
+The project demonstrates how modelling, visualisation, and interpretation can be combined to better understand churn behaviour and support proactive retention strategies.
 
 <a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Customer%20Churn%20Prediction/README.md"
 target="_blank" rel="noopener noreferrer">
@@ -87,21 +88,22 @@ target="_blank" rel="noopener noreferrer">
   <img src="demand_forecasting.png" alt="Short-term sales forecasting under volatile demand" width="520">
 </p>
 
-Retail demand often exhibits **seasonality, volatility, and sudden spikes**, making accurate short-term forecasting challenging.  
-This project evaluates multiple forecasting approaches to identify the most reliable model for predicting demand one week ahead.
+Retail demand often exhibits seasonality, volatility, and sudden spikes, making accurate short-term forecasting challenging.  
+This project evaluates multiple forecasting approaches to identify the most reliable model for predicting demand seven days ahead.
 
-The analysis integrates **time series modelling, visualisation of demand dynamics, and careful model evaluation** to understand how different methods respond to volatility.
+The analysis integrates time series modelling, visualisation of demand dynamics, and rigorous evaluation to understand how different forecasting models perform under volatile conditions.
 
 Key contributions:
 
-- Constructed a continuous daily time series from transactional data  
-- Performed exploratory visualisation to reveal seasonal patterns and demand spikes  
-- Implemented rolling-origin cross-validation to simulate real forecasting conditions  
-- Benchmarked ARIMA, SARIMA, Prophet, Random Forest, XGBoost, and LSTM models  
-- Achieved **25–31% RMSE reduction over naive baselines using XGBoost**  
-- Applied **SHAP analysis** to interpret the influence of lagged demand and seasonal patterns  
+- Constructed a continuous daily time series from transactional data spanning approximately four years  
+- Performed exploratory visualisation to reveal seasonal patterns, volatility, and spike-driven demand behaviour  
+- Implemented rolling-origin cross-validation to simulate realistic forecasting deployment  
+- Benchmarked ARIMA, SARIMA, Prophet, Random Forest, XGBoost, and LSTM models under unified evaluation metrics  
+- Achieved **25 to 31 percent RMSE reduction relative to naive baselines using XGBoost**  
+- Reduced systematic under-forecast bias by **46 to 47 percent** under rolling-origin evaluation  
+- Applied **SHAP analysis** to interpret the influence of seasonal structure and lagged demand features  
 
-The project highlights how combining visual analysis with modelling helps explain demand behaviour and improve forecasting reliability.
+The project demonstrates how combining visual analysis with machine learning models improves understanding of demand behaviour and forecasting reliability.
 
 <a href="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md"
 target="_blank" rel="noopener noreferrer">
