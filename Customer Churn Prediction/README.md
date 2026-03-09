@@ -15,7 +15,7 @@ Using the **IBM Telco Customer Churn dataset (7,032 customers after cleaning; 26
 
 Because of this asymmetric cost structure, model development prioritises **recall** rather than overall accuracy.
 
-Eight machine learning models were benchmarked under a consistent evaluation framework, and after recall-focused tuning **XGBoost was selected as the final model**.
+Four machine learning algorithms were benchmarked in both baseline and tuned configurations under a consistent evaluation framework. Following recall-focused hyperparameter tuning, **XGBoost delivered the strongest performance and was selected as the final model**.
 
 ---
 
