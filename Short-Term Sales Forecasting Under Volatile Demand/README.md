@@ -57,7 +57,7 @@ Model explainability using **SHAP** confirmed that the model learned the same se
   <img src="time_series_shap.png" width="800">
 </p>
 
-The SHAP summary plot shows that **month is the most influential feature in the final XGBoost model**, followed by short-term lag signals such as **lag_7** and **lag_14**. This indicates that the model captures both **calendar-driven seasonality** and **recent demand momentum**, enabling more reliable predictions under volatile demand conditions.
+SHAP analysis confirmed that **month was the most influential feature**, followed by short-term demand signals such as **lag_7** and **lag_14**, indicating that the model captures both **calendar-driven seasonality and recent demand momentum**.
 
 ---
 
