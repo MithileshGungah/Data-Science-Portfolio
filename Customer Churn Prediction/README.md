@@ -9,7 +9,7 @@
 
 # Overview
 
-Customer churn represents one of the largest revenue risks for subscription-based businesses. This project develops a **machine learning churn prediction system** designed to identify customers at risk of leaving and enable **proactive retention strategies before revenue is lost**.
+Customer churn is one of the largest revenue risks for subscription-based businesses. This project develops a **machine learning churn prediction system** designed to identify customers at risk of leaving and enable **proactive retention strategies before revenue is lost**.
 
 Using the **IBM Telco Customer Churn dataset (7,032 customers after cleaning; 26.6% churn rate)**, churn prediction is framed as a **business optimisation problem**, where the cost of **missing a churner (false negative)** is significantly higher than contacting a customer who may not churn.
 
@@ -45,7 +45,7 @@ The project follows an end-to-end machine learning workflow from data preparatio
 
 # Key Results
 
-The final **Tuned XGBoost model** significantly improved churn detection performance.
+The **final Tuned XGBoost model** significantly improved churn detection performance under recall-focused optimisation.
 
 Compared with baseline models:
 
