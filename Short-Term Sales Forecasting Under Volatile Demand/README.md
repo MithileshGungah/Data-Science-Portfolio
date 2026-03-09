@@ -31,7 +31,7 @@ These improvements indicate that the model not only reduced average forecast err
 Exploratory analysis revealed **strong recurring monthly demand patterns**, with repeated peaks during specific months and a consistent surge toward year-end.
 
 <p align="center">
-  <img src="seasonality_pattern.png" width="500">
+  <img src="seasonality_pattern.png" width="800">
 </p>
 
 This seasonal structure directly informed feature engineering. Calendar variables such as **month** and **day-of-week**, along with lagged demand statistics, were incorporated into the modelling pipeline.
