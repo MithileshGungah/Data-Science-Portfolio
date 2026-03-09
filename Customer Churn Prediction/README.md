@@ -15,7 +15,7 @@
 
 ---
 
-# Overview
+## Overview
 
 Customer churn is one of the largest revenue risks for subscription-based businesses. This project develops a **machine learning churn prediction system** designed to identify customers at risk of leaving and enable **proactive retention strategies before revenue is lost**.
 
@@ -27,7 +27,7 @@ Four machine learning algorithms were benchmarked in both baseline and tuned con
 
 ---
 
-# Live Application
+## Live Application
 
 The final model was deployed as an **interactive Streamlit application** allowing:
 
@@ -39,7 +39,7 @@ The final model was deployed as an **interactive Streamlit application** allowin
 
 ---
 
-# Churn Prediction Pipeline
+## Churn Prediction Pipeline
 
 The project follows an end-to-end machine learning workflow from data preparation through model deployment.
 
@@ -51,7 +51,7 @@ The project follows an end-to-end machine learning workflow from data preparatio
 
 ---
 
-# Key Results
+## Key Results
 
 The **final Tuned XGBoost model** significantly improved churn detection performance under recall-focused optimisation.
 
@@ -65,7 +65,7 @@ By prioritising recall, the system identifies the majority of potential churners
 
 ---
 
-# Business Impact
+## Business Impact
 
 Model performance was translated into **estimated financial impact** using a scaled scenario of **10,000 customers**.
 
@@ -80,7 +80,7 @@ These estimates represent **potential revenue exposure rather than guaranteed re
 
 ---
 
-# Why Recall Matters in Churn Prediction
+## Why Recall Matters in Churn Prediction
 
 In churn prediction, classification errors have **asymmetric business costs**.
 
@@ -93,7 +93,7 @@ For this reason, the modelling strategy prioritises **recall**, ensuring the sys
 
 ---
 
-# Data Overview
+## Data Overview
 
 ### Dataset
 
@@ -131,7 +131,7 @@ Key preprocessing steps included:
 
 ---
 
-# Modeling Strategy
+## Modeling Strategy
 
 Multiple machine learning algorithms were benchmarked under a consistent evaluation framework.
 
@@ -164,7 +164,7 @@ rather than raw accuracy.
 
 ---
 
-# Model Performance
+## Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 |
 |------|------|------|------|------|
@@ -181,7 +181,7 @@ rather than raw accuracy.
 
 ---
 
-# Final Model Selection
+## Final Model Selection
 
 ### Selected Model: Tuned XGBoost
 
@@ -191,7 +191,7 @@ With **recall = 0.87**, the model identifies the majority of customers likely to
 
 ---
 
-# Model Explainability (SHAP)
+## Model Explainability (SHAP)
 
 To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure feature contributions.
 
@@ -218,7 +218,7 @@ These insights help inform targeted retention strategies.
 
 ---
 
-# Business Recommendations
+## Business Recommendations
 
 Based on model insights, several retention strategies could reduce churn risk:
 
@@ -240,7 +240,7 @@ Customers without **TechSupport or OnlineSecurity** services show increased chur
 
 ---
 
-# Limitations
+## Limitations
 
 Several limitations should be considered:
 
@@ -253,7 +253,7 @@ In production systems, organisations would optimise thresholds based on **custom
 
 ---
 
-# Future Work
+## Future Work
 
 Potential improvements include:
 
@@ -265,7 +265,7 @@ Potential improvements include:
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 **Language**
 
@@ -284,13 +284,13 @@ Potential improvements include:
 
 ---
 
-# Code
+## Code
 
 [![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/b51536ac19f8f906bd05a2795ef32a9655bd4ad6/Customer%20Churn%20Prediction/churn_prediction_retention.ipynb)
 
 ---
 
-# Contact
+## Contact
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)&nbsp;&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
