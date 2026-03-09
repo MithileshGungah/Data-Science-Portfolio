@@ -1,5 +1,5 @@
 # Customer Churn Prediction Engine  
-### A Business-Aliented Machine Learning System for Proactive Customer Retention
+### A Business-Aligned Machine Learning System for Proactive Customer Retention
 
 <p align="center">
   <img src="churn_rate.png" alt="Customer Churn Rate" width="500">
@@ -115,7 +115,7 @@ Key preprocessing steps included:
 The project follows a structured end-to-end machine learning workflow from data preparation through deployment.
 
 <p align="center">
-  <img src="project_flow.png" width="40%">
+  <img src="project_flow.png" width="50%">
 </p>
 
 <p align="center">
@@ -204,7 +204,7 @@ In churn prediction, **missing a churner typically carries greater financial cos
 To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure the contribution of each feature to model output.
 
 <p align="center">
-  <img src="shap.png" width="40%">
+  <img src="shap.png" width="70%">
 </p>
 
 <p align="center">
