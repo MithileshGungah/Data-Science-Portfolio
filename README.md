@@ -51,7 +51,7 @@ target="_blank" rel="noopener noreferrer">
 ---
 
 <h3 align="center">Customer Churn Prediction for Proactive Customer Retention</h3>
-<h4 align="center"><em>Machine Learning for Early Churn Detection and Customer Retention</em></h4>
+<h4 align="center"><em>A Business-Aligned Machine Learning System for Proactive Customer Retention</em></h4>
 
 <p align="center">
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
