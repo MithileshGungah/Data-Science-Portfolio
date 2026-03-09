@@ -265,7 +265,6 @@ Potential improvements include:
 
 **Libraries**
 
-- Python  
 - Scikit-learn  
 - XGBoost  
 - Pandas  
