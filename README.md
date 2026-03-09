@@ -89,7 +89,7 @@ The project demonstrates how combining visual analysis with machine learning mod
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
 
-Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
+Large language models are increasingly becoming spatial gatekeepers for mapping, search, and location discovery.  
 This project investigates how multimodal LLMs internally represent urban space, using London as a controlled case study.
 
 Through large-scale classification experiments, the project reconstructs AI-generated cognitive maps and analyses how models prioritise or suppress different parts of the city.
