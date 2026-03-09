@@ -31,6 +31,11 @@ Rather than maximising model complexity, the objective was to identify a forecas
 
 The project follows a structured forecasting workflow from exploratory analysis through model explainability and final demand prediction.
 
+<p align="center">
+  <img src="forecasting_pipeline.png" width="900">
+  <br>
+  <em>End-to-end modelling workflow used in this forecasting project</em>
+</p>
 
 ---
 
