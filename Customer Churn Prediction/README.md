@@ -1,4 +1,4 @@
-# Customer Churn Prediction Engine  
+# Customer Churn Prediction for Proactive Customer Retention  
 ### A Business-Aligned Machine Learning System for Proactive Customer Retention
 
 <p align="center">
