@@ -88,7 +88,8 @@ target="_blank" rel="noopener noreferrer">
   <img src="demand_forecasting.png" alt="Short-term sales forecasting under volatile demand" width="520">
 </p>
 
-Retail demand often exhibits seasonality, volatility, and sudden spikes, making accurate short-term forecasting challenging.  
+Retail demand often exhibits seasonality, volatility, and sudden spikes, making accurate short-term forecasting challenging.
+
 This project evaluates multiple forecasting approaches to identify the most reliable model for predicting demand seven days ahead.
 
 The analysis integrates time series modelling, visualisation of demand dynamics, and rigorous evaluation to understand how different forecasting models perform under volatile conditions.
