@@ -112,23 +112,11 @@ Key preprocessing steps included:
 
 # Machine Learning Workflow
 
-The project follows a structured ML pipeline:
+The project follows a structured end-to-end machine learning pipeline, from raw data processing to model deployment.
 
-Raw Customer Data  
-↓  
-Data Cleaning & Validation  
-↓  
-Exploratory Data Analysis  
-↓  
-Feature Engineering  
-↓  
-Model Training & Hyperparameter Tuning  
-↓  
-Model Evaluation (Recall-Focused)  
-↓  
-SHAP Explainability  
-↓  
-Deployment with Streamlit
+<p align="center">
+  <img src="project_flow.png" width="700">
+</p>
 
 ---
 
