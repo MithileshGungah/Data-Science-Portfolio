@@ -1,5 +1,5 @@
-# Customer Churn Prediction for Proactive Customer Retention  
-### A Business-Aligned Machine Learning System for Proactive Customer Retention
+# Customer Churn Prediction for Proactive Customer Retention
+### A Business-Aligned Machine Learning System for Identifying At-Risk Customers
 
 <p align="center">
   <img src="churn_rate.png" alt="Customer Churn Rate" width="500">
@@ -7,21 +7,21 @@
 
 ---
 
-# Executive Summary
+# Overview
 
-Customer churn represents one of the largest revenue risks for subscription-based businesses. This project builds a **machine learning churn prediction system** designed to identify high-risk customers and enable **proactive retention strategies** before revenue is lost.
+Customer churn represents one of the largest revenue risks for subscription-based businesses. This project develops a **machine learning churn prediction system** designed to identify customers at risk of leaving and enable **proactive retention strategies before revenue is lost**.
 
-Using the **IBM Telco Customer Churn dataset (7,032 customers after cleaning; 26.6% churn rate)**, churn prediction is reframed as a **business optimisation problem**, where the cost of **missing a churner (false negative)** is significantly higher than contacting a customer who would not churn.
+Using the **IBM Telco Customer Churn dataset (7,032 customers after cleaning; 26.6% churn rate)**, churn prediction is framed as a **business optimisation problem**, where the cost of **missing a churner (false negative)** is significantly higher than contacting a customer who may not churn.
 
-Because of this asymmetric cost structure, model evaluation prioritises **recall** rather than overall accuracy.
+Because of this asymmetric cost structure, model development prioritises **recall** rather than overall accuracy.
 
-Multiple machine learning models were benchmarked under a consistent evaluation framework. After recall-focused hyperparameter tuning, **Tuned XGBoost** was selected as the final model.
+Eight machine learning models were benchmarked under a consistent evaluation framework, and after recall-focused tuning **XGBoost was selected as the final model**.
 
 ---
 
 # Live Application
 
-The final Tuned XGBoost model was deployed as an **interactive Streamlit application** that allows:
+The final model was deployed as an **interactive Streamlit application** allowing:
 
 - Individual churn predictions
 - Batch customer risk scoring
@@ -31,61 +31,57 @@ The final Tuned XGBoost model was deployed as an **interactive Streamlit applica
 
 ---
 
-# Key Outcomes
+# Churn Prediction Pipeline
 
-- **Recall improved from 0.54 → 0.87**
+The project follows an end-to-end machine learning workflow from data preparation through model deployment.
+
+<p align="center">
+  <img src="project_flow.png" width="900">
+  <br>
+  <em>End-to-end churn prediction pipeline used in this project</em>
+</p>
+
+---
+
+# Key Results
+
+The final **Tuned XGBoost model** significantly improved churn detection performance.
+
+Compared with baseline models:
+
+- **Recall increased from 0.54 → 0.87**
 - **False negatives reduced from 171 → 49**
 - **325 churners correctly detected in the test set**
-- **~£381k potential recoverable revenue per 10,000 customers**
 
-The model prioritises identifying as many churn-risk customers as possible while maintaining competitive predictive performance.
-
----
-
-# Business Value
-
-This system enables organisations to move from **reactive churn management** to **proactive customer retention**.
-
-With earlier churn detection, companies can:
-
-- Identify high-risk customers before cancellation
-- Target retention campaigns more efficiently
-- Reduce recurring revenue loss
-- Allocate retention budgets more effectively
-
-The project demonstrates how **metric selection, model tuning, and evaluation strategy directly influence financial outcomes.**
+By prioritising recall, the system identifies the majority of potential churners before cancellation.
 
 ---
 
-# Problem Statement
+# Business Impact
 
-Customer churn is a major challenge in subscription-based industries such as telecom, SaaS, and streaming services.
+Model performance was translated into **estimated financial impact** using a scaled scenario of **10,000 customers**.
 
-Acquiring new customers is significantly more expensive than retaining existing ones, making **early churn detection strategically important.**
+| Metric | Estimate |
+|------|------|
+| Additional churners identified | ~867 |
+| Average future revenue per churner | ~£1,464 |
+| Revenue exposure identified | ~£1.27M |
+| Assuming 30% retention success | **~£381k recoverable revenue** |
 
-### Objective
-
-Develop a machine learning system that:
-
-- **Maximises recall** to detect as many churners as possible
-- Minimises **false negatives** (missed churners)
-- Accepts controlled increases in false positives
-- Generates actionable insights for retention strategies
+These estimates represent **potential revenue exposure rather than guaranteed realised savings**, but illustrate how improved churn detection can materially affect retention outcomes.
 
 ---
 
 # Why Recall Matters in Churn Prediction
 
-In churn prediction, the cost of different prediction errors is not equal.
+In churn prediction, classification errors have **asymmetric business costs**.
 
-- **False Negative (missed churner):** A customer leaves without intervention, resulting in lost recurring revenue.
-- **False Positive (incorrect churn prediction):** A retention offer is made to a customer who may not have churned.
+- **False Negative (missed churner):** Customer leaves without intervention, resulting in lost recurring revenue.
+- **False Positive (incorrect churn prediction):** A retention offer is made to a customer who may not churn.
 
-In most subscription-based businesses, the financial impact of a **false negative is significantly higher** than the cost of contacting a customer unnecessarily.
+In most subscription-based businesses, the cost of **losing a customer** far exceeds the cost of contacting one unnecessarily.
 
-For this reason, the model evaluation prioritises **recall**, ensuring that as many potential churners as possible are identified. While this approach may increase false positives, it substantially reduces the number of customers who leave without any retention attempt.
-
-This trade-off aligns the machine learning model with the **real business objective: preventing revenue loss through early intervention.**
+For this reason, the modelling strategy prioritises **recall**, ensuring the system captures as many potential churners as possible.
 
 ---
 
@@ -101,9 +97,11 @@ This trade-off aligns the machine learning model with the **real business object
 | Features | 21 |
 | Target | `Churn` |
 | Churn Rate | 26.6% |
-| Data Type | Mixed numerical & categorical |
+| Data Type | Mixed categorical and numerical |
 
-### Key Features
+### Key Predictive Features
+
+Important customer attributes include:
 
 - Customer tenure
 - Contract type
@@ -111,7 +109,7 @@ This trade-off aligns the machine learning model with the **real business object
 - Monthly charges
 - Total charges
 - Payment method
-- Add-on services (TechSupport, OnlineSecurity, StreamingTV, etc.)
+- Add-on services (TechSupport, OnlineSecurity, StreamingTV)
 
 ### Data Preparation
 
@@ -121,46 +119,34 @@ Key preprocessing steps included:
 - Handling missing values
 - Feature engineering (`AvgMonthlySpend`, tenure indicators)
 - Encoding categorical variables
-- Train/test split using **stratified sampling**
-
----
-
-# Machine Learning Workflow
-
-The project follows a structured end-to-end machine learning workflow from data preparation through deployment.
-
-<p align="center">
-  <img src="project_flow.png" width="50%">
-</p>
-
-<p align="center">
-  <em>End-to-end churn prediction pipeline used in this project</em>
-</p>
+- Stratified train/test split
 
 ---
 
 # Modeling Strategy
 
-Models were evaluated using a **20% hold-out test set**.
+Multiple machine learning algorithms were benchmarked under a consistent evaluation framework.
 
 ### Models Evaluated
 
-- Logistic Regression (baseline & tuned)
-- Decision Tree (baseline & tuned)
-- Random Forest (baseline & tuned)
-- XGBoost (baseline & tuned)
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+
+Each model was trained in both **baseline and tuned configurations**.
 
 ### Hyperparameter Tuning
 
-Models were tuned using **cross-validation** and optimisation of:
+Models were tuned using cross-validation to optimise:
 
 - model complexity
-- learning rate
 - tree depth
+- learning rate
 - sampling parameters
 - class imbalance handling
 
-Evaluation focused on:
+Evaluation prioritised:
 
 - **Recall**
 - Precision
@@ -191,68 +177,58 @@ rather than raw accuracy.
 
 ### Selected Model: Tuned XGBoost
 
-Although Logistic Regression produced slightly higher precision-recall balance, **Tuned XGBoost was selected because it maximises recall**, aligning with the business objective of identifying as many churners as possible.
+Although Logistic Regression produced slightly better precision balance, **Tuned XGBoost was selected because it maximises recall**, aligning with the business objective of detecting as many churners as possible.
 
-With **recall = 0.87**, the model detects the largest proportion of customers likely to churn.
-
----
-
-# Confusion Matrix (Final Model)
-
-| Actual \ Predicted | No Churn | Churn |
-|-------------------|----------|-------|
-| No Churn | 696 | 337 |
-| Churn | 49 | 325 |
-
-Interpretation:
-
-- **325 churners correctly detected**
-- Only **49 churners missed**
-- False positives increased intentionally to reduce missed churners
-
-In churn prediction, **missing a churner typically carries greater financial cost than contacting a customer who may not churn.**
+With **recall = 0.87**, the model identifies the majority of customers likely to churn.
 
 ---
 
 # Model Explainability (SHAP)
 
-To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure the contribution of each feature to model output.
+To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure feature contributions.
 
 <p align="center">
-  <img src="shap.png" width="70%">
+  <img src="shap.png" width="700">
 </p>
 
 <p align="center">
-  <em>SHAP summary plot of key drivers influencing churn predictions</em>
+  <em>SHAP summary plot highlighting the most influential churn predictors</em>
 </p>
 
 ### Key Drivers of Churn
 
 SHAP analysis highlights several major churn predictors:
 
-- **Month-to-month contracts**
-- **Fiber optic internet service**
-- **Short customer tenure**
-- **Higher monthly charges**
-- **Electronic check payment method**
-- Lack of add-on services such as **TechSupport** and **OnlineSecurity**
+- Month-to-month contracts
+- Fiber optic internet service
+- Short customer tenure
+- Higher monthly charges
+- Electronic check payment method
+- Lack of services such as **TechSupport** and **OnlineSecurity**
 
-These insights support targeted retention strategies.
+These insights help inform targeted retention strategies.
 
 ---
 
-# Financial Impact
+# Business Recommendations
 
-To estimate business value, model performance was scaled to **10,000 customers**.
+Based on model insights, several retention strategies could reduce churn risk:
 
-| Metric | Estimate |
-|------|------|
-| Additional churners identified | ~867 |
-| Estimated future revenue per churner | ~£1,464 |
-| Revenue exposure identified | ~£1.27M |
-| Assuming 30% retention success | **~£381k recoverable revenue** |
+### 1. Encourage Long-Term Contracts
 
-These estimates represent **potential revenue exposure**, not guaranteed realised revenue.
+Customers on **month-to-month contracts exhibit significantly higher churn risk**. Offering discounted annual contracts could improve retention stability.
+
+### 2. Improve Fiber Service Customer Experience
+
+Fiber optic customers appear more likely to churn, suggesting possible **service quality or pricing concerns**.
+
+### 3. Early Engagement for New Customers
+
+Customers with **short tenure show elevated churn risk**. Targeted onboarding and early engagement programmes could reduce early cancellations.
+
+### 4. Bundle Value-Added Services
+
+Customers without **TechSupport or OnlineSecurity** services show increased churn risk. Bundling these services may increase perceived value and reduce churn.
 
 ---
 
@@ -265,15 +241,15 @@ Several limitations should be considered:
 - Financial projections rely on simplified assumptions
 - Default classification threshold (0.5) was used
 
-In production environments, organisations would optimise thresholds based on **retention campaign cost and customer lifetime value.**
+In production systems, organisations would optimise thresholds based on **customer lifetime value and retention campaign cost**.
 
 ---
 
 # Future Work
 
-Potential extensions include:
+Potential improvements include:
 
-- Cost-sensitive threshold optimisation
+- Cost-sensitive classification threshold optimisation
 - Advanced imbalance techniques (SMOTE)
 - Time-series behavioural modelling
 - Customer-level explainability dashboards
@@ -291,7 +267,7 @@ Potential extensions include:
 - SHAP  
 - Matplotlib  
 - Seaborn  
-- Streamlit
+- Streamlit  
 
 ---
 
@@ -303,5 +279,5 @@ Potential extensions include:
 
 # Contact
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com) &nbsp;&nbsp;
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithileshgungah@gmail.com)&nbsp;&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mithilesh-gungah-331133215/)
