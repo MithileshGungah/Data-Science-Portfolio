@@ -36,7 +36,7 @@ The final model was deployed as an **interactive Streamlit application** allowin
 The project follows an end-to-end machine learning workflow from data preparation through model deployment.
 
 <p align="center">
-  <img src="project_flow.png" width="900">
+  <img src="project_flow.png" width="600">
   <br>
   <em>End-to-end churn prediction pipeline used in this project</em>
 </p>
