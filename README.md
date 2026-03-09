@@ -31,7 +31,7 @@ Machine Learning • Time Series Forecasting • Data Analysis • NLP & LLM Ana
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
 </p>
 
-Customer churn prediction is a common application of machine learning in subscription-based businesses.  
+Customer churn prediction is a core machine learning application in subscription-based businesses.
 This project builds and evaluates models designed to identify customers most likely to cancel their services.
 
 The analysis combines exploratory data analysis, model comparison, visualisation, and interpretability techniques to understand both predictive performance and the underlying drivers of churn.
