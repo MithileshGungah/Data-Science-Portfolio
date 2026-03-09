@@ -112,10 +112,14 @@ Key preprocessing steps included:
 
 # Machine Learning Workflow
 
-The project follows a structured end-to-end machine learning pipeline, from raw data processing to model deployment.
+The project follows a structured end-to-end machine learning workflow from data preparation through deployment.
 
 <p align="center">
-  <img src="project_flow.png" width="30%">
+  <img src="project_flow.png" width="45%">
+</p>
+
+<p align="center">
+  <em>End-to-end churn prediction pipeline used in this project.</em>
 </p>
 
 ---
