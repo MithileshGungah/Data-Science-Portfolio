@@ -14,11 +14,39 @@ The objective was not to maximise complexity, but to identify a model that deliv
 
 ---
 
-## Key Result
+## Key Results
 
-**XGBoost delivered the strongest overall performance**, achieving approximately **25 to 31 percent reduction in RMSE relative to naive baselines**, alongside a **46 to 47 percent reduction in systematic under-forecast bias** under rolling-origin evaluation.
+**XGBoost emerged as the best-performing model under strict rolling-origin evaluation with a fixed 7-day forecast horizon.**
 
-These improvements enhance short-term planning reliability and strengthen demand calibration in volatile, spike-driven retail environments where large forecast misses drive disproportionate operational cost.
+Compared with baseline approaches, the model achieved:
+
+- **24.9% reduction in RMSE vs Naive baseline**
+- **30.9% reduction in RMSE vs Seasonal Naive**
+- **46.5% reduction in systematic under-forecast bias**
+
+These improvements indicate that the model not only reduced average forecast error but also **significantly improved demand calibration during volatile periods**, where under-forecasting can lead to stockouts and operational disruption.
+
+### Seasonal Demand Signal
+
+Exploratory analysis revealed **strong recurring monthly demand patterns**, with repeated peaks during specific months and a consistent surge toward year-end.
+
+<p align="center">
+  <img src="seasonality_pattern.png" width="500">
+</p>
+
+This seasonal structure directly informed feature engineering. Calendar variables such as **month** and **day-of-week**, along with lagged demand statistics, were incorporated into the modelling pipeline.
+
+Model interpretability using **SHAP** confirmed that **month was the most influential feature in the final XGBoost model**, indicating that the model successfully captured the underlying seasonal demand dynamics observed during exploratory analysis.
+
+### Operational Implication
+
+By combining **seasonality-aware features with nonlinear modelling**, the final model delivers more stable short-term forecasts, improving reliability for:
+
+- weekly inventory replenishment  
+- staffing and operational planning  
+- demand alignment during spike-driven periods  
+
+This demonstrates how **feature engineering informed by exploratory analysis can materially improve forecasting performance in volatile retail demand environments.**
 
 ---
 
