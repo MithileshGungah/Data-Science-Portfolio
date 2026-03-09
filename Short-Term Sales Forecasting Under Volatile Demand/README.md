@@ -27,21 +27,10 @@ Rather than maximising model complexity, the objective was to identify a forecas
 
 ---
 
----
-
 ## Forecasting Pipeline
 
 The project follows a structured forecasting workflow from exploratory analysis through model explainability and final demand prediction.
 
-flowchart LR
-    A[Exploratory Data Analysis<br/>Detect seasonality and demand spikes]
-    B[Feature Engineering<br/>Month, Day-of-Week, Lag Features<br/>Rolling Statistics]
-    C[Model Benchmarking<br/>ARIMA, SARIMA, Prophet<br/>Random Forest, XGBoost, LSTM]
-    D[Rolling-Origin Evaluation<br/>7-Day Recursive Forecasting<br/>MAE, RMSE, WMAPE]
-    E[Model Explainability<br/>SHAP Feature Importance]
-    F[Operational Forecast<br/>7-Day Demand Prediction]
-
-    A --> B --> C --> D --> E --> F
 
 ---
 
