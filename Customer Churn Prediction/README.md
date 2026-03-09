@@ -115,11 +115,11 @@ Key preprocessing steps included:
 The project follows a structured end-to-end machine learning workflow from data preparation through deployment.
 
 <p align="center">
-  <img src="project_flow.png" width="45%">
+  <img src="project_flow.png" width="40%">
 </p>
 
 <p align="center">
-  <em>End-to-end churn prediction pipeline used in this project.</em>
+  <em>End-to-end churn prediction pipeline used in this project</em>
 </p>
 
 ---
@@ -204,7 +204,11 @@ In churn prediction, **missing a churner typically carries greater financial cos
 To understand the drivers behind churn predictions, **SHAP (SHapley Additive exPlanations)** was used to measure the contribution of each feature to model output.
 
 <p align="center">
-  <img src="shap.png" width="700">
+  <img src="shap.png" width="width="40%">
+</p>
+
+<p align="center">
+  <em>SHAP summary plot of key drivers influencing churn predictions</em>
 </p>
 
 ### Key Drivers of Churn
