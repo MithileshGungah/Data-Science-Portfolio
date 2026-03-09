@@ -27,7 +27,7 @@ Rather than maximising model complexity, the objective was to identify a forecas
 
 ---
 
-# Key Results
+## Key Results
 
 **XGBoost delivered the strongest overall performance under rolling-origin evaluation**, outperforming both classical statistical models and deep learning approaches.
 
