@@ -49,9 +49,15 @@ Exploratory analysis revealed **strong recurring monthly demand patterns**, with
   <img src="seasonality_pattern.png" width="1000">
 </p>
 
-These seasonal patterns informed the feature engineering strategy. Calendar-based variables such as **month** and **day-of-week**, along with lagged demand and rolling demand statistics, were incorporated into the modelling pipeline.
+These seasonal patterns directly informed the feature engineering strategy. Calendar-based variables such as **month** and **day-of-week**, along with lagged demand and rolling demand statistics, were incorporated into the modelling pipeline.
 
-Model explainability using **SHAP** confirmed that **month was the most influential feature in the final XGBoost model**, demonstrating that the model successfully captured the seasonal demand structure observed during exploratory analysis.
+Model explainability using **SHAP** confirmed that the model learned the same seasonal structure identified during exploratory analysis.
+
+<p align="center">
+  <img src="time_series_shap.png" width="800">
+</p>
+
+The SHAP summary plot shows that **month is the most influential feature in the final XGBoost model**, followed by short-term lag signals such as **lag_7** and **lag_14**. This indicates that the model captures both **calendar-driven seasonality** and **recent demand momentum**, enabling more reliable predictions under volatile demand conditions.
 
 ---
 
