@@ -259,6 +259,12 @@ Potential improvements include:
 
 # Technology Stack
 
+**Language**
+
+- Python 3.12
+
+**Libraries**
+
 - Python  
 - Scikit-learn  
 - XGBoost  
