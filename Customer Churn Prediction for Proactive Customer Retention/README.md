@@ -25,6 +25,11 @@ Because of this asymmetric cost structure, model development prioritises **recal
 
 Four machine learning algorithms were benchmarked in both baseline and tuned configurations under a consistent evaluation framework. Following recall-focused hyperparameter tuning, **XGBoost delivered the strongest performance and was selected as the final model**.
 
+## Code
+
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/ac01769ec4d1f2c8b4af40681e979693f1190d98/Customer%20Churn%20Prediction%20for%20Proactive%20Customer%20Retention/churn_prediction_retention.ipynb)
+
+
 ---
 
 ## Live Application
