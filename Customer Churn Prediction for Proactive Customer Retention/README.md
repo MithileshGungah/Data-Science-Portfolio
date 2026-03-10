@@ -156,11 +156,11 @@ Each model was trained in both **baseline and tuned configurations**.
 
 Models were tuned using cross-validation to optimise:
 
-- model complexity
-- tree depth
-- learning rate
-- sampling parameters
-- class imbalance handling
+- Model complexity
+- Tree depth
+- Learning rate
+- Sampling parameters
+- Class imbalance handling
 
 Evaluation prioritised:
 
