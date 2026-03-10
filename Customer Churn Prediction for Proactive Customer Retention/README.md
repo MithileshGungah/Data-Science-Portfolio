@@ -29,6 +29,8 @@ Four machine learning algorithms were benchmarked in both baseline and tuned con
 
 ## Demo & Code
 
+### Live Application
+
 The final model was deployed as an **interactive Streamlit application** allowing:
 
 - Individual churn predictions
@@ -36,6 +38,8 @@ The final model was deployed as an **interactive Streamlit application** allowin
 - Estimated revenue impact calculations
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-ff4b4b)](https://mg-churn.streamlit.app)
+
+### Project Notebook
 
 Explore the full project notebook:
 
