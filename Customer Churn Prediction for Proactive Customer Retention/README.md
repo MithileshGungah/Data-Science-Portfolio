@@ -47,7 +47,7 @@ Explore the full analysis notebook:
 
 ---
 
-## Churn Prediction Pipeline
+## Project Pipeline
 
 The project follows an end-to-end machine learning workflow from data preparation through model deployment.
 
