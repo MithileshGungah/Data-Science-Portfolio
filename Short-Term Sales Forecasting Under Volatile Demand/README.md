@@ -209,7 +209,7 @@ Forecast accuracy improvements are particularly valuable during **high-volatilit
 
 ---
 
-## Code
+## Project Notebook
 
 [![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/c1064eef56aa6c9804a8b75b40432858d27f7694/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/Short_Term_Sales_Forecasting.ipynb)
 
