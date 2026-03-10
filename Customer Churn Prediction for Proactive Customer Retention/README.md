@@ -286,7 +286,7 @@ Potential improvements include:
 
 ## Code
 
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/b51536ac19f8f906bd05a2795ef32a9655bd4ad6/Customer%20Churn%20Prediction/churn_prediction_retention.ipynb)
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/ac01769ec4d1f2c8b4af40681e979693f1190d98/Customer%20Churn%20Prediction%20for%20Proactive%20Customer%20Retention/churn_prediction_retention.ipynb)
 
 ---
 
