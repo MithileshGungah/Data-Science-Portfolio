@@ -27,24 +27,6 @@ Four machine learning algorithms were benchmarked in both baseline and tuned con
 
 ---
 
-## Live Application
-
-The final model was deployed as an **interactive Streamlit application** allowing:
-
-- Individual churn predictions
-- Batch customer risk scoring
-- Estimated revenue impact calculations
-
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-ff4b4b)](https://mg-churn.streamlit.app)
-
----
-
-## Code
-
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/ac01769ec4d1f2c8b4af40681e979693f1190d98/Customer%20Churn%20Prediction%20for%20Proactive%20Customer%20Retention/churn_prediction_retention.ipynb)
-
----
-
 ## Demo & Code
 
 The final model was deployed as an **interactive Streamlit application** allowing:
@@ -55,7 +37,7 @@ The final model was deployed as an **interactive Streamlit application** allowin
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Application-ff4b4b)](https://mg-churn.streamlit.app)
 
-Project Notebook
+### Source Code
 
 [![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/ac01769ec4d1f2c8b4af40681e979693f1190d98/Customer%20Churn%20Prediction%20for%20Proactive%20Customer%20Retention/churn_prediction_retention.ipynb)
 
