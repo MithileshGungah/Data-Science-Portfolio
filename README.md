@@ -6,7 +6,7 @@ I build machine learning and analytical systems that extract insights from compl
 Across my projects I emphasise **reproducible analysis, rigorous model evaluation, and clear communication of technical findings**.
 
 **Core areas:**  
-Machine Learning • Time Series Forecasting • Data Analysis • LLM & NLP Analysis
+Machine Learning • Time Series Forecasting • Data Analysis • LLM & NLP Analysis • Data Visualization & Storytelling
 
 ---
 
