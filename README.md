@@ -50,7 +50,7 @@ The analysis combines exploratory data analysis, model comparison, visualisation
 The project demonstrates how modelling, visualisation, and interpretation can be combined to better understand churn behaviour and support proactive retention strategies.
 
 🔗 **Project:**  
-[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Customer%20Churn%20Prediction/README.md)
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/13b6d0091dda8e625d0c32647d858ede30dac601/Customer%20Churn%20Prediction%20for%20Proactive%20Customer%20Retention/README.md)
 
 ---
 
@@ -78,7 +78,7 @@ The analysis integrates time series modelling, visualisation of demand dynamics,
 The project demonstrates how combining visual analysis with machine learning models improves understanding of demand behaviour and forecasting reliability.
 
 🔗 **Project:**  
-[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md)
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/13b6d0091dda8e625d0c32647d858ede30dac601/Short-Term%20Sales%20Forecasting%20Under%20Volatile%20Demand/README.md)
 
 ---
 
