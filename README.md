@@ -82,27 +82,27 @@ The project demonstrates how combining visual analysis with machine learning mod
 
 ---
 
-## Cognitive Maps of London in Generative AI  
-### *How Multimodal Large Language Models Perceive and Distort Urban Space*
+## Evaluating Spatial Bias in Multimodal LLMs: How AI Models Perceive London  
+### *A Multimodal Evaluation of Urban Perception, Bias, and Reasoning*
 
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
 
-Large language models are increasingly becoming spatial gatekeepers for mapping, search, and location discovery.  
-This project investigates how multimodal LLMs internally represent urban space, using London as a controlled case study.
+Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
+This project evaluates how multimodal LLMs represent urban space, using London as a controlled case study.
 
-Through large-scale classification experiments, the project reconstructs AI-generated cognitive maps and analyses how models prioritise or suppress different parts of the city.
+Through large-scale classification experiments (990 inferences across 33 boroughs), I reconstruct AI-generated cognitive maps and analyse how models prioritise, distort, and suppress different parts of the city across image and text modalities.
 
 ### Key Contributions
 
-- Adapted **urban cognition experiments** into a reproducible multimodal ML evaluation framework  
-- Computed **borough-level recognition metrics** from large confusion matrices  
-- Reconstructed model-generated cognitive maps using **dimensionality reduction techniques**  
-- Used visualisation techniques to reveal **systematic spatial distortions**  
-- Analysed relationships between model behaviour and **socioeconomic indicators**
+- Designed a reproducible **multimodal evaluation framework** inspired by urban cognition experiments  
+- Computed **borough-level recognition and visibility metrics** from large confusion matrices  
+- Reconstructed model-generated cognitive maps using **dimensionality reduction (PCA)**  
+- Identified **systematic centrality bias and structured misclassification patterns**  
+- Analysed relationships between model behaviour and **socioeconomic indicators (IMD)**  
 
-The analysis highlights how AI systems may amplify existing spatial biases when representing complex urban environments.
+The results show that multimodal LLMs not only reproduce human-like spatial biases, but systematically amplify central dominance and peripheral suppression in their representation of urban environments.
 
 🔗 **Project:**  
 [View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/Cognitive%20Maps%20Of%20London%20In%20The%20Age%20Of%20Generative%20AI/README.md)
