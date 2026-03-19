@@ -83,7 +83,7 @@ The project demonstrates how combining visual analysis with machine learning mod
 ---
 
 ## Evaluating Spatial Bias in Multimodal LLMs: How AI Models Perceive London  
-### *A Multimodal Evaluation of Urban Perception, Bias, and Reasoning*
+### *Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning*
 
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
