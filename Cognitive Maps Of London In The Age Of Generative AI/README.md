@@ -1,6 +1,6 @@
-# Cognitive Maps of London in the Age of Generative AI  
-## How Multimodal LLMs Perceive, Prioritise, and Distort Urban Space  
-### Auditing Spatial Bias, Linguistic Salience, and Geographic Representation in Large Language Models  
+# Evaluating Spatial Bias in Multimodal LLMs: How AI Models Perceive London
+## Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning
+### Auditing Geographic Representation and Spatial Bias in Large Language Models
 
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
