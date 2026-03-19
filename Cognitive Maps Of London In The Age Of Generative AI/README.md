@@ -21,7 +21,7 @@
 **What this project is**  
 A research-driven audit of how **multimodal Large Language Models (LLMs)** internally represent cities, using London as a controlled, policy-relevant case study.
 
-Instead of training new models, this project treats deployed LLMs as real-world systems, analysing how spatial knowledge, salience, bias, and reasoning emerge from their behaviour across image and text inputs.
+Rather than training new models, this project treats deployed LLMs as real-world systems, analysing how spatial knowledge, salience, bias, and reasoning emerge from their behaviour across image and text inputs.
 
 **Why it matters**  
 **LLMs are becoming spatial gatekeepers.**  
