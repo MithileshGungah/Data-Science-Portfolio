@@ -357,6 +357,9 @@ Text-based descriptions encode these signals more explicitly than images, helpin
 
 Text-based recognition substantially outperforms image-based recognition, but both exhibit uneven spatial understanding.
 
+### Cross-Model Comparison
+Cross-model evaluation revealed clear differences in multimodal performance. Claude achieved the strongest overall results, with 24.0% image accuracy and 43.8% text accuracy. GPT-4o performed better on image recognition than text (19.8% vs. 15.0%), whereas Gemini 2.5 Flash showed the reverse pattern, performing substantially better on text than image (39.0% vs. 15.4%). These contrasts indicate that multimodal LLMs exhibit distinct modality-specific strengths rather than a shared spatial reasoning profile.
+
 ### Key Findings
 - **Central London boroughs consistently dominate model predictions** across both image and text modalities, independent of input type.  
 - **Outer boroughs are systematically under-recognised**, with many frequently misclassified or never predicted correctly, resulting in effective digital invisibility.  
@@ -406,7 +409,7 @@ This has direct implications for:
 ## Technology Stack
 
 - **Language:** Python  
-- **Models:** Gemini 2.5 Flash, GPT-4o, Claude  
+- **Models:** GPT-4o, Claude Sonnet 4, Gemini 2.5 Flash
 - **NLP:** Sentence Transformers, BERTopic  
 - **Analysis:** Pandas, NumPy, SciPy  
 - **Evaluation:** Confusion matrices, PCA, rank correlation  
