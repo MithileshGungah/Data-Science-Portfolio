@@ -1,6 +1,5 @@
 # Evaluating Spatial Bias in Multimodal LLMs: How AI Models Perceive London
 ## Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning
-### Auditing Geographic Representation and Spatial Bias in Large Language Models
 
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
