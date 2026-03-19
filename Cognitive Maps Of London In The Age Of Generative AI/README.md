@@ -1,11 +1,11 @@
 # Evaluating Spatial Bias in Multimodal LLMs: How AI Models Perceive London
 ## Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning
 
+> Evaluates how leading LLMs (GPT-4o, Gemini, Claude) interpret and reason about urban space, revealing systematic spatial bias and socio-economic skew.
+
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
-
-> Evaluates how leading LLMs (GPT-4o, Gemini, Claude) interpret and reason about urban space, revealing systematic spatial bias and socio-economic skew.
 
 ---
 
