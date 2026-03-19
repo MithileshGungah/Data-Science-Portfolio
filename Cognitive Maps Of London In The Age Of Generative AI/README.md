@@ -3,6 +3,13 @@
 
 > Evaluates how leading LLMs (GPT-4o, Gemini, Claude) interpret and reason about urban space, revealing systematic spatial bias and socio-economic skew.
 
+### Key Results
+
+- 990 inferences across 33 boroughs  
+- Up to 60% centrality bias detected  
+- Claude achieved strongest multimodal performance  
+- Text-based models outperform image-based by ~2.5x  
+
 <p align="center">
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
