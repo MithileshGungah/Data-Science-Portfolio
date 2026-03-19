@@ -5,7 +5,7 @@
   <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
 </p>
 
-> A multimodal evaluation of how leading LLMs (GPT-4o, Gemini, Claude) represent and reason about urban space, revealing systematic spatial bias and socio-economic skew.
+> Evaluates how leading LLMs (GPT-4o, Gemini, Claude) interpret and reason about urban space, revealing systematic spatial bias and socio-economic skew.
 
 ---
 
