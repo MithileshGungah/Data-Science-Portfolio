@@ -351,12 +351,6 @@ Text-based descriptions encode these signals more explicitly than images, helpin
 
 ![Summary of results: central amplification, peripheral suppression, and modality divergence](poster.jpg)
 
-### Overall Performance
-- Image-based accuracy: **15.4%** (above chance for 33 classes)  
-- Text-based accuracy: **39.0%**
-
-Text-based recognition substantially outperforms image-based recognition, but both exhibit uneven spatial understanding.
-
 ### Cross-Model Comparison
 Cross-model evaluation revealed clear differences in multimodal performance. Claude achieved the strongest overall results, with 24.0% image accuracy and 43.8% text accuracy. GPT-4o performed better on image recognition than text (19.8% vs. 15.0%), whereas Gemini 2.5 Flash showed the reverse pattern, performing substantially better on text than image (39.0% vs. 15.4%). These contrasts indicate that multimodal LLMs exhibit distinct modality-specific strengths rather than a shared spatial reasoning profile.
 
@@ -365,7 +359,7 @@ Cross-model evaluation revealed clear differences in multimodal performance. Cla
 - **Outer boroughs are systematically under-recognised**, with many frequently misclassified or never predicted correctly, resulting in effective digital invisibility.  
 - **A small number of boroughs function as cognitive defaults**, absorbing misclassifications from multiple, geographically distinct areas rather than errors being evenly distributed.  
 - **PCA reveals representational collapse**, where geographically distant boroughs are treated as cognitively similar based on shared recognition and visibility profiles.  
-- **Image-based and text-based models produce structurally different cognitive maps**, indicating modality-dependent spatial reasoning rather than a single unified representation.  
+- **Image-based and text-based models produce structurally different cognitive maps**, with Claude showing the most balanced performance across modalities, while GPT-4o and Gemini exhibit modality-specific strengths. 
 - **Socio-economic status strongly predicts model behaviour**: less deprived boroughs are both more visible and more accurately recognised, while higher-deprivation areas experience compounded suppression in both frequency and accuracy.
 
 ### Human-AI Comparison
