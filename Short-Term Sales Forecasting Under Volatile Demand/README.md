@@ -1,4 +1,5 @@
 # Short-Term Sales Forecasting Under Volatile Demand
+### A Time Series Forecasting Framework for Volatile Retail Demand
 
 <p align="center">
   <img src="demand_forecasting.png" alt="Short-Term Sales Forecasting Under Volatile Demand" width="500">
