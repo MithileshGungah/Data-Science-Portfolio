@@ -97,7 +97,7 @@ Through large-scale classification experiments (990 inferences across 33 borough
 ### Key Contributions
 
 - Designed a reproducible **multimodal evaluation framework** inspired by urban cognition experiments
-- Benchmarked leading multimodal LLMs (GPT-4o, Gemini, Claude)** across image and text-based spatial classification tasks
+- **Benchmarked** leading multimodal LLMs (GPT-4o, Gemini, Claude) across image and text-based spatial classification tasks
 - Computed **borough-level recognition and visibility metrics** from large confusion matrices  
 - Reconstructed model-generated cognitive maps using **dimensionality reduction (PCA)**  
 - Identified **systematic centrality bias and structured misclassification patterns**  
