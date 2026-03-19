@@ -25,7 +25,7 @@ Machine Learning • Time Series Forecasting • Data Analysis • LLM & NLP Ana
 ---
 
 ## Customer Churn Prediction for Proactive Customer Retention  
-### *A Business-Aligned Machine Learning System for Proactive Customer Retention*
+### *A Business-Aligned Machine Learning System for Identifying At-Risk Customers*
 
 <p align="center">
   <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
