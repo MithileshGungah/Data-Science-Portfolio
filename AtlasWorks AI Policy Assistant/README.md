@@ -2,13 +2,11 @@
 
 Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems.
 
-> **Note:** This system is fully dataset-agnostic. It is designed so the same LangGraph + RAG orchestration pipeline can be reused across domains by swapping only the underlying knowledge base (vector store content).
-
 > Built a production-style agentic RAG system using LangGraph, Pinecone, Groq, FastAPI, and Tavily that dynamically routes queries between internal retrieval, reasoning, and web search using confidence-aware orchestration and retrieval validation.
 
 <img src="img/RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="880"/>
 
-
+> **Note:** This system is fully dataset-agnostic. It is designed so the same LangGraph + RAG orchestration pipeline can be reused across domains by swapping only the underlying knowledge base (vector store content).
 
 ---
 
