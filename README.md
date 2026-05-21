@@ -144,8 +144,11 @@ The results show that multimodal LLMs not only reproduce human-like spatial bias
 ### Programming
 `Python` • `SQL`
 
-### Machine Learning
-`Scikit-learn` • `XGBoost` • `Large Language Models`
+### Machine Learning & Data Science
+`Scikit-learn` • `XGBoost` • `Time Series Forecasting` • `Feature Engineering`
+
+### LLMs & AI Systems
+`Large Language Models (LLMs)` • `Retrieval-Augmented Generation (RAG)` • `Agentic AI Systems` • `LangGraph` • `Prompt Engineering`
 
 ### Data Analysis
 `Pandas` • `NumPy`
@@ -153,11 +156,17 @@ The results show that multimodal LLMs not only reproduce human-like spatial bias
 ### Data Visualisation
 `Matplotlib` • `Seaborn` • `Plotly`
 
+### Backend & APIs
+`FastAPI`
+
+### Vector Databases
+`Pinecone`
+
 ### Version Control
 `Git` • `GitHub`
 
-### Tools
-`Jupyter Notebook`
+### Tools & Environment
+`Jupyter Notebook` • `Streamlit`
 
 ---
 
