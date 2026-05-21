@@ -2,7 +2,7 @@
 <h3 align="center">Machine Learning • AI Systems • Agentic LLM Applications</h3>
 
 <p align="center">
-  <img src="data_science_portfolio_banner.png" alt="Data Science Portfolio Banner" width="500"/>
+  <img src="data_science_portfolio_banner.jpg" alt="Data Science Portfolio Banner" width="500"/>
 </p>
 
 I build machine learning and AI systems that turn complex data into decision-making tools, with a focus on predictive modelling, retrieval-augmented generation, and interpretable AI systems.
