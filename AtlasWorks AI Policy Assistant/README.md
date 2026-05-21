@@ -25,6 +25,17 @@ This enables adaptive, explainable, and enterprise-ready AI behavior while reduc
 
 ---
 
+## Why LangGraph
+
+LangGraph enables deterministic control over LLM behavior by converting the reasoning process into a stateful execution graph.
+
+This replaces:
+- uncontrolled prompt chaining
+with:
+- explicit, inspectable decision nodes and transitions
+
+---
+
 ## Core Architecture Principles
 
 The system is designed around four key orchestration concepts:
