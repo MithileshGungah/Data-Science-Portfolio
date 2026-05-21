@@ -25,7 +25,7 @@ The architecture combines:
 
 This enables adaptive, explainable, and enterprise-ready AI behavior while reducing hallucinations and improving response grounding.
 
-> **Impact:** Reduces hallucinations in RAG systems via confidence-gated retrieval and dynamic routing.
+> **Impact:** Reduces hallucinations via confidence-gated retrieval and dynamic routing.
 ---
 
 ## Why LangGraph?
