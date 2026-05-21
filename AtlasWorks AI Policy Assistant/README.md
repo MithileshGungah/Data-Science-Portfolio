@@ -10,31 +10,33 @@ Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph 
 
 AtlasWorks AI Policy Intelligence System is a sophisticated AI agent designed to answer workplace policy and compliance queries by intelligently combining internal enterprise knowledge with real-time web search.
 
-Instead of relying on a standard retrieval-augmented generation pipeline, the system employs a structured agentic workflow. Each query is dynamically routed based on intent, contextual relevance, and retrieval confidence.
+Rather than relying on a standard retrieval-augmented generation pipeline, the system implements a structured agentic workflow where each query is dynamically routed based on intent, contextual relevance, and retrieval confidence.
 
-This design enables adaptive, explainable, and enterprise-ready AI responses with full execution transparency.
+This enables adaptive, explainable, and enterprise-ready AI behavior with full execution transparency across every request.
 
 ---
 
-## Key Capabilities
+## Core Capabilities
+
+The system is built around a hybrid reasoning and retrieval architecture:
 
 - **Hybrid AI Routing Engine**  
-  Dynamically selects between internal knowledge (RAG), external web search, or direct reasoning based on query intent and confidence scoring.
+  Dynamically routes queries between internal RAG, external web search, or direct reasoning based on confidence and intent classification.
 
 - **LangGraph Orchestration Layer**  
-  Stateful multi-step execution graph with explicit routing, retrieval, evaluation, and response synthesis nodes.
+  Stateful multi-step execution graph with explicit nodes for routing, retrieval, evaluation, and response synthesis.
 
 - **Retrieval-Augmented Generation (RAG)**  
   Semantic search over enterprise policy documents using Pinecone vector database.
 
 - **Retrieval Evaluation & Correction Loop**  
-  Validates retrieved context before generation and triggers fallback strategies when confidence is insufficient.
+  Evaluates retrieved context before generation and triggers fallback strategies when confidence is insufficient.
 
 - **Hybrid Knowledge Integration**  
   Combines internal documents, Tavily web search, and Groq-based LLM reasoning.
 
 - **Execution Traceability**  
-  Every request produces a structured trace of routing decisions, retrieval steps, and final response generation.
+  Every query produces a structured trace of routing decisions, retrieval steps, and final response generation.
 
 - **Modular System Architecture**  
   Clear separation between frontend interface, backend API layer, and agent reasoning core.
@@ -53,83 +55,79 @@ User Query
 → Retrieval Layer (Pinecone Vector Search) OR Web Search (Tavily)  
 → Retrieval Evaluation Node  
 → Response Synthesis (Groq LLM)  
-→ Final Answer + Execution Trace
+→ Final Answer + Execution Trace Output
 
 ---
 
 ### System Layers
 
-- **Frontend Layer**: Streamlit-based UI for interaction and session handling  
-- **API Layer**: FastAPI backend for request orchestration and routing  
-- **Agent Layer**: LangGraph-based reasoning and decision engine  
-- **Knowledge Layer**: Pinecone vector database powering enterprise RAG  
-- **External Tools Layer**: Tavily (web search) and Groq (LLM inference)
+- Frontend Layer: Streamlit-based UI for interaction and session management  
+- API Layer: FastAPI backend handling request orchestration and routing  
+- Agent Layer: LangGraph-based reasoning and decision engine  
+- Knowledge Layer: Pinecone vector database powering enterprise RAG  
+- External Tools Layer: Tavily (web search) and Groq (LLM inference)
 
 ---
 
-## Agent Behavior & Query Routing Examples
+## Agent Behavior & Query Routing
 
-The following examples illustrate how AtlasWorks dynamically adapts its reasoning strategy based on retrieval confidence, document coverage, and query intent.
+The system dynamically adapts its reasoning strategy based on retrieval confidence, document coverage, and query intent.
 
 ---
 
-### Relevant Query → RAG-Based Response
+### 1. Relevant Query → RAG-Based Response
 
 <img src="img/Relevent_Query.png" alt="Relevant Query" width="880"/>
-
-This case demonstrates a successful retrieval-augmented generation flow.
 
 A query such as:
 > “What types of workplace behavior are considered unacceptable at AtlasWorks?”
 
-is correctly matched to relevant internal policy documents.
+is correctly mapped to internal policy knowledge.
 
 System behavior:
 - Retrieves semantically relevant embeddings from Pinecone  
-- Confirms sufficient context alignment  
+- Validates context sufficiency for RAG  
 - Generates a grounded response using the LLM  
 
 ---
 
-### Internal Reasoning (LangGraph Decision Flow)
+### 2. Internal Reasoning (LangGraph Decision Flow)
 
 <img src="img/Reasoning.png" alt="Reasoning" width="880"/>
 
-This diagram illustrates the internal orchestration logic of the LangGraph agent.
+This illustrates the internal orchestration logic of the LangGraph agent.
 
 The system evaluates:
 - Whether retrieved context is sufficient for RAG  
-- Whether confidence thresholds are satisfied  
-- Whether routing should remain in RAG or transition to fallback pathways  
+- Whether confidence thresholds are met  
+- Whether routing should remain in RAG or transition to fallback paths  
 
-This ensures deterministic, explainable reasoning rather than opaque generation.
+This ensures deterministic, explainable decision-making rather than opaque generation.
 
 ---
 
-### Irrelevant Query → Web Search Fallback
+### 3. Irrelevant Query → Web Search Fallback
 
 <img src="img/Unrelevant_Query.png" alt="Unrelevant Query" width="880"/>
 <img src="img/Websearch.png" alt="Web Search" width="880"/>
 
-When a query falls outside the scope of internal enterprise knowledge:
+When a query falls outside internal enterprise knowledge:
 
 System behavior:
 - Retrieval confidence is low or empty  
 - RAG generation is rejected  
 - Query is routed to external web search (Tavily)  
 
-This ensures the system remains useful even when internal knowledge is insufficient.
+This ensures system usefulness even beyond the internal knowledge boundary.
 
 ---
 
-### Relevant Query Outside Document Coverage
+### 4. Relevant Query Outside Document Coverage
 
 <img src="img/Relevant_Data_but_outside_document.png" alt="Relevant Data but outside document" width="880"/>
 
-This scenario represents partial knowledge coverage.
-
-Although the query is relevant to enterprise policy:
-- The exact information is not present in the indexed documents  
+Although the query is related to enterprise policy:
+- The exact information is not present in indexed documents  
 - The system detects partial semantic overlap but insufficient grounding  
 
 System behavior:
