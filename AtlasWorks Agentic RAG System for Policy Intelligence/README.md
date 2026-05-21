@@ -1,4 +1,4 @@
-# AtlasWorks AI Policy Intelligence System.
+# AtlasWorks AI Policy Intelligence System
 
 Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems. 
 
