@@ -1,8 +1,8 @@
 # AtlasWorks AI Policy Intelligence System
 
-> TL;DR: Agentic RAG system that routes queries across internal documents and web search using LangGraph-based stateful orchestration, reducing hallucinations through confidence-gated retrieval and validation.
+Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems. 
 
-Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems.
+> Built a production-style agentic RAG system using LangGraph, Pinecone, Groq, FastAPI, and Tavily that dynamically routes queries between internal retrieval, reasoning, and web search using confidence-aware orchestration and retrieval validation.
 
 <img src="img/RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="880"/>
 
