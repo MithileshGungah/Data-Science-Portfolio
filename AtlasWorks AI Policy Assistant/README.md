@@ -6,77 +6,77 @@ Enterprise-grade AI assistant for workplace policy reasoning using Agentic RAG, 
 
 ## Overview
 
-AtlasWorks AI Policy Intelligence System is an AI agent designed to answer internal policy and compliance queries using a structured reasoning pipeline.
+AtlasWorks AI Policy Intelligence System is an AI agent designed to answer workplace policy and compliance queries using a structured, multi-step reasoning workflow.
 
-It combines:
+The system combines:
 
-- Internal knowledge base (Pinecone vector database)
-- Real-time web search (Tavily)
+- Internal enterprise knowledge (Pinecone vector database)
+- Real-time web search (Tavily API)
 - LLM reasoning (Groq)
-- Multi-step agent orchestration (LangGraph)
+- Agentic orchestration (LangGraph)
 
-Instead of a single retrieval-and-response flow, the system uses a decision-based architecture that dynamically selects the best information source for each query.
+Instead of a single-pass RAG pipeline, the system uses a decision-driven architecture that dynamically selects the best information source for each query and evaluates retrieval quality before generating a response.
 
 ---
 
 ## Key Features
 
 ### Agentic RAG System
-The system routes queries dynamically between:
-- Vector-based internal knowledge retrieval
-- Web search fallback for external information
+Dynamically routes queries between:
+- Internal vector-based knowledge retrieval
+- Web search fallback for external context
 - Direct LLM reasoning when appropriate
 
 ---
 
 ### LangGraph Orchestration
-The assistant is implemented as a stateful graph where each node represents a reasoning step such as routing, retrieval, evaluation, and synthesis.
+Implements a stateful graph-based AI workflow where each node represents a reasoning stage such as routing, retrieval, evaluation, and synthesis.
 
 This enables:
 - Multi-step controlled reasoning
-- Explicit decision flow
-- Traceable execution paths
+- Explicit execution flow
 - Stateful agent behavior
+- Traceable decision paths
 
 ---
 
 ### Enterprise Knowledge Retrieval
-Uses Pinecone vector database to store and retrieve enterprise policy documents using semantic search.
+Uses Pinecone vector database for semantic retrieval of enterprise policy documents.
 
-This allows:
+Capabilities:
+- Semantic search over policy data
 - Context-aware retrieval
-- Semantic understanding of queries
-- Scalable document indexing
+- Scalable knowledge indexing
 
 ---
 
 ### Retrieval Evaluation Layer
-The system evaluates retrieved context before using it in the final answer.
+Evaluates retrieved context before using it in the final response.
 
-If the context is insufficient:
-- It triggers web search
-- Or adjusts retrieval strategy
-- Or re-runs reasoning flow
+If context is insufficient:
+- Web search is triggered
+- Retrieval strategy is adjusted
+- Reasoning flow is re-evaluated
 
 ---
 
 ### Hybrid Knowledge System
 Combines:
-- Internal enterprise documents
+- Internal enterprise knowledge
 - External web search results
 - LLM reasoning layer
 
-This ensures both accuracy and freshness of responses.
+Ensures both accuracy and real-time relevance.
 
 ---
 
 ### Observability
-Each request generates a trace including:
+Each request generates an execution trace including:
 - routing decision
 - retrieval step
 - web search usage
 - evaluation outcome
-- final synthesis step
+- final synthesis path
 
 ---
 
@@ -92,102 +92,23 @@ User Query
 
 ---
 
-## Backend Structure
+## Core Modules Structure
 
-- agent.py → LangGraph agent workflow and routing logic
-- main.py → FastAPI entry point
-- vectortore.py → Pinecone vector retrieval implementation
-- config.py → Environment and API configuration
+atlasworks-ai-policy-assistant/
 
-Backend responsibilities:
-- Query orchestration
-- Retrieval pipeline execution
-- Web search fallback logic
-- API endpoints
-
----
-
-## Frontend Structure
-
-- app.py → Frontend application entry point
-- backend_api.py → Backend communication layer
-- session_manager.py → Conversation and session handling
-- ui_components.py → UI building components
-- config.py → Frontend configuration
-
-Frontend responsibilities:
-- User interface for querying
-- Session management
-- API integration
-- UI state handling
-
----
-
-## Tech Stack
-
-FastAPI, LangGraph, Groq, Pinecone, HuggingFace Embeddings, Tavily API, Pydantic
-
----
-
-## System Design Highlights
-
-- Multi-step agentic architecture instead of linear RAG
-- Explicit routing between multiple knowledge sources
-- Separation of retrieval, reasoning, and synthesis layers
-- Stateful graph-based AI orchestration
-- Hybrid internal and external knowledge system
-- Observability-driven execution tracking
-
----
-
-## Why This Project Is Different
-
-Traditional RAG systems:
-
-Retrieve → Generate
-
-This system:
-
-Reason → Route → Retrieve → Evaluate → Generate
-
-This enables adaptive decision-making and improves reliability in enterprise environments.
-
----
-
-## Run Locally
-
-Backend:
-python main.py
-
-Frontend:
-python app.py
-
-API Docs:
-http://localhost:8000/docs
-
----
-
-## API
-
-POST /chat
-
-Request:
-{
-  "query": "What is the remote work policy?"
-}
-
----
-
-POST /upload-document
-
-Uploads and indexes enterprise documents into the vector database.
-
----
-
-## Project Summary
-
-Built an enterprise AI Policy Intelligence System using LangGraph, FastAPI, and Pinecone.
-
-Implemented an agentic RAG architecture with dynamic routing between internal knowledge retrieval and web search, including retrieval evaluation and multi-step reasoning workflows.
-
-Designed a modular system with clear separation between agent logic, API layer, and frontend interface.
+│
+├── backend/
+│   ├── agent.py              # LangGraph agent (routing, retrieval, synthesis workflow)
+│   ├── main.py               # FastAPI entry point (API routes, server startup)
+│   ├── vectortore.py         # Pinecone vector store integration (RAG retrieval layer)
+│   ├── config.py             # Environment variables and API key configuration
+│
+├── frontend/
+│   ├── app.py                # Frontend application entry point (UI runtime)
+│   ├── backend_api.py        # API communication layer between frontend and backend
+│   ├── session_manager.py    # Session state and conversation memory handling
+│   ├── ui_components.py      # Reusable UI components and layout elements
+│   ├── config.py             # Frontend configuration settings
+│
+├── requirements.txt          # Python dependencies
+└── .env                      # Environment variables (not committed)
