@@ -48,7 +48,7 @@ The system is built around a hybrid reasoning and retrieval architecture:
 ### End-to-End System Flow
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[User Query] --> B[Streamlit Frontend]
     B --> C[FastAPI Backend]
     C --> D[LangGraph Agent Core]
@@ -56,8 +56,8 @@ flowchart TD
 
     E --> F{Route Decision}
 
-    F -->|Relevant / High Confidence| G[Pinecone Vector Search]
-    F -->|External / Low Confidence| H[Tavily Web Search]
+    F -->|High Confidence / RAG| G[Pinecone Vector Search]
+    F -->|Low Confidence / External| H[Tavily Web Search]
 
     G --> I[Retrieval Evaluation Node]
     H --> I
