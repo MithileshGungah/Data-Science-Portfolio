@@ -31,7 +31,9 @@ LangGraph enables deterministic control over LLM behavior by converting the reas
 
 This replaces:
 - uncontrolled prompt chaining
+
 with:
+
 - explicit, inspectable decision nodes and transitions
 
 ---
