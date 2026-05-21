@@ -140,8 +140,6 @@ FastAPI, LangGraph, Groq, Pinecone, HuggingFace Embeddings, Tavily API, Streamli
 
 ## Core Modules Structure
 
-## 📦 Core Modules Structure
-
 ```
 agentBot/
 ├── frontend/
