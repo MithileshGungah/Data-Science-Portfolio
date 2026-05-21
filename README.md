@@ -6,7 +6,7 @@ I build machine learning and AI systems that turn complex data into decision-mak
 My work spans both traditional ML pipelines and modern LLM-based architectures, with an emphasis on **system design, evaluation rigour, and explainable outputs that can be used in real-world decision contexts**.
 
 **Core areas:**  
-Machine Learning • Time Series Forecasting • Data Analysis • LLM Applications • Agentic RAG Systems • Data Visualization & Storytelling
+Machine Learning • Time Series Forecasting • Data Analysis • Agentic RAG Systems • Data Visualization & Storytelling
 
 ---
 
