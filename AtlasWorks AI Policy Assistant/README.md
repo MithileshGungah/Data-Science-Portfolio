@@ -6,15 +6,14 @@ Enterprise-grade AI assistant for workplace policy reasoning using Agentic RAG, 
 
 ## System Architecture
 
-User Query  
-→ Streamlit Frontend (UI Layer)  
-→ FastAPI Backend (API Layer)  
-→ LangGraph Agent (Orchestration Layer)  
-→ Router Node (Decision Engine)  
-→ Vector Search (Pinecone) OR Web Search (Tavily)  
-→ Retrieval Evaluation Node  
-→ Response Synthesis (Groq LLM)  
-→ Final Answer + Execution Trace
+- Streamlit Frontend (UI Layer)  
+- FastAPI Backend (API Layer)  
+- LangGraph Agent (Orchestration Layer)  
+- Router Node (Decision Engine)  
+- Vector Search (Pinecone) OR Web Search (Tavily)  
+- Retrieval Evaluation Node  
+- Response Synthesis (Groq LLM)  
+- Final Answer + Execution Trace
 
 ---
 
