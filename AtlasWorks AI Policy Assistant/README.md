@@ -424,7 +424,7 @@ GROQ_API_KEY="your_groq_api_key_here"
 PINECONE_API_KEY="your_pinecone_api_key_here"
 PINECONE_ENVIRONMENT="your_pinecone_environment"
 TAVILY_API_KEY="your_tavily_api_key"
-FASTAPI_BASE_URL="http://localhost:8000"
+FASTAPI_BASE_URL="http://localhost:9010"
 ```
 
 ### Running the Application
