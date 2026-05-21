@@ -1,140 +1,67 @@
 # AtlasWorks AI Policy Intelligence System
 
-Enterprise-grade AI assistant for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems.
-
----
-
-## System Architecture
-
-- Streamlit Frontend (UI Layer)  
-- FastAPI Backend (API Layer)  
-- LangGraph Agent (Orchestration Layer)  
-- Router Node (Decision Engine)  
-- Vector Search (Pinecone) OR Web Search (Tavily)  
-- Retrieval Evaluation Node  
-- Response Synthesis (Groq LLM)  
-- Final Answer + Execution Trace
+Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph orchestration, and hybrid retrieval systems.
 
 ---
 
 ## Overview
 
-AtlasWorks AI Policy Intelligence System is an AI agent designed to answer workplace policy and compliance queries using a structured multi-step reasoning architecture.
+AtlasWorks AI Policy Intelligence System is a sophisticated AI agent designed to answer workplace policy and compliance queries by intelligently combining internal enterprise knowledge with real-time web search.
 
-Instead of a single retrieval-and-generation pipeline, the system uses an agentic decision flow that dynamically selects between internal knowledge, external web search, and LLM reasoning based on query intent and retrieval quality.
+The system uses a structured agentic workflow instead of a simple retrieval-augmented generation pipeline. Each query is dynamically routed based on intent, context quality, and retrieval confidence.
 
-This enables a more adaptive and reliable enterprise AI system.
-
----
-
-## Why This System Is Different
-
-Traditional RAG systems:
-
-Retrieve → Generate
-
-This system uses a decision-driven reasoning architecture:
-
-Reason → Route → Retrieve → Evaluate → Generate
-
-This allows the agent to behave like a structured AI system rather than a static chatbot.
+This enables adaptive, explainable, and enterprise-ready AI responses.
 
 ---
 
-## System Capabilities
+## Key Features
 
-### Agentic RAG Workflow
+- **Hybrid AI & Intelligent Routing**  
+  Dynamically selects between internal knowledge (RAG), web search, or direct reasoning based on query context.
 
-The system dynamically routes each query through:
+- **LangGraph Agent Orchestration**  
+  Multi-step stateful workflow with explicit routing, retrieval, evaluation, and response synthesis nodes.
 
-- Internal knowledge retrieval using Pinecone vector database
-- External web search using Tavily API
-- Direct LLM reasoning when appropriate
+- **Retrieval-Augmented Generation (RAG)**  
+  Uses Pinecone vector database to perform semantic search over enterprise policy documents.
 
-This replaces static RAG with a decision-driven pipeline.
+- **Retrieval Evaluation & Correction Loop**  
+  Evaluates retrieved context before generation and triggers fallback web search when needed.
 
----
+- **Hybrid Knowledge System**  
+  Combines internal documents, external web search (Tavily), and LLM reasoning (Groq).
 
-### LangGraph Orchestration
+- **Execution Traceability**  
+  Each request produces a structured trace of routing decisions, retrieval steps, and final synthesis flow.
 
-The AI agent is implemented as a stateful graph where each node represents a reasoning step.
-
-Key properties:
-
-- Multi-step execution flow
-- Stateful transitions between nodes
-- Explicit routing decisions
-- Fully traceable reasoning path
-
-Core stages:
-routing → retrieval → evaluation → synthesis
+- **Modular Architecture**  
+  Clean separation between backend agent logic and frontend interface layer.
 
 ---
 
-### Enterprise Knowledge Retrieval
+## High-Level Architecture
 
-The system uses Pinecone vector database to store and retrieve enterprise policy documents using semantic embeddings.
+### System Flow
 
-Capabilities:
-
-- Semantic search over internal documents
-- Context-aware retrieval beyond keyword matching
-- Scalable knowledge indexing
-
----
-
-### Retrieval Evaluation & Correction
-
-Before generating a final response, retrieved context is evaluated for relevance and completeness.
-
-If context is insufficient:
-
-- Web search is triggered
-- Retrieval strategy is adjusted
-- Reasoning flow is re-evaluated
-
-This introduces a self-correcting retrieval loop.
+User Query  
+→ Streamlit Frontend  
+→ FastAPI Backend  
+→ LangGraph Agent Core  
+→ Router Node (decision engine)  
+→ Vector Search (Pinecone) OR Web Search (Tavily)  
+→ Retrieval Evaluation Node  
+→ Response Synthesis (Groq LLM)  
+→ Final Answer + Trace Output
 
 ---
 
-### Hybrid Knowledge System
+### System Layers
 
-The system integrates:
-
-- Internal enterprise knowledge (Pinecone)
-- External web search (Tavily)
-- LLM reasoning layer (Groq)
-
-This ensures both accuracy and real-time relevance.
-
----
-
-### Observability & Traceability
-
-Each request generates a full execution trace including:
-
-- routing decision
-- retrieval source selection
-- web search usage
-- evaluation outcome
-- final response path
-
----
-
-## Key Design Principles
-
-- Separation of reasoning, retrieval, and generation
-- Graph-based agent orchestration
-- Hybrid knowledge sources (internal and external)
-- Self-correcting retrieval mechanism
-- Stateful execution flow
-- Observability-first design
-
----
-
-## Tech Stack
-
-FastAPI, LangGraph, Groq, Pinecone, HuggingFace Embeddings, Tavily API, Streamlit, Pydantic
+- **Frontend Layer**: Streamlit UI for interaction and session management  
+- **API Layer**: FastAPI backend handling requests and orchestration  
+- **Agent Layer**: LangGraph-based reasoning engine  
+- **Knowledge Layer**: Pinecone vector database for enterprise RAG  
+- **External Tools**: Tavily search and Groq LLM inference
 
 ---
 
@@ -160,14 +87,49 @@ agentBot/
 └── .env                      # API keys (not committed)
 ```
 
-## ⚙️ Technology Stack
 
-- **Language**: Python 3.9+
-- **Frontend**: Streamlit
-- **Backend**: FastAPI
-- **Agent Orchestration**: LangGraph
-- **LLMs & Tools**: LangChain, Groq (Llama 3)
-- **Embeddings**: sentence-transformers/all-MiniLM-L6-v2
-- **Vector Store**: Pinecone
-- **PDF Processing**: PyPDFLoader
-- **Search Engine**: Tavily API
+---
+
+## Technology Stack
+
+- Python 3.9+
+- FastAPI
+- Streamlit
+- LangGraph
+- Groq (LLM inference)
+- Pinecone (vector database)
+- HuggingFace embeddings
+- Tavily Search API
+- Pydantic
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.9+
+- API keys for:
+  - GROQ_API_KEY
+  - PINECONE_API_KEY
+  - TAVILY_API_KEY
+
+---
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/atlasworks-ai-policy-assistant.git
+cd atlasworks-ai-policy-assistant
+
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+
+```
+```bash
+GROQ_API_KEY=your_key
+PINECONE_API_KEY=your_key
+TAVILY_API_KEY=your_key
+```
