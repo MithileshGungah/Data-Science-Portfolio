@@ -119,7 +119,7 @@ The project demonstrates how combining visual analysis with machine learning mod
 ### *Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning*
 
 <p align="center">
-  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="350">
+  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="345">
 </p>
 
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
