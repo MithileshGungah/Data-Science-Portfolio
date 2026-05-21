@@ -365,6 +365,18 @@ agentBot/
 
 ---
 
+## Real-World Impact
+
+This system demonstrates how enterprise AI assistants can move beyond static RAG pipelines into controllable, auditable, and fallback-safe agentic systems.
+
+It directly addresses key production problems:
+- hallucination in RAG systems
+- lack of retrieval validation
+- brittle single-path pipelines
+- absence of explainability in LLM routing decisions
+
+---
+
 ## Technology Stack
 
 - Python 3.9+
