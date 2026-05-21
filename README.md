@@ -61,7 +61,7 @@ This project demonstrates how LLMs can be moved beyond chat-based systems into *
 ### *A Business-Aligned Machine Learning System for Identifying At-Risk Customers*
 
 <p align="center">
-  <img src="churn_rate.png" alt="Churn Prediction Engine" width="500">
+  <img src="churn_rate.png" alt="Churn Prediction Engine" width="520">
 </p>
 
 Customer churn prediction is a critical machine learning application in subscription-based businesses, where early identification of at-risk customers can directly influence retention strategies and revenue outcomes.
