@@ -28,7 +28,7 @@ Machine Learning • Time Series Forecasting • Data Analysis • LLM & NLP Ana
 ### *A Stateful AI Orchestration System for Enterprise Policy Reasoning*
 
 <p align="center">
-  <img src="RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="530"/>
+  <img src="RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="550"/>
 </p>
 
 AtlasWorks is a production-style Agentic RAG system designed for enterprise policy reasoning and compliance intelligence. Unlike traditional RAG pipelines, it uses a stateful LangGraph orchestration layer to dynamically route queries across internal retrieval, web search, and direct reasoning based on confidence scoring and retrieval validation.
