@@ -8,38 +8,111 @@ Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph 
 
 ## Overview
 
-AtlasWorks AI Policy Intelligence System is a sophisticated AI agent designed to answer workplace policy and compliance queries by intelligently combining internal enterprise knowledge with real-time web search.
+AtlasWorks AI Policy Intelligence System is a stateful AI orchestration framework designed for enterprise policy reasoning and compliance intelligence.
 
-Rather than relying on a standard retrieval-augmented generation pipeline, the system implements a structured agentic workflow where each query is dynamically routed based on intent, contextual relevance, and retrieval confidence.
+Instead of relying on a traditional retrieval-augmented generation pipeline, the system implements a conditional agent workflow powered by LangGraph. Each query is dynamically evaluated and routed based on semantic intent, retrieval confidence, contextual sufficiency, and runtime execution constraints.
 
-This enables adaptive, explainable, and enterprise-ready AI behavior with full execution transparency across every request.
+The architecture combines:
+- Retrieval-Augmented Generation (RAG)
+- Runtime decision routing
+- Retrieval validation
+- Dynamic fallback execution
+- Structured execution tracing
+
+This enables adaptive, explainable, and enterprise-ready AI behavior while reducing hallucinations and improving response grounding.
+
+---
+
+## Core Architecture Principles
+
+The system is designed around four key orchestration concepts:
+
+### 1. Intelligent Query Routing
+
+Queries are dynamically classified into execution paths using an LLM-powered router node.
+
+Depending on query characteristics, the system can:
+- Retrieve from internal enterprise knowledge (RAG)
+- Route to external web search
+- Respond directly without retrieval
+- End conversational flows gracefully
+
+This creates adaptive execution behavior rather than static prompt chaining.
+
+---
+
+### 2. Confidence-Gated Retrieval
+
+Unlike standard RAG pipelines:
+
+```text
+retrieve → answer
+```
+
+AtlasWorks introduces a retrieval evaluation layer:
+
+```text
+retrieve → evaluate sufficiency → decide next action
+```
+
+Retrieved context is validated before response generation to determine whether the information is sufficiently grounded.
+
+This significantly reduces unsupported or hallucinated outputs.
+
+---
+
+### 3. Dynamic Fallback Execution
+
+If internal retrieval is insufficient:
+- The system rejects weak RAG grounding
+- Automatically escalates to web search
+- Continues execution using external context
+
+This allows the agent to operate safely beyond the boundaries of the internal document corpus.
+
+---
+
+### 4. Stateful Graph Orchestration
+
+The execution workflow is implemented as a LangGraph state machine with:
+- Explicit node transitions
+- Conditional routing edges
+- Shared graph state
+- Runtime configuration injection
+- Execution checkpointing
+
+This provides deterministic, traceable, and modular orchestration behavior.
 
 ---
 
 ## Core Capabilities
 
-The system is built around a hybrid reasoning and retrieval architecture:
-
 - **Hybrid AI Routing Engine**  
-  Dynamically routes queries between internal RAG, external web search, or direct reasoning based on confidence and intent classification.
+  Dynamically routes queries between internal RAG, external web search, or direct reasoning based on confidence scoring and semantic intent classification.
 
 - **LangGraph Orchestration Layer**  
-  Stateful multi-step execution graph with explicit nodes for routing, retrieval, evaluation, and response synthesis.
+  Stateful multi-step execution graph with explicit routing, retrieval, evaluation, and synthesis nodes.
 
 - **Retrieval-Augmented Generation (RAG)**  
   Semantic search over enterprise policy documents using Pinecone vector database.
 
-- **Retrieval Evaluation & Correction Loop**  
-  Evaluates retrieved context before generation and triggers fallback strategies when confidence is insufficient.
+- **Retrieval Evaluation & Validation Loop**  
+  Evaluates whether retrieved context is sufficiently grounded before allowing final response generation.
+
+- **Dynamic Web Fallback System**  
+  Automatically redirects insufficient retrieval flows to Tavily web search.
 
 - **Hybrid Knowledge Integration**  
-  Combines internal documents, Tavily web search, and Groq-based LLM reasoning.
+  Combines internal enterprise documents, web search, and Groq-based LLM reasoning.
 
 - **Execution Traceability**  
-  Every query produces a structured trace of routing decisions, retrieval steps, and final response generation.
+  Every request produces a structured trace of routing decisions, retrieval paths, and final response generation.
 
-- **Modular System Architecture**  
-  Clear separation between frontend interface, backend API layer, and agent reasoning core.
+- **Runtime Configuration Injection**  
+  Graph behavior can dynamically change during execution using runtime configuration flags.
+
+- **Modular System Design**  
+  Clean separation between frontend interface, backend orchestration, and retrieval infrastructure.
 
 ---
 
@@ -56,81 +129,151 @@ flowchart LR
 
     E --> F{Route Decision}
 
-    F -->|High Confidence / RAG| G[Pinecone Vector Search]
-    F -->|Low Confidence / External| H[Tavily Web Search]
+    F -->|High Confidence / Internal Knowledge| G[Pinecone Vector Search]
+    F -->|External Knowledge Required| H[Tavily Web Search]
+    F -->|Simple Direct Query| K[Direct Response Path]
 
     G --> I[Retrieval Evaluation Node]
-    H --> I
+    H --> J[External Context Collection]
 
-    I --> J{Context Sufficient?}
+    I --> L{Context Sufficient?}
 
-    J -->|Yes| K[Response Synthesis<br/>Groq LLM]
-    J -->|No| H
+    L -->|Yes| M[Response Synthesis<br/>Groq LLM]
+    L -->|No| H
 
-    K --> L[Final Answer + Execution Trace Output]
+    J --> M
+    K --> M
+
+    M --> N[Final Answer + Execution Trace]
 ```
----
-
-### System Layers
-
-- Frontend Layer: Streamlit-based UI for interaction and session management  
-- API Layer: FastAPI backend handling request orchestration and routing  
-- Agent Layer: LangGraph-based reasoning and decision engine  
-- Knowledge Layer: Pinecone vector database powering enterprise RAG  
-- External Tools Layer: Tavily (web search) and Groq (LLM inference)
 
 ---
 
-## Agent Behavior & Query Routing
+## System Layers
 
-The system dynamically adapts its reasoning strategy based on retrieval confidence, document coverage, and query intent.
+| Layer | Responsibility |
+|---|---|
+| Frontend Layer | Streamlit-based interface for user interaction and session management |
+| API Layer | FastAPI backend handling orchestration and request lifecycle |
+| Agent Layer | LangGraph-based reasoning and execution workflow |
+| Routing Layer | LLM-powered decision engine for adaptive query routing |
+| Retrieval Layer | Pinecone vector database for semantic enterprise document retrieval |
+| Validation Layer | Confidence evaluation and retrieval sufficiency checking |
+| External Tools Layer | Tavily web search and Groq LLM inference |
 
 ---
 
-### 1. Relevant Query → RAG-Based Response
+## Agent Workflow Execution
+
+The system operates as a conditional execution graph where each node contributes to a structured reasoning pipeline.
+
+### Router Node
+
+The router node:
+- Interprets semantic query intent
+- Evaluates runtime constraints
+- Selects the optimal execution path
+
+Possible routes:
+- `rag`
+- `web`
+- `answer`
+- `end`
+
+---
+
+### Retrieval Node
+
+The retrieval node:
+- Performs semantic similarity search using Pinecone
+- Retrieves top-k relevant document chunks
+- Passes retrieved context to the evaluation layer
+
+---
+
+### Retrieval Evaluation Node
+
+The evaluation node determines:
+- Whether retrieved information sufficiently answers the query
+- Whether fallback execution is required
+- Whether response generation is safe to proceed
+
+This creates confidence-aware orchestration behavior.
+
+---
+
+### Web Search Node
+
+If retrieval confidence is insufficient:
+- Tavily web search is triggered
+- External context is collected
+- Final synthesis combines all available sources
+
+---
+
+### Response Synthesis Node
+
+The final generation layer:
+- Combines validated context
+- Synthesizes grounded responses
+- Produces execution-aware outputs
+
+---
+
+## Agent Behavior & Query Routing Examples
+
+The following examples demonstrate how AtlasWorks adapts its execution strategy based on confidence evaluation, retrieval quality, and knowledge coverage.
+
+---
+
+### 1. Relevant Query → Successful RAG Flow
 
 <img src="img/Relevent_Query.png" alt="Relevant Query" width="880"/>
 
-A query such as:
+Example query:
 > “What types of workplace behavior are considered unacceptable at AtlasWorks?”
 
-is correctly mapped to internal policy knowledge.
+Execution behavior:
+- Query routed to internal RAG pipeline
+- Pinecone retrieval returns relevant policy embeddings
+- Retrieval evaluation confirms sufficient grounding
+- Final response generated using enterprise knowledge
 
-System behavior:
-- Retrieves semantically relevant embeddings from Pinecone  
-- Validates context sufficiency for RAG  
-- Generates a grounded response using the LLM  
+This demonstrates a fully grounded retrieval-augmented execution path.
 
 ---
 
-### 2. Internal Reasoning (LangGraph Decision Flow)
+### 2. Internal Reasoning & LangGraph Decision Flow
 
 <img src="img/Reasoning.png" alt="Reasoning" width="880"/>
 
-This illustrates the internal orchestration logic of the LangGraph agent.
+This illustrates the internal orchestration logic of the LangGraph execution graph.
 
 The system evaluates:
-- Whether retrieved context is sufficient for RAG  
-- Whether confidence thresholds are met  
-- Whether routing should remain in RAG or transition to fallback paths  
+- Retrieval sufficiency
+- Confidence thresholds
+- Runtime routing constraints
+- Fallback eligibility
 
-This ensures deterministic, explainable decision-making rather than opaque generation.
+This transforms the system from a simple chatbot into a structured AI decision workflow.
 
 ---
 
 ### 3. Irrelevant Query → Web Search Fallback
 
 <img src="img/Unrelevant_Query.png" alt="Unrelevant Query" width="880"/>
+
 <img src="img/Websearch.png" alt="Web Search" width="880"/>
 
 When a query falls outside internal enterprise knowledge:
 
-System behavior:
-- Retrieval confidence is low or empty  
-- RAG generation is rejected  
-- Query is routed to external web search (Tavily)  
+Execution behavior:
+- Retrieval confidence becomes insufficient
+- RAG response generation is rejected
+- Query is dynamically rerouted to Tavily web search
+- External context is incorporated into synthesis
 
-This ensures system usefulness even beyond the internal knowledge boundary.
+This ensures adaptive behavior beyond internal document boundaries.
 
 ---
 
@@ -138,28 +281,49 @@ This ensures system usefulness even beyond the internal knowledge boundary.
 
 <img src="img/Relevant_Data_but_outside_document.png" alt="Relevant Data but outside document" width="880"/>
 
-Although the query is related to enterprise policy:
-- The exact information is not present in indexed documents  
-- The system detects partial semantic overlap but insufficient grounding  
+This scenario demonstrates partial semantic relevance without sufficient grounding.
+
+Although the query relates to enterprise policy:
+- The exact information does not exist in indexed documents
+- Semantic overlap is detected
+- Context validation fails confidence thresholds
 
 System behavior:
-- Avoids hallucinated responses  
-- Prevents unsupported assumptions  
-- Either escalates to web search or requests clarification  
+- Prevents unsupported assumptions
+- Avoids hallucinated responses
+- Requests clarification or escalates externally when appropriate
+
+---
+
+## Technical Stack
+
+| Component | Technology |
+|---|---|
+| Orchestration Framework | LangGraph |
+| LLM Inference | Groq |
+| Vector Database | Pinecone |
+| Embeddings | sentence-transformers/all-MiniLM-L6-v2 |
+| Web Search | Tavily |
+| Backend API | FastAPI |
+| Frontend | Streamlit |
+| State Management | LangGraph StateGraph + MemorySaver |
 
 ---
 
 ## System Summary
 
-AtlasWorks AI demonstrates advanced agentic reasoning through:
+AtlasWorks AI demonstrates production-style agentic orchestration through:
 
-- Dynamic routing between RAG, reasoning, and web search  
-- Strong grounding in enterprise policy knowledge  
-- Safe fallback behavior for incomplete or missing information  
-- Transparent decision-making via LangGraph orchestration  
-- Full traceability of every query execution path
+- Dynamic query routing
+- Confidence-gated retrieval
+- Retrieval validation before generation
+- Adaptive fallback execution
+- Stateful graph orchestration
+- Runtime-configurable execution paths
+- Grounded response synthesis
+- Structured execution traceability
 
----
+The system is designed not as a simple chatbot, but as a modular AI decision framework capable of safe, explainable, and adaptive enterprise reasoning.
 
 ## Core Modules Structure
 
