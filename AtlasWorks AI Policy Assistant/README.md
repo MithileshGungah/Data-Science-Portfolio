@@ -27,13 +27,17 @@ This enables adaptive, explainable, and enterprise-ready AI behavior while reduc
 
 ---
 
-## Why LangGraph
+## Why LangGraph?
 
-LangGraph enables deterministic control over LLM behavior by converting the reasoning process into a stateful execution graph.
+LangGraph was chosen over traditional LangChain chains because this system requires stateful, multi-step decision making rather than linear prompt execution.
 
-This replaces uncontrolled prompt chaining with:
+Unlike standard chains, LangGraph enables:
+- Stateful execution across routing, retrieval, evaluation, and synthesis
+- Conditional branching and fallback loops (e.g., RAG → Web Search escalation)
+- Persistent shared state for confidence scores and retrieval quality
+- More reliable debugging and observability in complex agent flows
 
-- explicit, inspectable decision nodes and transitions
+This makes it better suited for production-grade agentic systems where execution is dynamic rather than sequential.
 
 ---
 
@@ -102,31 +106,28 @@ This provides deterministic, traceable, and modular orchestration behavior.
 ## Core Capabilities
 
 - **Hybrid AI Routing Engine**  
-  Dynamically routes queries between internal RAG, external web search, or direct reasoning based on confidence scoring and semantic intent classification.
+  Routes queries between RAG, web search, or direct reasoning using intent and confidence scoring.
 
 - **LangGraph Orchestration Layer**  
-  Stateful multi-step execution graph with explicit routing, retrieval, evaluation, and synthesis nodes.
+  Stateful execution graph with explicit routing, retrieval, evaluation, and synthesis nodes.
 
 - **Retrieval-Augmented Generation (RAG)**  
   Semantic search over enterprise policy documents using Pinecone vector database.
 
-- **Retrieval Evaluation & Validation Loop**  
-  Evaluates whether retrieved context is sufficiently grounded before allowing final response generation.
+- **Retrieval Evaluation Loop**  
+  Validates retrieved context before allowing response generation, reducing hallucinations.
 
-- **Dynamic Web Fallback System**  
-  Automatically redirects insufficient retrieval flows to Tavily web search.
+- **Dynamic Web Fallback**  
+  Escalates to Tavily web search when internal retrieval is insufficient.
 
 - **Hybrid Knowledge Integration**  
-  Combines internal enterprise documents, web search, and Groq-based LLM reasoning.
+  Combines internal documents, web search, and Groq-based LLM reasoning.
 
 - **Execution Traceability**  
-  Every request produces a structured trace of routing decisions, retrieval paths, and final response generation.
-
-- **Runtime Configuration Injection**  
-  Graph behavior can dynamically change during execution using runtime configuration flags.
+  Produces structured traces of routing, retrieval, and generation steps for each query.
 
 - **Modular System Design**  
-  Clean separation between frontend interface, backend orchestration, and retrieval infrastructure.
+  Clear separation between frontend, backend, and agent orchestration layers.
 
 ---
 
