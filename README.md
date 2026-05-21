@@ -1,6 +1,10 @@
 <h1 align="center">Mithilesh Gungah</h1>
 <h3 align="center">Machine Learning • AI Systems • Agentic LLM Applications</h3>
 
+<p align="center">
+  <img src="data_science_portfolio_banner.png" alt="Data Science Portfolio Banner" width="500"/>
+</p>
+
 I build machine learning and AI systems that turn complex data into decision-making tools, with a focus on predictive modelling, retrieval-augmented generation, and interpretable AI systems.
 
 My work spans both traditional ML pipelines and modern LLM-based architectures, with an emphasis on **system design, evaluation rigour, and explainable outputs that can be used in real-world decision contexts**.
