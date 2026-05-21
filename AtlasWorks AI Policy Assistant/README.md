@@ -397,6 +397,7 @@ It directly addresses key production problems:
 
 - Python 3.9+
 - API keys for:
+  
   - `GROQ_API_KEY`
   - `PINECONE_API_KEY`
   - `TAVILY_API_KEY`
@@ -426,7 +427,7 @@ TAVILY_API_KEY="your_tavily_api_key"
 FASTAPI_BASE_URL="http://localhost:8000"
 ```
 
-### Running the application
+### Running the Application
 
 #### Start Backend (FastAPI)
 ```bash
