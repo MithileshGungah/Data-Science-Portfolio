@@ -149,3 +149,10 @@ python main.py
 cd frontend
 streamlit run app.py
 ```
+## Future Improvements
+
+- Integrate core tools such as calculator, calendar, and code execution support
+- Enable streaming LLM responses token-by-token for improved real-time experience
+- Enhance RAG pipeline with reranking, multi-query retrieval, and better source grounding
+- Add long-term memory with user-controlled personalization and session continuity
+- Improve UI/UX with themes, smoother animations, and responsive design upgrades
