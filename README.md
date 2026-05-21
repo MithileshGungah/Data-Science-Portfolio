@@ -91,7 +91,7 @@ The project demonstrates how modelling, visualisation, and interpretation can be
 ### *A Time Series Forecasting Framework for Volatile Retail Demand*
 
 <p align="center">
-  <img src="demand_forecasting.png" alt="Short-term sales forecasting under volatile demand" width="520">
+  <img src="demand_forecasting.png" alt="Short-term sales forecasting under volatile demand" width="535">
 </p>
 
 Retail demand often exhibits seasonality, volatility, and sudden spikes, making accurate short-term forecasting challenging. This project evaluates multiple forecasting approaches to identify the most reliable model for predicting demand seven days ahead.
@@ -119,7 +119,7 @@ The project demonstrates how combining visual analysis with machine learning mod
 ### *Multimodal LLM Evaluation of Urban Perception, Bias, and Reasoning*
 
 <p align="center">
-  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="340">
+  <img src="LLM_Boroughs.png" alt="AI-generated cognitive maps of London" width="505" height="350">
 </p>
 
 Large language models are increasingly acting as spatial gatekeepers for mapping, search, and location discovery.  
