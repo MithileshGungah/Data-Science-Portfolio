@@ -6,7 +6,7 @@ Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph 
 
 <img src="img/RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="880"/>
 
-> **Note: This system is fully dataset-agnostic. It is designed so the same LangGraph + RAG orchestration pipeline can be reused across domains by swapping only the underlying knowledge base (vector store content).**
+> **Note: This system is dataset-agnostic. While currently configured for workplace policy intelligence, the same architecture can be applied to any domain by replacing the underlying document corpus (e.g., legal, medical, financial, or enterprise knowledge bases) without changing the core LangGraph orchestration logic.**
 
 ---
 
