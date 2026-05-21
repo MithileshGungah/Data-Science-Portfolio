@@ -47,16 +47,28 @@ The system is built around a hybrid reasoning and retrieval architecture:
 
 ### End-to-End System Flow
 
-User Query  
-→ Streamlit Frontend  
-→ FastAPI Backend  
-→ LangGraph Agent Core  
-→ Router Node (intent classification + confidence scoring)  
-→ Retrieval Layer (Pinecone Vector Search) OR Web Search (Tavily)  
-→ Retrieval Evaluation Node  
-→ Response Synthesis (Groq LLM)  
-→ Final Answer + Execution Trace Output
+```mermaid
+flowchart TD
+    A[User Query] --> B[Streamlit Frontend]
+    B --> C[FastAPI Backend]
+    C --> D[LangGraph Agent Core]
+    D --> E[Router Node<br/>Intent Classification + Confidence Scoring]
 
+    E --> F{Route Decision}
+
+    F -->|Relevant / High Confidence| G[Pinecone Vector Search]
+    F -->|External / Low Confidence| H[Tavily Web Search]
+
+    G --> I[Retrieval Evaluation Node]
+    H --> I
+
+    I --> J{Context Sufficient?}
+
+    J -->|Yes| K[Response Synthesis<br/>Groq LLM]
+    J -->|No| H
+
+    K --> L[Final Answer + Execution Trace Output]
+```
 ---
 
 ### System Layers
