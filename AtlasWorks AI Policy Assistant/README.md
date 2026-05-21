@@ -95,7 +95,7 @@ User Query
 ## Core Modules Structure
 
 atlasworks-ai-policy-assistant/
-
+```
 │
 ├── backend/
 │   ├── agent.py              # LangGraph agent (routing, retrieval, synthesis workflow)
@@ -112,3 +112,4 @@ atlasworks-ai-policy-assistant/
 │
 ├── requirements.txt          # Python dependencies
 └── .env                      # Environment variables (not committed)
+```
