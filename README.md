@@ -24,6 +24,34 @@ Machine Learning • Time Series Forecasting • Data Analysis • LLM & NLP Ana
 
 ---
 
+## AtlasWorks Agentic RAG System for Policy Intelligence  
+### *A Stateful AI Orchestration System for Enterprise Policy Reasoning*
+
+<p align="center">
+  <img src="img/RAG_Thumbnail.jpg" alt="AtlasWorks AI Policy Intelligence System" width="500"/>
+</p>
+
+AtlasWorks is a production-style Agentic RAG system designed for enterprise policy reasoning and compliance intelligence. Unlike traditional RAG pipelines, it uses a stateful LangGraph orchestration layer to dynamically route queries across internal retrieval, web search, and direct reasoning based on confidence scoring and retrieval validation.
+
+The system combines retrieval-augmented generation, structured decision-making, and fallback reasoning to ensure responses are grounded, explainable, and production-ready.
+
+### Key Contributions
+
+- Designed a **stateful LangGraph orchestration system** for multi-step reasoning workflows  
+- Built a **confidence-aware routing engine** for adaptive query execution (RAG vs Web vs Direct reasoning)  
+- Implemented **retrieval validation layer** to prevent low-quality or hallucinated responses  
+- Integrated **Pinecone vector DB** for semantic enterprise knowledge retrieval  
+- Built **automatic web fallback system using Tavily** for out-of-domain queries  
+- Developed **traceable execution pipeline** for debugging and observability of AI decisions  
+- Deployed backend using **FastAPI + Groq LLM inference** for production-style architecture  
+
+This project demonstrates how LLMs can be moved beyond chat-based systems into **structured, controllable, and production-grade AI decision engines**.
+
+🔗 **Project:**  
+[View Project](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/main/AtlasWorks%20Agentic%20RAG%20System%20for%20Policy%20Intelligence/README.md)
+
+---
+
 ## Customer Churn Prediction for Proactive Customer Retention  
 ### *A Business-Aligned Machine Learning System for Identifying At-Risk Customers*
 
