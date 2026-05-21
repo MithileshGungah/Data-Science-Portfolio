@@ -128,8 +128,24 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 ```
+
+### Create a .env file
+
 ```bash
 GROQ_API_KEY=your_key
 PINECONE_API_KEY=your_key
 TAVILY_API_KEY=your_key
+```
+
+### Running the application
+
+#### Start Backend
+```bash
+cd backend
+python main.py
+```
+#### Start Frontend
+```bash
+cd frontend
+streamlit run app.py
 ```
