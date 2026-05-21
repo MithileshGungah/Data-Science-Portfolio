@@ -17,6 +17,7 @@ Machine Learning • Time Series Forecasting • Data Analysis • Agentic RAG S
 - Designed a **multimodal auditing framework for spatial bias in large language models**
 - Applied **SHAP explainability and NLP techniques** to interpret model behaviour
 - Deployed an **interactive Streamlit application** for churn risk prediction
+- Built an **Agentic RAG system (LangGraph + Pinecone + Groq)** for enterprise policy reasoning with dynamic routing, retrieval validation, and web fallback
 
 ---
 
