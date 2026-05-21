@@ -63,7 +63,90 @@ User Query
 - **API Layer**: FastAPI backend handling requests and orchestration  
 - **Agent Layer**: LangGraph-based reasoning engine  
 - **Knowledge Layer**: Pinecone vector database for enterprise RAG  
-- **External Tools**: Tavily search and Groq LLM inference
+- **External Tools**: Tavily search and Groq LLM inference  
+
+---
+
+## Agent Behavior & Query Routing Examples
+
+The following examples demonstrate how the system dynamically routes queries based on retrieval confidence, document coverage, and intent classification.
+
+---
+
+### Relevant Query → RAG-based Response
+
+<img src="img/Relevent_Query.png" alt="Relevant Query" width="880"/>
+
+This example demonstrates a successful RAG retrieval flow.
+
+A query such as:
+> “What types of workplace behavior are considered unacceptable at AtlasWorks?”
+
+is correctly matched against the internal policy corpus.
+
+The system:
+- Retrieves relevant embeddings from Pinecone
+- Confirms sufficient context relevance
+- Generates a grounded, document-based response using the LLM
+
+---
+
+### Internal Reasoning (LangGraph Decision Flow)
+
+<img src="img/Reasoning.png" alt="Reasoning" width="880"/>
+
+This image explains the internal LangGraph orchestration process.
+
+The reasoning layer determines:
+- Whether retrieved context is sufficient for RAG
+- Whether confidence thresholds are met
+- Whether routing should remain in RAG or shift to fallback mechanisms
+
+This ensures deterministic and explainable decision-making rather than opaque LLM-only behavior.
+
+---
+
+### Irrelevant Query → Web Search Fallback
+
+<img src="img/Unrelevant_Query.png" alt="Unrelevant Query" width="880"/>
+<img src="img/Websearch.png" alt="Web Search" width="880"/>
+
+For queries that are not supported by internal enterprise documents:
+
+- Retrieval returns low or no relevant context
+- The system rejects RAG-based generation
+- The agent automatically routes to external web search (Tavily)
+
+This fallback ensures the system remains useful even outside the knowledge boundary of the internal dataset.
+
+---
+
+### Relevant Query Outside Document Coverage
+
+<img src="img/Relevant_Data_but_outside_document.png" alt="Relevant Data but outside document" width="880"/>
+
+This case highlights a partial-match scenario.
+
+The query is related to enterprise policy but:
+- The exact information is not present in the indexed documents
+- The system detects partial relevance but insufficient grounding
+
+In this case, the system avoids hallucination and:
+- Does not fabricate answers
+- Either requests clarification or escalates to external search
+- Maintains response safety and factual integrity
+
+---
+
+## System Summary
+
+AtlasWorks AI demonstrates advanced agentic behavior through:
+
+- Dynamic routing between RAG, reasoning, and web search  
+- Strong grounding in enterprise policy data  
+- Safe fallback behavior for unknown or missing information  
+- Transparent decision-making via LangGraph orchestration  
+- Full traceability of execution flow per query
 
 ---
 
