@@ -394,9 +394,9 @@ It directly addresses key production problems:
 
 - Python 3.9+
 - API keys for:
-  - GROQ_API_KEY
-  - PINECONE_API_KEY
-  - TAVILY_API_KEY
+  - `GROQ_API_KEY`
+  - `PINECONE_API_KEY`
+  - `TAVILY_API_KEY`
 
 ---
 
@@ -416,19 +416,21 @@ pip install -r requirements.txt
 ### Create a .env file
 
 ```dotenv
-GROQ_API_KEY=your_key
-PINECONE_API_KEY=your_key
-TAVILY_API_KEY=your_key
+GROQ_API_KEY="your_groq_api_key_here"
+PINECONE_API_KEY="your_pinecone_api_key_here"
+PINECONE_ENVIRONMENT="your_pinecone_environment"
+TAVILY_API_KEY="your_tavily_api_key"
+FASTAPI_BASE_URL="http://localhost:8000"
 ```
 
 ### Running the application
 
-#### Start Backend
+#### Start Backend (FastAPI)
 ```bash
 cd backend
 python main.py
 ```
-#### Start Frontend
+#### Start Frontend (Streamlit)
 ```bash
 cd frontend
 streamlit run app.py
