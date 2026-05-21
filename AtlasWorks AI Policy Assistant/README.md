@@ -10,84 +10,84 @@ Enterprise AI Agent for workplace policy reasoning using Agentic RAG, LangGraph 
 
 AtlasWorks AI Policy Intelligence System is a sophisticated AI agent designed to answer workplace policy and compliance queries by intelligently combining internal enterprise knowledge with real-time web search.
 
-The system uses a structured agentic workflow instead of a simple retrieval-augmented generation pipeline. Each query is dynamically routed based on intent, context quality, and retrieval confidence.
+Instead of relying on a standard retrieval-augmented generation pipeline, the system employs a structured agentic workflow. Each query is dynamically routed based on intent, contextual relevance, and retrieval confidence.
 
-This enables adaptive, explainable, and enterprise-ready AI responses.
+This design enables adaptive, explainable, and enterprise-ready AI responses with full execution transparency.
 
 ---
 
-## Key Features
+## Key Capabilities
 
-- **Hybrid AI & Intelligent Routing**  
-  Dynamically selects between internal knowledge (RAG), web search, or direct reasoning based on query context.
+- **Hybrid AI Routing Engine**  
+  Dynamically selects between internal knowledge (RAG), external web search, or direct reasoning based on query intent and confidence scoring.
 
-- **LangGraph Agent Orchestration**  
-  Multi-step stateful workflow with explicit routing, retrieval, evaluation, and response synthesis nodes.
+- **LangGraph Orchestration Layer**  
+  Stateful multi-step execution graph with explicit routing, retrieval, evaluation, and response synthesis nodes.
 
 - **Retrieval-Augmented Generation (RAG)**  
-  Uses Pinecone vector database to perform semantic search over enterprise policy documents.
+  Semantic search over enterprise policy documents using Pinecone vector database.
 
 - **Retrieval Evaluation & Correction Loop**  
-  Evaluates retrieved context before generation and triggers fallback web search when needed.
+  Validates retrieved context before generation and triggers fallback strategies when confidence is insufficient.
 
-- **Hybrid Knowledge System**  
-  Combines internal documents, external web search (Tavily), and LLM reasoning (Groq).
+- **Hybrid Knowledge Integration**  
+  Combines internal documents, Tavily web search, and Groq-based LLM reasoning.
 
 - **Execution Traceability**  
-  Each request produces a structured trace of routing decisions, retrieval steps, and final synthesis flow.
+  Every request produces a structured trace of routing decisions, retrieval steps, and final response generation.
 
-- **Modular Architecture**  
-  Clean separation between backend agent logic and frontend interface layer.
+- **Modular System Architecture**  
+  Clear separation between frontend interface, backend API layer, and agent reasoning core.
 
 ---
 
 ## High-Level Architecture
 
-### System Flow
+### End-to-End System Flow
 
 User Query  
 → Streamlit Frontend  
 → FastAPI Backend  
 → LangGraph Agent Core  
-→ Router Node (decision engine)  
-→ Vector Search (Pinecone) OR Web Search (Tavily)  
+→ Router Node (intent classification + confidence scoring)  
+→ Retrieval Layer (Pinecone Vector Search) OR Web Search (Tavily)  
 → Retrieval Evaluation Node  
 → Response Synthesis (Groq LLM)  
-→ Final Answer + Trace Output
+→ Final Answer + Execution Trace
 
 ---
 
 ### System Layers
 
-- **Frontend Layer**: Streamlit UI for interaction and session management  
-- **API Layer**: FastAPI backend handling requests and orchestration  
-- **Agent Layer**: LangGraph-based reasoning engine  
-- **Knowledge Layer**: Pinecone vector database for enterprise RAG  
-- **External Tools**: Tavily search and Groq LLM inference  
+- **Frontend Layer**: Streamlit-based UI for interaction and session handling  
+- **API Layer**: FastAPI backend for request orchestration and routing  
+- **Agent Layer**: LangGraph-based reasoning and decision engine  
+- **Knowledge Layer**: Pinecone vector database powering enterprise RAG  
+- **External Tools Layer**: Tavily (web search) and Groq (LLM inference)
 
 ---
 
 ## Agent Behavior & Query Routing Examples
 
-The following examples demonstrate how the system dynamically routes queries based on retrieval confidence, document coverage, and intent classification.
+The following examples illustrate how AtlasWorks dynamically adapts its reasoning strategy based on retrieval confidence, document coverage, and query intent.
 
 ---
 
-### Relevant Query → RAG-based Response
+### Relevant Query → RAG-Based Response
 
 <img src="img/Relevent_Query.png" alt="Relevant Query" width="880"/>
 
-This example demonstrates a successful RAG retrieval flow.
+This case demonstrates a successful retrieval-augmented generation flow.
 
 A query such as:
 > “What types of workplace behavior are considered unacceptable at AtlasWorks?”
 
-is correctly matched against the internal policy corpus.
+is correctly matched to relevant internal policy documents.
 
-The system:
-- Retrieves relevant embeddings from Pinecone
-- Confirms sufficient context relevance
-- Generates a grounded, document-based response using the LLM
+System behavior:
+- Retrieves semantically relevant embeddings from Pinecone  
+- Confirms sufficient context alignment  
+- Generates a grounded response using the LLM  
 
 ---
 
@@ -95,14 +95,14 @@ The system:
 
 <img src="img/Reasoning.png" alt="Reasoning" width="880"/>
 
-This image explains the internal LangGraph orchestration process.
+This diagram illustrates the internal orchestration logic of the LangGraph agent.
 
-The reasoning layer determines:
-- Whether retrieved context is sufficient for RAG
-- Whether confidence thresholds are met
-- Whether routing should remain in RAG or shift to fallback mechanisms
+The system evaluates:
+- Whether retrieved context is sufficient for RAG  
+- Whether confidence thresholds are satisfied  
+- Whether routing should remain in RAG or transition to fallback pathways  
 
-This ensures deterministic and explainable decision-making rather than opaque LLM-only behavior.
+This ensures deterministic, explainable reasoning rather than opaque generation.
 
 ---
 
@@ -111,13 +111,14 @@ This ensures deterministic and explainable decision-making rather than opaque LL
 <img src="img/Unrelevant_Query.png" alt="Unrelevant Query" width="880"/>
 <img src="img/Websearch.png" alt="Web Search" width="880"/>
 
-For queries that are not supported by internal enterprise documents:
+When a query falls outside the scope of internal enterprise knowledge:
 
-- Retrieval returns low or no relevant context
-- The system rejects RAG-based generation
-- The agent automatically routes to external web search (Tavily)
+System behavior:
+- Retrieval confidence is low or empty  
+- RAG generation is rejected  
+- Query is routed to external web search (Tavily)  
 
-This fallback ensures the system remains useful even outside the knowledge boundary of the internal dataset.
+This ensures the system remains useful even when internal knowledge is insufficient.
 
 ---
 
@@ -125,28 +126,28 @@ This fallback ensures the system remains useful even outside the knowledge bound
 
 <img src="img/Relevant_Data_but_outside_document.png" alt="Relevant Data but outside document" width="880"/>
 
-This case highlights a partial-match scenario.
+This scenario represents partial knowledge coverage.
 
-The query is related to enterprise policy but:
-- The exact information is not present in the indexed documents
-- The system detects partial relevance but insufficient grounding
+Although the query is relevant to enterprise policy:
+- The exact information is not present in the indexed documents  
+- The system detects partial semantic overlap but insufficient grounding  
 
-In this case, the system avoids hallucination and:
-- Does not fabricate answers
-- Either requests clarification or escalates to external search
-- Maintains response safety and factual integrity
+System behavior:
+- Avoids hallucinated responses  
+- Prevents unsupported assumptions  
+- Either escalates to web search or requests clarification  
 
 ---
 
 ## System Summary
 
-AtlasWorks AI demonstrates advanced agentic behavior through:
+AtlasWorks AI demonstrates advanced agentic reasoning through:
 
 - Dynamic routing between RAG, reasoning, and web search  
-- Strong grounding in enterprise policy data  
-- Safe fallback behavior for unknown or missing information  
+- Strong grounding in enterprise policy knowledge  
+- Safe fallback behavior for incomplete or missing information  
 - Transparent decision-making via LangGraph orchestration  
-- Full traceability of execution flow per query
+- Full traceability of every query execution path
 
 ---
 
