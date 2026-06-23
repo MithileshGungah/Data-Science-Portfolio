@@ -29,6 +29,14 @@ The analysis is divided into two parts:
 
 ---
 
+## Notebook
+
+View the complete analysis notebook here:
+
+[![Open Notebook](https://img.shields.io/badge/Open-Notebook-blueviolet?style=for-the-badge)](https://github.com/yourusername/Retail-Intelligence-Customer-Segmentation/blob/main/notebooks/retail_intelligence.ipynb)
+
+---
+
 ## Project Workflow
 
 ```text
