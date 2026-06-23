@@ -139,10 +139,8 @@ The project includes:
 Retail-Intelligence-Customer-Segmentation/
 │
 ├── data/
-├── notebooks/
-├── images/
+├── notebook/
 ├── README.md
-└── requirements.txt
 ```
 
 ---
