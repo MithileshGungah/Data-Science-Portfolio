@@ -3,7 +3,7 @@
 ## Overview
 
 <p align="center">
-  <img src="../img/customer_segmentation.jpg" alt="Customer Segmentation" width="500">
+  <img src="https://github.com/MithileshGungah/Data-Science-Portfolio/blob/b633dd71816f432bc533a05ad5b2e934d250cc33/Retail%20Intelligence%3A%20Sales%20Analytics%20%26%20RFM-Based%20Customer%20Segmentation/img/customer_segmentation.jpg" alt="Customer Segmentation" width="500">
 </p>
 
 
