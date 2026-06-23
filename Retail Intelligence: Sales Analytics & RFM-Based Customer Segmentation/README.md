@@ -31,9 +31,9 @@ The analysis is divided into two parts:
 
 ## Notebook
 
-View the complete analysis notebook here:
+Explore the full analysis notebook:
 
-[![Open Notebook](https://img.shields.io/badge/Open-Notebook-blueviolet?style=for-the-badge)](https://github.com/yourusername/Retail-Intelligence-Customer-Segmentation/blob/main/notebooks/retail_intelligence.ipynb)
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)]()
 
 ---
 
