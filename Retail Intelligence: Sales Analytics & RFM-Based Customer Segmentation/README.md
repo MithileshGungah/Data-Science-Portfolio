@@ -2,6 +2,11 @@
 
 ## Overview
 
+<p align="center">
+  <img src="../img/customer_segmentation.jpg" alt="Customer Segmentation" width="500">
+</p>
+
+
 This project combines retail sales analytics and customer segmentation to transform transactional data into actionable business insights.
 
 The analysis is divided into two parts:
