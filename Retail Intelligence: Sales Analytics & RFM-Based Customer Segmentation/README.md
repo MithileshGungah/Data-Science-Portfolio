@@ -3,7 +3,7 @@
 ## Overview
 
 <p align="center">
-  <img src="/img/customer_segmentation.jpg" alt="Customer Segmentation" width="500">
+  <img src="../img/customer_segmentation.jpg" alt="Customer Segmentation" width="500">
 </p>
 
 
