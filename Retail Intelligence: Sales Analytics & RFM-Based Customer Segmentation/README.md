@@ -79,9 +79,9 @@ Business Recommendations
 
 The retail dataset was cleaned and transformed into RFM metrics:
 
-- **Recency** — Days since the customer's last purchase
-- **Frequency** — Number of purchases
-- **Monetary** — Total customer spending
+- **Recency** - Days since the customer's last purchase
+- **Frequency** - Number of purchases
+- **Monetary** - Total customer spending
 
 After scaling and clustering, **4 customer segments** were identified using K-Means.
 
