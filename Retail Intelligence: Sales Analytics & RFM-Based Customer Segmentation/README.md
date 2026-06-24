@@ -1,7 +1,7 @@
 # Retail Intelligence: Sales Analytics & RFM-Based Customer Segmentation
 
 <p align="center">
-  <img src="images/customer_segmentation.png" alt="Customer Segmentation" width="700">
+  <img src="customer_segmentation.png" alt="Customer Segmentation" width="700">
 </p>
 
 ## Project Overview
