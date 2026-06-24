@@ -1,39 +1,36 @@
 # Retail Intelligence: Sales Analytics & RFM-Based Customer Segmentation
 
-## Overview
-
 <p align="center">
-  <img src="customer_segmentation.jpg" alt="Customer Segmentation" width="500">
+  <img src="images/customer_segmentation.png" alt="Customer Segmentation" width="700">
 </p>
 
+## Project Overview
 
-This project combines retail sales analytics and customer segmentation to transform transactional data into actionable business insights.
+This project combines **retail sales analytics** and **customer segmentation** to transform transactional data into actionable business insights.
 
-The analysis is divided into two parts:
-
-### Superstore Sales Analysis
-
-- Customer and revenue analysis
-- Product and category performance
-- Geographic sales distribution
-- Shipping preferences
-- Sales trend analysis
-
-### Online Retail Customer Segmentation
-
-- Data cleaning and validation
-- RFM (Recency, Frequency, Monetary) feature engineering
-- Customer behavior analysis
-- K-Means clustering
-- Business-focused segmentation strategies
+Using Python, exploratory data analysis, and machine learning techniques, the project analyzes customer purchasing behavior, identifies revenue-driving segments, and develops business strategies to improve customer retention, engagement, and growth.
 
 ---
 
-## Notebook
+## Project Outcomes
 
-Explore the full analysis notebook:
+- Analyzed retail transaction data to uncover customer and sales trends.
+- Engineered **RFM (Recency, Frequency, Monetary)** features to profile customer behavior.
+- Applied **K-Means Clustering** to identify actionable customer segments.
+- Discovered high-value customer groups with strong spending and engagement characteristics.
+- Developed segment-specific retention, reactivation, and growth strategies.
+- Produced business-focused recommendations to support data-driven decision-making.
 
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)]()
+---
+
+## Business Problem
+
+Retail businesses generate large volumes of transactional data, but converting that data into actionable customer insights remains a challenge.
+
+This project addresses two key business questions:
+
+1. What factors drive sales performance across customers, products, and regions?
+2. How can customers be segmented based on purchasing behavior to support targeted marketing strategies?
 
 ---
 
@@ -48,7 +45,7 @@ Exploratory Data Analysis
    ↓
 RFM Feature Engineering
    ↓
-Scaling
+Feature Scaling
    ↓
 K-Means Clustering
    ↓
@@ -59,50 +56,128 @@ Business Recommendations
 
 ---
 
-## Technologies Used
+## Datasets
 
-**Python • Pandas • NumPy • Matplotlib • Seaborn • Plotly • Scikit-Learn**
+### Superstore Sales Dataset
+
+Used for:
+
+- Customer analysis
+- Revenue analysis
+- Product performance evaluation
+- Geographic sales insights
+- Shipping analysis
+- Sales trend analysis
+
+### Online Retail Dataset
+
+Used for:
+
+- Customer behavior analysis
+- RFM modeling
+- Customer segmentation
+- Cluster profiling
+- Marketing strategy development
 
 ---
 
-## Key Insights
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Plotly
+- Scikit-Learn
+
+---
+
+## Exploratory Data Analysis
 
 ### Sales Analysis
 
-- Consumer customers generated the highest revenue.
-- California, New York, and Texas were the strongest markets.
-- Phones and Chairs were among the best-performing product categories.
-- Sales demonstrated consistent year-over-year growth.
-- Standard Class was the most preferred shipping method.
+The sales analysis focused on:
 
-### Customer Segmentation
+- Customer segment performance
+- Product and category profitability
+- Regional sales distribution
+- Shipping preferences
+- Revenue trends over time
 
-The retail dataset was cleaned and transformed into RFM metrics:
+### Key Findings
 
-- **Recency** - Days since the customer's last purchase
-- **Frequency** - Number of purchases
-- **Monetary** - Total customer spending
+- Consumer customers generated the highest overall revenue.
+- California, New York, and Texas were among the strongest-performing markets.
+- Phones and Chairs ranked among the top-performing product categories.
+- Sales showed consistent growth over time.
+- Standard Class was the most frequently selected shipping method.
 
-After scaling and clustering, **4 customer segments** were identified using K-Means.
+---
+
+## Customer Segmentation
+
+### RFM Analysis
+
+Customer behavior was summarized using three key metrics:
+
+| Metric | Definition |
+|----------|------------|
+| Recency | Days since the customer's last purchase |
+| Frequency | Number of purchases made |
+| Monetary | Total customer spending |
+
+These metrics were standardized and used as inputs for clustering.
+
+---
+
+## Clustering Methodology
+
+### Feature Preparation
+
+- Engineered RFM features from transaction-level data.
+- Standardized features prior to clustering.
+- Investigated outliers separately to improve segmentation quality.
+
+### K-Means Clustering
+
+K-Means clustering was applied to identify customer groups with similar purchasing behavior.
+
+Model selection was supported using:
+
+- Elbow Method
+- Silhouette Analysis
 
 ---
 
 ## Customer Segments
 
-| Segment | Description | Business Action |
-|----------|------------|----------------|
-| **Retain** | High-value loyal customers | Loyalty programs and VIP rewards |
-| **Reward** | Frequent and engaged customers | Personalized offers and premium benefits |
-| **Re-engage** | Customers showing reduced activity | Win-back campaigns and promotions |
-| **Nurture** | Lower-value customers with growth potential | Upselling and targeted marketing |
+### Core Segments
 
-### Special Outlier Segments
+| Segment | Characteristics | Recommended Action |
+|----------|------------|------------|
+| **Retain** | Established customers with consistent purchasing activity | Loyalty programs and retention campaigns |
+| **Reward** | Engaged customers with moderate-to-high activity | Personalized offers and premium benefits |
+| **Re-Engage** | Previously active customers showing reduced engagement | Win-back campaigns and targeted promotions |
+| **Nurture** | Large customer base with lower spending and activity | Upselling, cross-selling, and engagement initiatives |
 
-| Segment | Description |
-|----------|------------|
-| **Pamper** | High spending, low purchase frequency |
-| **Upsell** | High purchase frequency, moderate spending |
-| **Delight** | High purchase frequency and high spending |
+### Specialized Segments
+
+| Segment | Characteristics | Recommended Action |
+|----------|------------|------------|
+| **Delight** | Highest-value customers with strong spending and purchase frequency | VIP treatment and premium experiences |
+| **Pamper** | High-spending customers with less frequent purchases | Personalized retention strategies |
+| **Upsell** | Customers with growth potential and above-average purchasing activity | Product recommendations and upsell campaigns |
+
+---
+
+## Key Segmentation Insights
+
+- **NURTURE** and **RE-ENGAGE** are the largest customer segments but exhibit the lowest monetary value and purchase frequency.
+- **DELIGHT** is the highest-value segment, demonstrating the strongest spending and customer engagement characteristics.
+- **PAMPER** customers contribute significant value despite their relatively small segment size.
+- **UPSELL** customers display promising growth potential through targeted product recommendations.
+- **RETAIN** provides a stable customer foundation with opportunities for incremental revenue growth.
 
 ---
 
@@ -111,35 +186,59 @@ After scaling and clustering, **4 customer segments** were identified using K-Me
 The project includes:
 
 - Customer and revenue analysis
+- Product performance dashboards
 - Geographic sales insights
-- Product category performance
 - Sales trend analysis
 - RFM distributions
-- Elbow and Silhouette analysis
-- Interactive 3D customer cluster visualization
+- Elbow Method evaluation
+- Silhouette Analysis
+- Cluster distribution visualizations
+- Interactive 3D customer segmentation plots
 
 ---
 
 ## Skills Demonstrated
 
+### Data Analytics
+
+- Data Cleaning
 - Exploratory Data Analysis (EDA)
-- Data Cleaning and Validation
-- Feature Engineering
-- Data Visualization
-- Customer Analytics
-- RFM Modeling
-- K-Means Clustering
+- Statistical Analysis
 - Business Intelligence
+
+### Data Science
+
+- Feature Engineering
+- RFM Modeling
+- Customer Segmentation
+- K-Means Clustering
+- Cluster Evaluation
+
+### Data Visualization
+
+- Matplotlib
+- Seaborn
+- Plotly Interactive Visualizations
+
+### Business Analytics
+
+- Customer Retention Analysis
+- Marketing Strategy Development
+- Segmentation-Based Decision Making
+- Data-Driven Business Strategy
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```text
 Retail-Intelligence-Customer-Segmentation/
 │
 ├── data/
-├── notebook/
+│   ├── superstore.csv
+│   └── online_retail.csv (Too large to upload)
+│
+├── notebooks/
 ├── README.md
 ```
 
@@ -147,16 +246,31 @@ Retail-Intelligence-Customer-Segmentation/
 
 ## Business Impact
 
-This project demonstrates how retail transaction data can be leveraged to:
+This project demonstrates how transaction data can be leveraged to:
 
 - Identify high-value customers
 - Improve customer retention
-- Personalize marketing campaigns
-- Detect growth opportunities
-- Support data-driven decision-making
+- Develop targeted marketing campaigns
+- Increase customer engagement
+- Detect revenue growth opportunities
+- Support data-driven business decisions
+
+---
+
+## Future Improvements
+
+- Customer Lifetime Value (CLV) modeling
+- Streamlit dashboard deployment
+- Real-time customer analytics pipeline
+
+---
+
+## Notebook
+
+[View Full Analysis Notebook](notebooks/retail_intelligence.ipynb)
 
 ---
 
 ## Author
 
-Developed as an end-to-end retail analytics and customer segmentation project using Python, data visualization, and machine learning techniques.
+Designed and implemented as an end-to-end retail analytics and customer segmentation project, combining exploratory data analysis, feature engineering, machine learning, and business-focused insight generation using Python.
