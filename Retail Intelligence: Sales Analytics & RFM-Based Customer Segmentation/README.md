@@ -144,7 +144,7 @@ These metrics were standardized and used as inputs for clustering.
 K-Means clustering was applied to identify customer groups with similar purchasing behavior.
 
 <p align="center">
-  <img src="K-Mean-Clustering.jpg" alt="K-Mean Clustering" width="400">
+  <img src="K-Mean-Clustering.png" alt="K-Mean Clustering" width="400">
 </p>
 
 Model selection was supported using:
