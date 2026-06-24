@@ -207,7 +207,6 @@ The project includes:
 
 - Data Cleaning
 - Exploratory Data Analysis (EDA)
-- Statistical Analysis
 - Business Intelligence
 
 ### Data Science
