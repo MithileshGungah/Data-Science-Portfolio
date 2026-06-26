@@ -21,13 +21,11 @@ Using Python, exploratory data analysis, and machine learning techniques, the pr
 - Developed segment-specific retention, reactivation, and growth strategies.
 - Produced business-focused recommendations to support data-driven decision-making.
 
----
-
 ## Project Notebook
 
 Explore the full analysis notebook:
 
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/e800b16bf2392561a3812207169411d2640b0b66/Retail%20Intelligence%3A%20Sales%20Analytics%20%26%20RFM-Based%20Customer%20Segmentation/notebook/Online_Retail_Analysis_%26_Customer_Segmentation.ipynb))
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/e800b16bf2392561a3812207169411d2640b0b66/Retail%20Intelligence%3A%20Sales%20Analytics%20%26%20RFM-Based%20Customer%20Segmentation/notebook/Online_Retail_Analysis_%26_Customer_Segmentation.ipynb)
 
 ---
 
