@@ -241,7 +241,7 @@ Retail-Intelligence-Customer-Segmentation/
 │   ├── superstore.csv
 │   └── online_retail.csv (Too large to upload)
 │
-├── notebooks/
+├── notebook/
 ├── README.md
 ```
 
