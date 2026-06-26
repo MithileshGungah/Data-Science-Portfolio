@@ -23,6 +23,14 @@ Using Python, exploratory data analysis, and machine learning techniques, the pr
 
 ---
 
+## Project Notebook
+
+Explore the full analysis notebook:
+
+[![View Notebook](https://img.shields.io/badge/View%20Notebook-6F42C1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MithileshGungah/Data-Science-Portfolio/blob/e800b16bf2392561a3812207169411d2640b0b66/Retail%20Intelligence%3A%20Sales%20Analytics%20%26%20RFM-Based%20Customer%20Segmentation/notebook/Online_Retail_Analysis_%26_Customer_Segmentation.ipynb))
+
+---
+
 ## Business Problem
 
 Retail businesses generate large volumes of transactional data, but converting that data into actionable customer insights remains a challenge.
@@ -265,15 +273,3 @@ This project demonstrates how transaction data can be leveraged to:
 - Customer Lifetime Value (CLV) modeling
 - Streamlit dashboard deployment
 - Real-time customer analytics pipeline
-
----
-
-## Notebook
-
-[View Full Analysis Notebook](notebooks/retail_intelligence.ipynb)
-
----
-
-## Author
-
-Designed and implemented as an end-to-end retail analytics and customer segmentation project, combining exploratory data analysis, feature engineering, machine learning, and business-focused insight generation using Python.
